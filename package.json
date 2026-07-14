@@ -1,0 +1,9 @@
+{
+  "name": "dadsjobsearch-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "refresh-data": "node scripts/fetch-opportunities.mjs"
+  }
+}
