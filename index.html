@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs for Dad</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f7fb;
+      color: #1f2933;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem;
+    }
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .intro {
+      margin: 0 0 1.5rem;
+      color: #52606d;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.85rem 1rem;
+      border: 1px solid #cbd2d9;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .jobs {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .job-card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .job-card h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.2rem;
+    }
+
+    .meta {
+      margin: 0 0 0.75rem;
+      color: #52606d;
+      font-size: 0.95rem;
+    }
+
+    .empty-state {
+      display: none;
+      padding: 1rem 1.25rem;
+      border-radius: 1rem;
+      background: #fff;
+      color: #52606d;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Jobs for Dad</h1>
+    <p class="intro">Browse flexible roles with dependable schedules and filter by title, company, location, or keyword.</p>
+
+    <label for="job-search">Search jobs</label>
+    <input id="job-search" type="search" placeholder="Try remote, driver, support, or part-time">
+
+    <section class="jobs" id="job-list" aria-live="polite">
+      <article class="job-card" data-search="delivery driver northside logistics chicago il full-time route planning">
+        <h2>Delivery Driver</h2>
+        <p class="meta">Northside Logistics · Chicago, IL · Full-time</p>
+        <p>Early morning routes, paid training, and predictable weekday hours.</p>
+      </article>
+
+      <article class="job-card" data-search="customer support specialist hearth home remote part-time customer service flexible">
+        <h2>Customer Support Specialist</h2>
+        <p class="meta">Hearth &amp; Home · Remote · Part-time</p>
+        <p>Remote support role with flexible afternoon shifts and healthcare stipend.</p>
+      </article>
+
+      <article class="job-card" data-search="warehouse coordinator steady supply columbus oh full-time inventory forklift">
+        <h2>Warehouse Coordinator</h2>
+        <p class="meta">Steady Supply · Columbus, OH · Full-time</p>
+        <p>Coordinate inbound shipments, maintain inventory, and work a stable day schedule.</p>
+      </article>
+
+      <article class="job-card" data-search="school bus driver community transit phoenix az part-time cdl mornings">
+        <h2>School Bus Driver</h2>
+        <p class="meta">Community Transit · Phoenix, AZ · Part-time</p>
+        <p>Morning and afternoon routes with paid CDL support and school holidays off.</p>
+      </article>
+    </section>
+
+    <p class="empty-state" id="empty-state">No jobs match that search yet. Try a broader keyword.</p>
+  </main>
+
+  <script>
+    const searchInput = document.getElementById('job-search');
+    const jobCards = Array.from(document.querySelectorAll('.job-card'));
+    const emptyState = document.getElementById('empty-state');
+
+    function filterJobs() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      jobCards.forEach((card) => {
+        const matches = card.dataset.search.includes(query);
+        card.style.display = matches ? '' : 'none';
+        if (matches) {
+          visibleCount += 1;
+        }
+      });
+
+      emptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    searchInput.addEventListener('input', filterJobs);
+  </script>
+</body>
+</html>
