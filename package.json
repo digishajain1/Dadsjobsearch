@@ -1,0 +1,27 @@
+{
+  "name": "dadsjobsearch",
+  "version": "1.0.0",
+  "description": "Static job dashboard for senior telecom and data center opportunities.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "refresh-data": "node scripts/fetch-opportunities.mjs",
+    "test": "node --test",
+    "serve": "python3 -m http.server 4173 --directory site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digishajain1/Dadsjobsearch.git"
+  },
+  "keywords": [
+    "jobs",
+    "dashboard",
+    "github-pages"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digishajain1/Dadsjobsearch/issues"
+  },
+  "homepage": "https://digishajain1.github.io/Dadsjobsearch/"
+}
