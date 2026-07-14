@@ -1,0 +1,32 @@
+name: Refresh opportunities
+
+on:
+  schedule:
+    - cron: "30 0,12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Refresh aggregated opportunities
+        run: node scripts/fetch-opportunities.mjs
+
+      - name: Commit updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/opportunities.json
+          git diff --cached --quiet || git commit -m "chore: refresh opportunities data"
+          git push
