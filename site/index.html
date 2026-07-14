@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dad's Job Search Dashboard</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Updated twice daily</p>
+        <h1>Dad's Job Search Dashboard</h1>
+        <p class="intro">
+          A focused dashboard for senior telecom, data center, advisory, and board opportunities in Mumbai,
+          India, and remote-friendly markets.
+        </p>
+      </div>
+      <div class="hero-actions">
+        <a class="button primary" href="#tracker">Open tracker</a>
+        <a class="button secondary" href="#search-links">Search links</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="stats" id="stats"></section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Refresh status</p>
+            <h2>Latest opportunity snapshot</h2>
+          </div>
+          <p id="generated-at" class="muted"></p>
+        </div>
+        <div id="alerts" class="alerts"></div>
+      </section>
+
+      <section class="panel" id="search-links">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Always-on search shortcuts</p>
+            <h2>Live search links</h2>
+          </div>
+        </div>
+        <div class="search-grid">
+          <div>
+            <h3>Executive / advisory</h3>
+            <ul id="executive-links" class="link-list"></ul>
+          </div>
+          <div>
+            <h3>Board positions</h3>
+            <ul id="board-links" class="link-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" id="tracker">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Personal tracker</p>
+            <h2>Shortlist and notes</h2>
+          </div>
+          <button id="clear-tracker" class="button ghost" type="button">Clear saved tracker</button>
+        </div>
+        <div id="tracker-summary" class="tracker-summary"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Priority opportunities</p>
+            <h2>Executive and advisory roles</h2>
+          </div>
+        </div>
+        <div id="executive-opportunities" class="opportunity-grid"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Separate board search</p>
+            <h2>Board and independent director roles</h2>
+          </div>
+        </div>
+        <div id="board-opportunities" class="opportunity-grid"></div>
+      </section>
+    </main>
+
+    <template id="opportunity-template">
+      <article class="card opportunity-card">
+        <div class="card-top">
+          <div>
+            <p class="source-line"></p>
+            <h3></h3>
+            <p class="company-line"></p>
+          </div>
+          <span class="badge score-badge"></span>
+        </div>
+        <p class="meta"></p>
+        <p class="summary"></p>
+        <div class="tag-list"></div>
+        <div class="tracker-controls">
+          <label>
+            Status
+            <select>
+              <option value="">Not tracked</option>
+              <option value="shortlisted">Shortlisted</option>
+              <option value="applied">Applied</option>
+              <option value="networking">Networking</option>
+              <option value="interview">Interviewing</option>
+              <option value="archived">Archived</option>
+            </select>
+          </label>
+          <label>
+            Notes
+            <textarea rows="3" placeholder="Why this looks interesting"></textarea>
+          </label>
+        </div>
+        <div class="card-actions">
+          <a class="button primary" target="_blank" rel="noreferrer">Open role</a>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="./assets/app.js"></script>
+  </body>
+</html>
