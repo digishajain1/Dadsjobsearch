@@ -1,0 +1,115 @@
+{
+  "generatedAt": "2026-07-14T00:00:00.000Z",
+  "executiveRoles": [
+    {
+      "id": "exec-equinix-1",
+      "title": "Vice President - India Data Center Strategy",
+      "company": "Equinix",
+      "location": "Mumbai",
+      "type": "Executive",
+      "sector": "Data Center",
+      "salaryLpa": 95,
+      "source": "Equinix Careers",
+      "url": "https://careers.equinix.com",
+      "postedDate": "2026-07-10",
+      "keywords": ["vp", "data center", "strategy", "india"],
+      "relevanceScore": 93
+    },
+    {
+      "id": "exec-ntt-1",
+      "title": "Senior Advisor - Connectivity Expansion",
+      "company": "NTT Global Data Centers",
+      "location": "Mumbai / Remote",
+      "type": "Advisory",
+      "sector": "Connectivity",
+      "salaryLpa": 80,
+      "source": "NTT GDC Careers",
+      "url": "https://www.global.ntt/en/careers",
+      "postedDate": "2026-07-09",
+      "keywords": ["advisor", "connectivity", "telecom"],
+      "relevanceScore": 90
+    },
+    {
+      "id": "exec-jio-1",
+      "title": "Chief Growth Officer - Enterprise Fiber",
+      "company": "Reliance Jio",
+      "location": "Mumbai",
+      "type": "Executive",
+      "sector": "Telecom",
+      "salaryLpa": 110,
+      "source": "Reliance Careers",
+      "url": "https://careers.ril.com",
+      "postedDate": "2026-07-08",
+      "keywords": ["chief", "enterprise", "fiber", "telecom"],
+      "relevanceScore": 95
+    },
+    {
+      "id": "exec-tatacomm-1",
+      "title": "SVP - Data Center Interconnect",
+      "company": "Tata Communications",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Connectivity",
+      "salaryLpa": 88,
+      "source": "Tata Communications Careers",
+      "url": "https://careers.tatacommunications.com",
+      "postedDate": "2026-07-11",
+      "keywords": ["svp", "interconnect", "network"],
+      "relevanceScore": 91
+    }
+  ],
+  "boardRoles": [
+    {
+      "id": "board-nse-1",
+      "title": "Independent Director Opportunity Signal",
+      "company": "NSE/BSE Filing - Large Telecom Infra Co.",
+      "location": "Mumbai",
+      "type": "Board",
+      "sector": "Telecom Infrastructure",
+      "source": "NSE/BSE Corporate Filings",
+      "url": "https://www.nseindia.com/companies-listing/corporate-filings-announcements",
+      "postedDate": "2026-07-12",
+      "keywords": ["independent director", "filing", "board"],
+      "relevanceScore": 86
+    },
+    {
+      "id": "board-kornferry-1",
+      "title": "Board Advisor Search Signal - Digital Infrastructure",
+      "company": "Korn Ferry",
+      "location": "Mumbai / Remote",
+      "type": "Board",
+      "sector": "Data Center",
+      "source": "Executive Search Firm",
+      "url": "https://www.kornferry.com",
+      "postedDate": "2026-07-10",
+      "keywords": ["board", "advisor", "independent director"],
+      "relevanceScore": 84
+    },
+    {
+      "id": "board-iica-1",
+      "title": "Independent Director Expression of Interest",
+      "company": "IICA Independent Director's Databank",
+      "location": "India / Remote",
+      "type": "Board",
+      "sector": "Cross-sector",
+      "source": "IICA Databank",
+      "url": "https://www.independentdirectorsdatabank.in",
+      "postedDate": "2026-07-11",
+      "keywords": ["independent director", "board"],
+      "relevanceScore": 80
+    },
+    {
+      "id": "board-prime-1",
+      "title": "Board Appointment Tracker Signal",
+      "company": "Prime Database",
+      "location": "Mumbai",
+      "type": "Board",
+      "sector": "Telecom / Data Center",
+      "source": "Prime Database",
+      "url": "https://www.primedatabasegroup.com",
+      "postedDate": "2026-07-09",
+      "keywords": ["appointment", "board", "director"],
+      "relevanceScore": 82
+    }
+  ]
+}
