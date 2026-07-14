@@ -5,6 +5,7 @@ const ITEMS_PER_PAGE = 10;
 const searchInput = document.getElementById("search");
 const locationFilter = document.getElementById("locationFilter");
 const statusFilter = document.getElementById("statusFilter");
+const ageFilter = document.getElementById("ageFilter");
 const executiveList = document.getElementById("executiveList");
 const boardList = document.getElementById("boardList");
 const template = document.getElementById("opportunityTemplate");
@@ -32,9 +33,33 @@ function getCombinedText(opportunity) {
     opportunity.location,
     opportunity.sector,
     opportunity.source,
+    ...(opportunity.ageReasons || []),
   ]
     .join(" ")
     .toLowerCase();
+}
+
+function ageFilterMatches(filter, opportunity) {
+  if (filter === "all") return true;
+  if (filter === "friendly") return opportunity.ageAgeFriendly === true;
+  if (filter === "flagged") return opportunity.ageAgeFriendly !== true;
+  return true;
+}
+
+function getAgePriority(opportunity) {
+  return opportunity.ageAgeFriendly === true ? 1 : 0;
+}
+
+function getAgeCounts() {
+  const all = [...(dataset.executiveRoles || []), ...(dataset.boardRoles || [])];
+  return all.reduce(
+    (acc, item) => {
+      if (item.ageAgeFriendly === true) acc.friendly += 1;
+      else acc.flagged += 1;
+      return acc;
+    },
+    { friendly: 0, flagged: 0 }
+  );
 }
 
 function statusMatches(selected, storedStatus) {
@@ -59,6 +84,17 @@ function buildCard(opportunity) {
   node.querySelector(".details").textContent = `${opportunity.type} · Sector: ${opportunity.sector} · Posted: ${opportunity.postedDate || "N/A"}`;
   node.querySelector(".source").textContent = `Source: ${opportunity.source}`;
   node.querySelector(".score").textContent = `Relevance: ${opportunity.relevanceScore ?? "N/A"}${opportunity.salaryLpa ? ` · Salary: ₹${opportunity.salaryLpa}L` : ""}`;
+  const ageBadge = node.querySelector(".age-badge");
+  const ageReasons = node.querySelector(".age-reasons");
+  if (opportunity.ageAgeFriendly === true) {
+    ageBadge.textContent = "✓ Age-Friendly 60+";
+    ageBadge.className = "age-badge age-friendly";
+  } else {
+    ageBadge.textContent = "⚠️ May have age limits";
+    ageBadge.className = "age-badge age-flagged";
+  }
+  const reasons = (opportunity.ageReasons || []).join(", ");
+  ageReasons.textContent = reasons ? `Why: ${reasons}` : "";
 
   const link = node.querySelector(".link");
   link.href = opportunity.url;
@@ -94,7 +130,8 @@ function applyFilters(list) {
     return (
       queryMatches &&
       locationMatches(locationFilter.value, item.location) &&
-      statusMatches(statusFilter.value, status)
+      statusMatches(statusFilter.value, status) &&
+      ageFilterMatches(ageFilter.value, item)
     );
   });
 }
@@ -161,8 +198,14 @@ function renderList(container, items, emptyText, type) {
 }
 
 function render() {
-  const executive = applyFilters(dataset.executiveRoles || []);
-  const board = applyFilters(dataset.boardRoles || []);
+  const executive = applyFilters(dataset.executiveRoles || []).sort(
+    (a, b) => getAgePriority(b) - getAgePriority(a) || (b.relevanceScore || 0) - (a.relevanceScore || 0)
+  );
+  const board = applyFilters(dataset.boardRoles || []).sort(
+    (a, b) => getAgePriority(b) - getAgePriority(a) || (b.relevanceScore || 0) - (a.relevanceScore || 0)
+  );
+  const ageCounts = getAgeCounts();
+  meta.textContent = `Data generated: ${new Date(dataset.generatedAt).toLocaleString()} (${(dataset.executiveRoles || []).length} executive, ${(dataset.boardRoles || []).length} board) · ${ageCounts.friendly} age-friendly opportunities · ${ageCounts.flagged} flagged opportunities`;
 
   renderList(executiveList, executive, "No executive opportunities match current filters.", "executive");
   renderList(boardList, board, "No board signals match current filters.", "board");
@@ -173,12 +216,11 @@ async function init() {
     const response = await fetch(DATA_URL, { cache: "no-store" });
     if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
     dataset = await response.json();
-    meta.textContent = `Data generated: ${new Date(dataset.generatedAt).toLocaleString()} (${(dataset.executiveRoles || []).length} executive, ${(dataset.boardRoles || []).length} board)`;
   } catch (error) {
     meta.textContent = `Unable to load data file. ${error.message}`;
   }
 
-  [searchInput, locationFilter, statusFilter].forEach((input) =>
+  [searchInput, locationFilter, statusFilter, ageFilter].forEach((input) =>
     input.addEventListener("input", () => {
       currentPage = { executive: 1, board: 1 };
       render();
