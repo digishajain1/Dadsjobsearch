@@ -144,7 +144,7 @@ async function tryFetchRemoteOK() {
         source: "RemoteOK",
         url: entry.url ? `https://remoteok.com${entry.url}` : "https://remoteok.com",
         postedDate: entry.date || new Date().toISOString().slice(0, 10),
-        description: entry.description ? entry.description.replace(/<[^>]+>/g, "").slice(0, 200) : "",
+        description: entry.description ? entry.description.replace(/[<>]/g, "").slice(0, 200) : "",
         viewCount: entry.views || Math.floor(Math.random() * 2000) + 300,
         applicantCount: entry.applicant_count || Math.floor(Math.random() * 60) + 10,
         keywords: entry.tags || []
@@ -230,7 +230,7 @@ async function tryFetchArbeitnow() {
         source: "Arbeitnow",
         url: entry.url || "https://www.arbeitnow.com",
         postedDate: entry.created_at ? entry.created_at.slice(0, 10) : new Date().toISOString().slice(0, 10),
-        description: entry.description ? entry.description.replace(/<[^>]+>/g, "").slice(0, 200) : "",
+        description: entry.description ? entry.description.replace(/[<>]/g, "").slice(0, 200) : "",
         viewCount: Math.floor(Math.random() * 1200) + 150,
         applicantCount: Math.floor(Math.random() * 40) + 5,
         keywords: entry.tags || []
