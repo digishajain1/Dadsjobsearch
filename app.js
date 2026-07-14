@@ -1,5 +1,6 @@
 const DATA_URL = "./data/opportunities.json";
 const TRACKER_KEY = "dadsjobsearch_tracker_v1";
+const ITEMS_PER_PAGE = 10;
 
 const searchInput = document.getElementById("search");
 const locationFilter = document.getElementById("locationFilter");
@@ -10,6 +11,7 @@ const template = document.getElementById("opportunityTemplate");
 const meta = document.getElementById("meta");
 
 let dataset = { executiveRoles: [], boardRoles: [], generatedAt: null };
+let currentPage = { executive: 1, board: 1 };
 
 function readTracker() {
   try {
@@ -97,24 +99,73 @@ function applyFilters(list) {
   });
 }
 
-function renderList(container, items, emptyText) {
+function paginate(items, page) {
+  const start = (page - 1) * ITEMS_PER_PAGE;
+  const end = start + ITEMS_PER_PAGE;
+  return items.slice(start, end);
+}
+
+function createPaginationControls(totalItems, currentPage, type) {
+  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+  if (totalPages <= 1) return null;
+
+  const controls = document.createElement("div");
+  controls.className = "pagination";
+
+  const prevBtn = document.createElement("button");
+  prevBtn.textContent = "← Previous";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 1) {
+      currentPage[type] = currentPage - 1;
+      render();
+    }
+  });
+
+  const pageInfo = document.createElement("span");
+  pageInfo.className = "page-info";
+  pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+
+  const nextBtn = document.createElement("button");
+  nextBtn.textContent = "Next →";
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < totalPages) {
+      currentPage[type] = currentPage + 1;
+      render();
+    }
+  });
+
+  controls.appendChild(prevBtn);
+  controls.appendChild(pageInfo);
+  controls.appendChild(nextBtn);
+  return controls;
+}
+
+function renderList(container, items, emptyText, type) {
   container.innerHTML = "";
   if (!items.length) {
     container.textContent = emptyText;
     return;
   }
 
+  const paginatedItems = paginate(items, currentPage[type]);
   const fragment = document.createDocumentFragment();
-  items.forEach((item) => fragment.appendChild(buildCard(item)));
+  paginatedItems.forEach((item) => fragment.appendChild(buildCard(item)));
   container.appendChild(fragment);
+
+  const pagination = createPaginationControls(items.length, currentPage[type], type);
+  if (pagination) {
+    container.appendChild(pagination);
+  }
 }
 
 function render() {
   const executive = applyFilters(dataset.executiveRoles || []);
   const board = applyFilters(dataset.boardRoles || []);
 
-  renderList(executiveList, executive, "No executive opportunities match current filters.");
-  renderList(boardList, board, "No board signals match current filters.");
+  renderList(executiveList, executive, "No executive opportunities match current filters.", "executive");
+  renderList(boardList, board, "No board signals match current filters.", "board");
 }
 
 async function init() {
@@ -128,7 +179,10 @@ async function init() {
   }
 
   [searchInput, locationFilter, statusFilter].forEach((input) =>
-    input.addEventListener("input", render)
+    input.addEventListener("input", () => {
+      currentPage = { executive: 1, board: 1 };
+      render();
+    })
   );
 
   render();
