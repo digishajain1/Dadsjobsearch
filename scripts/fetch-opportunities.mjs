@@ -93,32 +93,48 @@ async function fetchHimalayas() {
   });
 }
 
-async function loadPreviousMap() {
+async function loadPreviousState() {
   try {
     const raw = await readFile(DATA_PATH, 'utf8');
     const parsed = JSON.parse(raw);
     const items = [...(parsed.opportunities?.executive || []), ...(parsed.opportunities?.board || [])];
-    return new Map(items.map((item) => [item.id, item]));
+    return {
+      map: new Map(items.map((item) => [item.id, item])),
+      items
+    };
   } catch {
-    return new Map();
+    return {
+      map: new Map(),
+      items: []
+    };
   }
 }
 
 async function main() {
-  const previousMap = await loadPreviousMap();
+  const previousState = await loadPreviousState();
   const errors = [];
   const sourceResults = [];
 
-  for (const fetcher of [fetchRemotive, fetchArbeitnow, fetchHimalayas]) {
+  for (const [name, fetcher] of [['Remotive', fetchRemotive], ['Arbeitnow', fetchArbeitnow], ['Himalayas', fetchHimalayas]]) {
     try {
       sourceResults.push(...(await fetcher()));
     } catch (error) {
-      errors.push(error.message);
+      errors.push(`${name}: ${error.message || 'live refresh failed'}`);
     }
   }
 
   const relevant = sourceResults.filter((item) => item.isRelevant);
-  const opportunities = dedupeAndRank(relevant, previousMap);
+  const fallbackItems = !relevant.length && previousState.items.length
+    ? previousState.items.map((item) => ({ ...item, lastSeenAt: item.lastSeenAt || new Date().toISOString() }))
+    : [];
+  const opportunities = relevant.length
+    ? dedupeAndRank(relevant, previousState.map)
+    : fallbackItems;
+
+  if (!relevant.length && previousState.items.length) {
+    errors.push('Using the last cached opportunity snapshot because the live sources did not return fresh matches.');
+  }
+
   const payload = buildDashboardPayload(opportunities, errors);
 
   await mkdir(new URL('../site/data', import.meta.url), { recursive: true });

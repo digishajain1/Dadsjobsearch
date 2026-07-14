@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "refresh-data": "node scripts/fetch-opportunities.mjs",
-    "test": "node --test"
+    "test": "node --test",
+    "serve": "python3 -m http.server 4173 --directory site"
   },
   "repository": {
     "type": "git",

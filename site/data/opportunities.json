@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T00:00:00.000Z",
+  "generatedAt": "2026-07-14T21:58:34.710Z",
   "profile": {
     "name": "Dad's Next-Innings Opportunity Radar",
     "focus": [
@@ -21,7 +21,9 @@
     "sources": 0
   },
   "alerts": [
-    "No live opportunities cached yet. Run the refresh workflow or npm run refresh-data to pull the latest matches."
+    "Remotive: fetch failed",
+    "Arbeitnow: fetch failed",
+    "Himalayas: fetch failed"
   ],
   "searchLinks": {
     "executive": [

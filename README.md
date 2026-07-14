@@ -15,9 +15,10 @@ A deployment-ready static dashboard for senior telecom, data center, advisory, a
 npm ci
 npm run refresh-data
 npm test
+npm run serve
 ```
 
-Then open `/home/runner/work/Dadsjobsearch/Dadsjobsearch/site/index.html` in a browser.
+Then open `http://localhost:4173` in a browser.
 
 ## Deployment link
 
