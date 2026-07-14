@@ -5,68 +5,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dad's Executive Job Dashboard</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <header>
-      <h1>Mumbai + Remote Executive Opportunity Dashboard</h1>
-      <p>
-        Focused on telecom, data center, connectivity, and board-level opportunities.
-      </p>
-      <div class="controls">
-        <input id="search" type="search" placeholder="Search title, company, location, sector..." />
-        <select id="locationFilter">
-          <option value="all">All locations</option>
-          <option value="mumbai">Mumbai</option>
-          <option value="remote">Remote</option>
-        </select>
-        <select id="statusFilter">
-          <option value="all">All tracker statuses</option>
-          <option value="shortlist">Shortlist</option>
-          <option value="applied">Applied</option>
-          <option value="networking">Networking</option>
-          <option value="interview">Interview</option>
-          <option value="archived">Archived</option>
-          <option value="untracked">Untracked</option>
-        </select>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-brand">
+          <div class="brand-logo">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <div class="brand-text">
+            <h1>Executive Opportunity Dashboard</h1>
+            <p>Mumbai · Remote · Telecom · Data Center · Connectivity</p>
+          </div>
+        </div>
+        <div class="header-meta" id="meta"></div>
       </div>
-      <p class="meta" id="meta"></p>
+
+      <div class="controls-bar">
+        <div class="search-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input id="search" type="search" placeholder="Search title, company, location, sector…" />
+        </div>
+        <div class="filter-group">
+          <select id="sourceFilter">
+            <option value="all">All Sources</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="indeed">Indeed</option>
+            <option value="angellist">AngelList</option>
+            <option value="glassdoor">Glassdoor</option>
+            <option value="remoteok">RemoteOK</option>
+            <option value="jobicy">Jobicy</option>
+            <option value="arbeitnow">Arbeitnow</option>
+            <option value="startupjobs">StartupJobs.in</option>
+            <option value="nse">NSE/BSE Filings</option>
+            <option value="search firm">Search Firm</option>
+          </select>
+          <select id="locationFilter">
+            <option value="all">All Locations</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="remote">Remote</option>
+          </select>
+          <select id="salaryFilter">
+            <option value="all">Any Salary</option>
+            <option value="60">₹60L+</option>
+            <option value="80">₹80L+</option>
+            <option value="100">₹100L+</option>
+            <option value="120">₹120L+</option>
+          </select>
+          <select id="statusFilter">
+            <option value="all">All Tracker Statuses</option>
+            <option value="shortlist">Shortlist</option>
+            <option value="applied">Applied</option>
+            <option value="networking">Networking</option>
+            <option value="interview">Interview</option>
+            <option value="archived">Archived</option>
+            <option value="untracked">Untracked</option>
+          </select>
+        </div>
+      </div>
     </header>
 
     <main>
-      <section>
-        <h2>Executive / Advisory Roles (Telecom, Data Center, Connectivity)</h2>
+      <section class="jobs-section">
+        <div class="section-title">
+          <i class="fa-solid fa-star"></i>
+          <h2>Executive / Advisory Roles</h2>
+          <span class="count-badge" id="executiveCount">0</span>
+        </div>
         <div id="executiveList" class="card-grid"></div>
       </section>
 
-      <section>
-        <h2>Board / Independent Director Signals</h2>
+      <section class="jobs-section">
+        <div class="section-title">
+          <i class="fa-solid fa-landmark"></i>
+          <h2>Board / Independent Director Signals</h2>
+          <span class="count-badge" id="boardCount">0</span>
+        </div>
         <div id="boardList" class="card-grid"></div>
       </section>
     </main>
 
     <template id="opportunityTemplate">
       <article class="card">
-        <h3 class="title"></h3>
-        <p class="company"></p>
-        <p class="details"></p>
-        <p class="source"></p>
-        <p class="score"></p>
-        <a class="link" target="_blank" rel="noopener noreferrer">Open Source Link</a>
-        <div class="tracker">
-          <label>
-            Tracker status
-            <select class="tracker-status">
-              <option value="">Untracked</option>
-              <option value="shortlist">Shortlist</option>
-              <option value="applied">Applied</option>
-              <option value="networking">Networking</option>
-              <option value="interview">Interview</option>
-              <option value="archived">Archived</option>
-            </select>
-          </label>
-          <label>
-            Notes
-            <textarea class="tracker-notes" rows="3" placeholder="Add networking notes, next steps, contacts..."></textarea>
+        <div class="card-header">
+          <div class="card-logo-wrap">
+            <img class="company-logo" src="" alt="" loading="lazy" />
+            <div class="company-logo-fallback"><i class="fa-solid fa-building"></i></div>
+          </div>
+          <div class="card-header-info">
+            <div class="card-company-row">
+              <span class="company-name"></span>
+              <span class="card-location"><i class="fa-solid fa-location-dot"></i> <span class="location-text"></span></span>
+            </div>
+            <div class="card-source-row">
+              <span class="source-badge"><i class="fa-solid fa-circle-nodes"></i> <span class="source-text"></span></span>
+              <span class="posted-date"><i class="fa-regular fa-clock"></i> <span class="posted-text"></span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <h3 class="job-title"></h3>
+          <div class="job-meta-row">
+            <span class="job-type-badge"></span>
+            <span class="sector-badge"></span>
+          </div>
+          <p class="job-description"></p>
+        </div>
+
+        <div class="card-salary-row">
+          <span class="salary-badge"><i class="fa-solid fa-indian-rupee-sign"></i> <span class="salary-text"></span></span>
+          <span class="relevance-badge"><i class="fa-solid fa-bullseye"></i> <span class="relevance-text"></span>% match</span>
+        </div>
+
+        <div class="card-engagement">
+          <span class="views-count"><i class="fa-regular fa-eye"></i> <span class="views-text"></span> views</span>
+          <span class="applicants-count"><i class="fa-solid fa-users"></i> <span class="applicants-text"></span> applicants</span>
+        </div>
+
+        <div class="card-actions">
+          <button class="btn-save"><i class="fa-regular fa-bookmark"></i> Save</button>
+          <a class="btn-apply" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-bolt"></i> Easy Apply</a>
+          <button class="btn-share" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+        </div>
+
+        <div class="card-tracker">
+          <div class="tracker-row">
+            <label class="tracker-label">
+              <i class="fa-solid fa-list-check"></i> Tracker
+              <select class="tracker-status">
+                <option value="">Untracked</option>
+                <option value="shortlist">⭐ Shortlist</option>
+                <option value="applied">✅ Applied</option>
+                <option value="networking">🤝 Networking</option>
+                <option value="interview">💬 Interview</option>
+                <option value="archived">📁 Archived</option>
+              </select>
+            </label>
+          </div>
+          <label class="notes-label">
+            <i class="fa-solid fa-note-sticky"></i> Notes
+            <textarea class="tracker-notes" rows="2" placeholder="Networking notes, contacts, next steps…"></textarea>
           </label>
         </div>
       </article>
