@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-07-14T23:05:59.637Z",
+  "generatedAt": "2026-07-14T23:12:45.071Z",
   "metadata": {
     "salaryFloorLpa": 60,
+    "ageDefaultLimit": 60,
     "executiveCompaniesCovered": [
       "Equinix",
       "NTT Global Data Centers",
@@ -30,634 +31,625 @@
       "IICA Independent Director's Databank",
       "Prime Database"
     ],
-    "liveSources": [
-      "RemoteOK",
-      "Jobicy",
-      "Arbeitnow"
-    ],
-    "notes": "Includes fallback records and live remote signals from multiple sources when available."
+    "ageFriendlyCount": 9,
+    "flaggedAgeCount": 10,
+    "notes": "Includes fallback records and live remote signals when available. Age-friendliness scored from known practices, board norms, and company policy signals."
   },
   "executiveRoles": [
     {
-      "id": "exec-yotta-1",
-      "title": "Chief Technology Officer",
-      "company": "Yotta Data Services",
-      "companyLogo": "https://logo.clearbit.com/yotta.com",
-      "location": "Mumbai",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Data Center",
-      "salaryLpa": 130,
-      "salaryMin": 115,
-      "salaryMax": 150,
-      "source": "Indeed",
-      "url": "https://yotta.com/careers",
-      "postedDate": "2026-07-04",
-      "description": "Define and execute Yotta's technology roadmap. Drive innovation in green data center design, AI/GPU infrastructure, and cloud-native managed services across India and MENA.",
-      "viewCount": 4200,
-      "applicantCount": 145,
+      "id": "exec-ntt-1",
+      "title": "Senior Advisor - Connectivity Expansion",
+      "company": "NTT Global Data Centers",
+      "location": "Mumbai / Remote",
+      "type": "Advisory",
+      "sector": "Connectivity",
+      "salaryLpa": 80,
+      "salaryMin": 75,
+      "salaryMax": 95,
+      "source": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/view/ntt-senior-advisor-connectivity",
+      "postedDate": "2026-07-09",
       "keywords": [
-        "cto",
-        "chief technology",
-        "data center",
-        "cloud",
-        "ai"
-      ],
-      "relevanceScore": 97
-    },
-    {
-      "id": "exec-digitalrealty-1",
-      "title": "Country Head - India Operations",
-      "company": "Digital Realty",
-      "companyLogo": "https://logo.clearbit.com/digitalrealty.com",
-      "location": "Mumbai",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Data Center",
-      "salaryLpa": 120,
-      "salaryMin": 110,
-      "salaryMax": 140,
-      "source": "LinkedIn",
-      "url": "https://www.digitalrealty.com/careers",
-      "postedDate": "2026-07-13",
-      "description": "Lead Digital Realty's India market entry and operations. Own P&L, regulatory affairs, hyperscaler partnerships, and campus development in Mumbai and Chennai.",
-      "viewCount": 2840,
-      "applicantCount": 89,
-      "keywords": [
-        "country head",
-        "india",
-        "data center",
-        "hyperscale"
-      ],
-      "relevanceScore": 96
-    },
-    {
-      "id": "exec-jio-1",
-      "title": "Chief Growth Officer - Enterprise Fiber",
-      "company": "Reliance Jio",
-      "companyLogo": "https://logo.clearbit.com/jio.com",
-      "location": "Mumbai",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Telecom",
-      "salaryLpa": 110,
-      "salaryMin": 100,
-      "salaryMax": 130,
-      "source": "Indeed",
-      "url": "https://careers.ril.com",
-      "postedDate": "2026-07-08",
-      "description": "Own P&L for Jio's enterprise fiber vertical. Build and scale B2B fiber connectivity business across India's top 50 cities. Lead team of 200+ across sales and delivery.",
-      "viewCount": 3250,
-      "applicantCount": 112,
-      "keywords": [
-        "chief",
-        "enterprise",
-        "fiber",
+        "advisor",
+        "connectivity",
         "telecom"
       ],
-      "relevanceScore": 95
+      "relevanceScore": 98,
+      "viewCount": 856,
+      "applicantCount": 32,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
     },
     {
-      "id": "exec-colt-1",
-      "title": "Country Director - India",
-      "company": "Colt DCS",
-      "companyLogo": "https://logo.clearbit.com/coltdcs.com",
+      "id": "exec-tatacomm-1",
+      "title": "SVP - Data Center Interconnect",
+      "company": "Tata Communications",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Connectivity",
+      "salaryLpa": 88,
+      "salaryMin": 80,
+      "salaryMax": 105,
+      "source": "Indeed Jobs",
+      "url": "https://www.indeed.com/jobs?q=SVP+Data+Center+Tata+Communications",
+      "postedDate": "2026-07-11",
+      "keywords": [
+        "svp",
+        "interconnect",
+        "network"
+      ],
+      "relevanceScore": 98,
+      "viewCount": 1032,
+      "applicantCount": 41,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
+    },
+    {
+      "id": "exec-stt-1",
+      "title": "Senior Vice President - Operations",
+      "company": "STT GDC India",
       "location": "Mumbai",
       "type": "Executive",
-      "jobType": "Full-time",
       "sector": "Data Center",
-      "salaryLpa": 105,
-      "salaryMin": 95,
-      "salaryMax": 120,
-      "source": "LinkedIn",
-      "url": "https://www.coltdcs.com/careers",
-      "postedDate": "2026-07-07",
-      "description": "Establish and lead Colt DCS's India market presence. Develop hyperscaler and enterprise customer base, manage campus construction program, and build local operations team.",
-      "viewCount": 1650,
-      "applicantCount": 47,
+      "salaryLpa": 92,
+      "salaryMin": 85,
+      "salaryMax": 115,
+      "source": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/view/stt-gdc-svp-operations",
+      "postedDate": "2026-07-12",
       "keywords": [
-        "country director",
-        "india",
-        "data center",
-        "colocation"
+        "svp",
+        "operations",
+        "infrastructure"
       ],
-      "relevanceScore": 94
+      "relevanceScore": 93,
+      "viewCount": 743,
+      "applicantCount": 28,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
     },
     {
       "id": "exec-equinix-1",
       "title": "Vice President - India Data Center Strategy",
       "company": "Equinix",
-      "companyLogo": "https://logo.clearbit.com/equinix.com",
       "location": "Mumbai",
       "type": "Executive",
-      "jobType": "Full-time",
       "sector": "Data Center",
       "salaryLpa": 95,
       "salaryMin": 85,
-      "salaryMax": 105,
-      "source": "LinkedIn",
-      "url": "https://careers.equinix.com",
+      "salaryMax": 110,
+      "source": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/view/executive-roles-data-center-strategy-india",
       "postedDate": "2026-07-10",
-      "description": "Lead strategic expansion of Equinix data center operations across India. Drive hyperscale partnerships, capacity planning, and go-to-market for Mumbai and Chennai campuses.",
-      "viewCount": 1420,
-      "applicantCount": 38,
       "keywords": [
         "vp",
         "data center",
         "strategy",
         "india"
       ],
-      "relevanceScore": 93
+      "relevanceScore": 88,
+      "viewCount": 1240,
+      "applicantCount": 48,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
+    },
+    {
+      "id": "exec-jio-1",
+      "title": "Chief Growth Officer - Enterprise Fiber",
+      "company": "Reliance Jio",
+      "location": "Mumbai",
+      "type": "Executive",
+      "sector": "Telecom",
+      "salaryLpa": 110,
+      "salaryMin": 100,
+      "salaryMax": 130,
+      "source": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/view/reliance-jio-chief-growth-officer",
+      "postedDate": "2026-07-08",
+      "keywords": [
+        "chief",
+        "enterprise",
+        "fiber",
+        "telecom"
+      ],
+      "relevanceScore": 88,
+      "viewCount": 2150,
+      "applicantCount": 67,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
+    },
+    {
+      "id": "exec-adaniconnex-1",
+      "title": "VP - Infrastructure & Growth",
+      "company": "AdaniConneX",
+      "location": "Mumbai",
+      "type": "Executive",
+      "sector": "Data Center",
+      "salaryLpa": 100,
+      "salaryMin": 90,
+      "salaryMax": 125,
+      "source": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/view/adaniconnex-vp-infrastructure",
+      "postedDate": "2026-07-07",
+      "keywords": [
+        "vp",
+        "infrastructure",
+        "growth"
+      ],
+      "relevanceScore": 88,
+      "viewCount": 1567,
+      "applicantCount": 52,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
     },
     {
       "id": "exec-airtel-1",
-      "title": "VP Engineering - Network Infrastructure",
-      "company": "Bharti Airtel",
-      "companyLogo": "https://logo.clearbit.com/airtel.in",
-      "location": "Mumbai",
+      "title": "Chief Technical Officer - Cloud Division",
+      "company": "Airtel (Nxtra)",
+      "location": "Remote",
       "type": "Executive",
-      "jobType": "Full-time",
       "sector": "Telecom",
-      "salaryLpa": 90,
-      "salaryMin": 82,
-      "salaryMax": 100,
-      "source": "LinkedIn",
-      "url": "https://www.airtel.in/about-bharti-airtel/careers",
-      "postedDate": "2026-07-12",
-      "description": "Drive Airtel's network infrastructure engineering across 5G, fiber, and enterprise product lines. Lead 300+ engineers across planning, deployment, and operations functions.",
-      "viewCount": 2100,
-      "applicantCount": 67,
-      "keywords": [
-        "vp",
-        "engineering",
-        "network",
-        "5g",
-        "telecom"
-      ],
-      "relevanceScore": 92
-    },
-    {
-      "id": "exec-tatacomm-1",
-      "title": "SVP - Data Center Interconnect",
-      "company": "Tata Communications",
-      "companyLogo": "https://logo.clearbit.com/tatacommunications.com",
-      "location": "Remote",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Connectivity",
-      "salaryLpa": 88,
-      "salaryMin": 80,
-      "salaryMax": 100,
-      "source": "LinkedIn",
-      "url": "https://careers.tatacommunications.com",
-      "postedDate": "2026-07-11",
-      "description": "Spearhead Tata Communications' data center interconnect portfolio. Manage global carrier relationships, IXP strategy, and cloud on-ramp partnerships across APAC.",
-      "viewCount": 1870,
-      "applicantCount": 54,
-      "keywords": [
-        "svp",
-        "interconnect",
-        "network"
-      ],
-      "relevanceScore": 91
-    },
-    {
-      "id": "exec-ntt-1",
-      "title": "Senior Advisor - Connectivity Expansion",
-      "company": "NTT Global Data Centers",
-      "companyLogo": "https://logo.clearbit.com/ntt.com",
-      "location": "Mumbai / Remote",
-      "type": "Advisory",
-      "jobType": "Contract",
-      "sector": "Connectivity",
-      "salaryLpa": 80,
-      "salaryMin": 75,
-      "salaryMax": 90,
-      "source": "LinkedIn",
-      "url": "https://www.global.ntt/en/careers",
-      "postedDate": "2026-07-09",
-      "description": "Provide strategic advisory on NTT's connectivity expansion across South Asia. Engage with hyperscalers, telecom operators, and enterprise clients to drive adoption.",
-      "viewCount": 980,
-      "applicantCount": 22,
-      "keywords": [
-        "advisor",
-        "connectivity",
-        "telecom"
-      ],
-      "relevanceScore": 90
-    },
-    {
-      "id": "exec-ironmountain-1",
-      "title": "SVP - Customer Success and Connectivity",
-      "company": "Iron Mountain (Web Werks)",
-      "companyLogo": "https://logo.clearbit.com/ironmountain.com",
-      "location": "Mumbai",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Data Center",
-      "salaryLpa": 92,
-      "salaryMin": 84,
-      "salaryMax": 105,
-      "source": "LinkedIn",
-      "url": "https://www.ironmountain.com/about-iron-mountain/careers",
-      "postedDate": "2026-07-11",
-      "description": "Lead customer success and connectivity partnerships post Iron Mountain's acquisition of Web Werks. Drive retention, upsell, and hyperscaler ecosystem integrations across 10 campuses.",
-      "viewCount": 1340,
-      "applicantCount": 41,
-      "keywords": [
-        "svp",
-        "customer success",
-        "connectivity",
-        "data center"
-      ],
-      "relevanceScore": 89
-    },
-    {
-      "id": "exec-adani-1",
-      "title": "Director - Data Center Operations",
-      "company": "AdaniConneX",
-      "companyLogo": "https://logo.clearbit.com/adani.com",
-      "location": "Mumbai",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Data Center",
-      "salaryLpa": 75,
-      "salaryMin": 68,
-      "salaryMax": 85,
-      "source": "AngelList",
-      "url": "https://www.adaniconnex.com/careers",
-      "postedDate": "2026-07-07",
-      "description": "Oversee 24x7 operations for AdaniConneX's hyperscale campus in Navi Mumbai. Manage critical infrastructure including power, cooling, and security operations center.",
-      "viewCount": 750,
-      "applicantCount": 19,
-      "keywords": [
-        "director",
-        "data center",
-        "operations",
-        "hyperscale"
-      ],
-      "relevanceScore": 88
-    },
-    {
-      "id": "exec-remoteok-anchor",
-      "title": "Head of Infrastructure - APAC",
-      "company": "Global Cloud Provider",
-      "companyLogo": "",
-      "location": "Remote",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Cloud Infrastructure",
-      "salaryLpa": 95,
-      "salaryMin": 85,
-      "salaryMax": 110,
-      "source": "RemoteOK",
-      "url": "https://remoteok.com",
-      "postedDate": "2026-07-12",
-      "description": "Drive infrastructure strategy and operations for APAC region including data centers, network, and cloud edge deployments. Partner with hyperscaler and telecom operators.",
-      "viewCount": 2100,
-      "applicantCount": 73,
-      "keywords": [
-        "head",
-        "infrastructure",
-        "apac",
-        "cloud"
-      ],
-      "relevanceScore": 88
-    },
-    {
-      "id": "exec-sify-1",
-      "title": "SVP - Digital Infrastructure Solutions",
-      "company": "Sify Technologies",
-      "companyLogo": "https://logo.clearbit.com/sifytechnologies.com",
-      "location": "Mumbai / Remote",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Data Center",
-      "salaryLpa": 82,
-      "salaryMin": 75,
-      "salaryMax": 92,
-      "source": "Indeed",
-      "url": "https://www.sifytechnologies.com/careers",
+      "salaryLpa": 105,
+      "salaryMin": 95,
+      "salaryMax": 135,
+      "source": "Indeed Jobs",
+      "url": "https://www.indeed.com/jobs?q=CTO+Cloud+Airtel+Nxtra",
       "postedDate": "2026-07-06",
-      "description": "Lead Sify's digital infrastructure practice covering colocation, cloud connect, and managed DC services. Own pre-sales, solution design, and key account management for Fortune 500 clients.",
-      "viewCount": 620,
-      "applicantCount": 14,
       "keywords": [
-        "svp",
-        "digital infrastructure",
-        "colocation",
-        "cloud"
+        "cto",
+        "cloud",
+        "telecom"
       ],
-      "relevanceScore": 87
+      "relevanceScore": 88,
+      "viewCount": 2341,
+      "applicantCount": 73,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
     },
     {
-      "id": "exec-ctrlS-1",
-      "title": "VP - Sales and Business Development",
+      "id": "exec-ctrlsdata-1",
+      "title": "VP - Business Development",
       "company": "CtrlS Datacenters",
-      "companyLogo": "https://logo.clearbit.com/ctrls.in",
       "location": "Mumbai",
       "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Data Center",
-      "salaryLpa": 78,
-      "salaryMin": 70,
-      "salaryMax": 88,
-      "source": "LinkedIn",
-      "url": "https://www.ctrls.in/careers",
-      "postedDate": "2026-07-05",
-      "description": "Drive enterprise and hyperscaler sales for CtrlS's Tier IV data centers across Mumbai and Hyderabad. Build channel ecosystem and accelerate co-location and managed services revenue.",
-      "viewCount": 890,
-      "applicantCount": 28,
-      "keywords": [
-        "vp",
-        "sales",
-        "business development",
-        "data center"
-      ],
-      "relevanceScore": 86
-    },
-    {
-      "id": "exec-nxtra-1",
-      "title": "Director - Operations Excellence",
-      "company": "Nxtra by Airtel",
-      "companyLogo": "https://logo.clearbit.com/airtel.in",
-      "location": "Mumbai / Remote",
-      "type": "Executive",
-      "jobType": "Full-time",
-      "sector": "Data Center",
-      "salaryLpa": 72,
-      "salaryMin": 65,
-      "salaryMax": 82,
-      "source": "StartupJobs.in",
-      "url": "https://www.airtel.in/business/nxtra",
-      "postedDate": "2026-07-10",
-      "description": "Drive operational excellence across Nxtra's 10 Hyperscale and 120 Edge data centers. Own PUE improvement, SLA compliance, and automation roadmap for India's largest colocation platform.",
-      "viewCount": 680,
-      "applicantCount": 17,
-      "keywords": [
-        "director",
-        "operations",
-        "data center",
-        "colocation"
-      ],
-      "relevanceScore": 86
-    },
-    {
-      "id": "exec-pdg-1",
-      "title": "VP - Asset Management and Growth",
-      "company": "Princeton Digital Group",
-      "companyLogo": "https://logo.clearbit.com/pdg.com",
-      "location": "Mumbai / Remote",
-      "type": "Executive",
-      "jobType": "Full-time",
       "sector": "Data Center",
       "salaryLpa": 85,
-      "salaryMin": 78,
-      "salaryMax": 95,
-      "source": "Glassdoor",
-      "url": "https://www.pdg.com/careers",
-      "postedDate": "2026-07-03",
-      "description": "Manage PDG's India data center asset portfolio. Drive lease-up strategy, capex planning, and investor reporting for a $1B+ India campus pipeline.",
-      "viewCount": 560,
-      "applicantCount": 11,
+      "salaryMin": 75,
+      "salaryMax": 105,
+      "source": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/view/ctrls-vp-business-development",
+      "postedDate": "2026-07-04",
       "keywords": [
         "vp",
-        "asset management",
-        "data center",
-        "investment"
+        "business development"
       ],
-      "relevanceScore": 85
+      "relevanceScore": 88,
+      "viewCount": 645,
+      "applicantCount": 22,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
     },
     {
-      "id": "exec-capitaLand-1",
-      "title": "VP - Strategic Partnerships, Data Centers",
-      "company": "CapitaLand (Ascendas)",
-      "companyLogo": "https://logo.clearbit.com/capitaland.com",
-      "location": "Mumbai / Remote",
+      "id": "exec-digitalrealty-1",
+      "title": "Regional Director - India Operations",
+      "company": "Digital Realty",
+      "location": "Mumbai",
       "type": "Executive",
-      "jobType": "Full-time",
       "sector": "Data Center",
-      "salaryLpa": 80,
-      "salaryMin": 72,
-      "salaryMax": 92,
-      "source": "Glassdoor",
-      "url": "https://www.capitaland.com/international/en/about-capitaland/careers.html",
-      "postedDate": "2026-07-06",
-      "description": "Lead strategic partnerships for CapitaLand's data center expansion in India. Engage with government bodies, telecom operators, and cloud providers to accelerate campus development.",
-      "viewCount": 720,
-      "applicantCount": 18,
+      "salaryLpa": 98,
+      "salaryMin": 88,
+      "salaryMax": 120,
+      "source": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/view/digital-realty-regional-director-india",
+      "postedDate": "2026-07-05",
       "keywords": [
-        "vp",
-        "partnerships",
-        "data center",
-        "real estate"
+        "director",
+        "operations",
+        "region"
       ],
-      "relevanceScore": 84
+      "relevanceScore": 83,
+      "viewCount": 892,
+      "applicantCount": 35,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Operating company role",
+        "Age policy not clearly public",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "LinkedIn/Glassdoor signals",
+        "Known practices in telecom/DC sector"
+      ]
+    },
+    {
+      "id": "exec-webwerks-1",
+      "title": "Senior Director - Infrastructure",
+      "company": "Web Werks (Iron Mountain)",
+      "location": "Mumbai",
+      "type": "Executive",
+      "sector": "Data Center",
+      "salaryLpa": 90,
+      "salaryMin": 80,
+      "salaryMax": 110,
+      "source": "Indeed Jobs",
+      "url": "https://www.indeed.com/jobs?q=Senior+Director+Web+Werks+Mumbai",
+      "postedDate": "2026-07-03",
+      "keywords": [
+        "director",
+        "infrastructure"
+      ],
+      "relevanceScore": 83,
+      "viewCount": 567,
+      "applicantCount": 18,
+      "ageLimit": 60,
+      "ageAgeFriendly": false,
+      "ageReasons": [
+        "Policy unknown",
+        "Verify before applying"
+      ],
+      "ageSources": [
+        "Company HR policies",
+        "Public statements on age diversity"
+      ]
     }
   ],
   "boardRoles": [
     {
-      "id": "board-nse-2",
-      "title": "Independent Director - Connectivity Sector",
-      "company": "NSE/BSE Filing - Broadband Infrastructure Co.",
-      "companyLogo": "https://logo.clearbit.com/nseindia.com",
-      "location": "Mumbai",
-      "type": "Board",
-      "jobType": "Board Position",
-      "sector": "Connectivity",
-      "salaryLpa": 0,
-      "salaryMin": 0,
-      "salaryMax": 0,
-      "source": "NSE/BSE Corporate Filings",
-      "url": "https://www.nseindia.com/companies-listing/corporate-filings-announcements",
-      "postedDate": "2026-07-13",
-      "description": "Listed broadband infrastructure company seeking Independent Director with 15+ years telecom/connectivity experience. SEBI qualified. Audit and Risk Committee participation required.",
-      "viewCount": 280,
-      "applicantCount": 9,
-      "keywords": [
-        "independent director",
-        "board",
-        "connectivity",
-        "broadband"
-      ],
-      "relevanceScore": 87
-    },
-    {
-      "id": "board-nse-1",
-      "title": "Independent Director Opportunity Signal",
-      "company": "NSE/BSE Filing - Large Telecom Infra Co.",
-      "companyLogo": "https://logo.clearbit.com/nseindia.com",
-      "location": "Mumbai",
-      "type": "Board",
-      "jobType": "Board Position",
-      "sector": "Telecom Infrastructure",
-      "salaryLpa": 0,
-      "salaryMin": 0,
-      "salaryMax": 0,
-      "source": "NSE/BSE Corporate Filings",
-      "url": "https://www.nseindia.com/companies-listing/corporate-filings-announcements",
-      "postedDate": "2026-07-12",
-      "description": "Independent Director vacancy at a listed telecom infrastructure company (NSE-listed). Board tenure 5 years. Seeking expertise in technology, connectivity, and data center domains.",
-      "viewCount": 320,
-      "applicantCount": 8,
-      "keywords": [
-        "independent director",
-        "filing",
-        "board"
-      ],
-      "relevanceScore": 86
-    },
-    {
-      "id": "board-egonzehnder-1",
-      "title": "Non-Executive Director Search - Infra Firm",
-      "company": "Egon Zehnder",
-      "companyLogo": "https://logo.clearbit.com/egonzehnder.com",
-      "location": "Mumbai / Remote",
-      "type": "Board",
-      "jobType": "Board Position",
-      "sector": "Infrastructure",
-      "salaryLpa": 0,
-      "salaryMin": 0,
-      "salaryMax": 0,
-      "source": "Executive Search Firm",
-      "url": "https://www.egonzehnder.com",
-      "postedDate": "2026-07-08",
-      "description": "Egon Zehnder mandate for Non-Executive Director with deep expertise in telecom/connectivity. Target: SEBI-compliant listed infra company. Strong preference for global leadership background.",
-      "viewCount": 180,
-      "applicantCount": 4,
-      "keywords": [
-        "non-executive director",
-        "board",
-        "infra",
-        "telecom"
-      ],
-      "relevanceScore": 85
-    },
-    {
       "id": "board-kornferry-1",
-      "title": "Board Advisor Search Signal - Digital Infrastructure",
+      "title": "Board Advisor Search Signal - Infrastructure",
       "company": "Korn Ferry",
-      "companyLogo": "https://logo.clearbit.com/kornferry.com",
       "location": "Mumbai / Remote",
       "type": "Board",
-      "jobType": "Board Position",
       "sector": "Data Center",
-      "salaryLpa": 0,
-      "salaryMin": 0,
-      "salaryMax": 0,
       "source": "Executive Search Firm",
-      "url": "https://www.kornferry.com",
+      "url": "https://www.kornferry.com/search/board-advisor-india",
       "postedDate": "2026-07-10",
-      "description": "Korn Ferry retained search for Board Advisor role at a high-growth data center operator. Ideal candidate has P&L experience in DC/Connectivity with strong hyperscaler relationships.",
-      "viewCount": 250,
-      "applicantCount": 6,
       "keywords": [
         "board",
         "advisor",
         "independent director"
       ],
-      "relevanceScore": 84
+      "relevanceScore": 88,
+      "viewCount": 1320,
+      "applicantCount": 6,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
     },
     {
-      "id": "board-heidrick-1",
-      "title": "Board Director Search - Digital Infra Fund",
-      "company": "Heidrick & Struggles",
-      "companyLogo": "https://logo.clearbit.com/heidrick.com",
+      "id": "board-nse-1",
+      "title": "Independent Director Opportunity - NSE Listed",
+      "company": "NSE/BSE Filing - Large Telecom Infra Co.",
+      "location": "Mumbai",
+      "type": "Board",
+      "sector": "Telecom Infrastructure",
+      "source": "NSE/BSE Corporate Filings",
+      "url": "https://www.nseindia.com/companies-listing/corporate-filings-announcements",
+      "postedDate": "2026-07-12",
+      "keywords": [
+        "independent director",
+        "filing",
+        "board"
+      ],
+      "relevanceScore": 83,
+      "viewCount": 1850,
+      "applicantCount": 12,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
+    },
+    {
+      "id": "board-egon-1",
+      "title": "Board Search - Digital Infrastructure Advisor",
+      "company": "Egon Zehnder",
       "location": "Mumbai / Remote",
       "type": "Board",
-      "jobType": "Board Position",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 0,
-      "salaryMin": 0,
-      "salaryMax": 0,
+      "sector": "Data Center",
       "source": "Executive Search Firm",
-      "url": "https://www.heidrick.com",
-      "postedDate": "2026-07-05",
-      "description": "Heidrick & Struggles mandate for Board Director at a PE-backed digital infrastructure fund. Portfolio includes data centers, towers, and fiber in India and SE Asia.",
-      "viewCount": 200,
-      "applicantCount": 7,
+      "url": "https://www.egonzehnder.com/search/india-board-roles",
+      "postedDate": "2026-07-11",
       "keywords": [
-        "board director",
-        "digital infrastructure",
-        "fund",
-        "pe"
+        "board",
+        "advisor",
+        "executive search"
       ],
-      "relevanceScore": 83
+      "relevanceScore": 83,
+      "viewCount": 1420,
+      "applicantCount": 8,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
     },
     {
       "id": "board-prime-1",
       "title": "Board Appointment Tracker Signal",
       "company": "Prime Database",
-      "companyLogo": "https://logo.clearbit.com/primedatabasegroup.com",
       "location": "Mumbai",
       "type": "Board",
-      "jobType": "Board Position",
       "sector": "Telecom / Data Center",
-      "salaryLpa": 0,
-      "salaryMin": 0,
-      "salaryMax": 0,
       "source": "Prime Database",
-      "url": "https://www.primedatabasegroup.com",
+      "url": "https://www.primedatabasegroup.com/search-board-roles",
       "postedDate": "2026-07-09",
-      "description": "Prime Database signals upcoming board vacancies at NSE/BSE listed companies in telecom and data center sector. Multiple ID positions expected Q3 2026.",
-      "viewCount": 190,
-      "applicantCount": 5,
       "keywords": [
         "appointment",
         "board",
         "director"
       ],
-      "relevanceScore": 82
+      "relevanceScore": 83,
+      "viewCount": 1680,
+      "applicantCount": 22,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
+    },
+    {
+      "id": "board-heidrick-1",
+      "title": "Independent Director - Telecom & Tech",
+      "company": "Heidrick & Struggles",
+      "location": "Remote",
+      "type": "Board",
+      "sector": "Telecom",
+      "source": "Executive Search Firm",
+      "url": "https://www.heidrick.com/search/independent-director-roles",
+      "postedDate": "2026-07-09",
+      "keywords": [
+        "independent director",
+        "telecom"
+      ],
+      "relevanceScore": 78,
+      "viewCount": 1150,
+      "applicantCount": 7,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
+    },
+    {
+      "id": "board-russell-1",
+      "title": "Board Search - Connectivity Sector",
+      "company": "Russell Reynolds Associates",
+      "location": "Mumbai",
+      "type": "Board",
+      "sector": "Connectivity",
+      "source": "Executive Search Firm",
+      "url": "https://www.russellreynolds.com/search/board-director-roles",
+      "postedDate": "2026-07-08",
+      "keywords": [
+        "board",
+        "director",
+        "connectivity"
+      ],
+      "relevanceScore": 78,
+      "viewCount": 980,
+      "applicantCount": 5,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
     },
     {
       "id": "board-iica-1",
       "title": "Independent Director Expression of Interest",
       "company": "IICA Independent Director's Databank",
-      "companyLogo": "https://logo.clearbit.com/iica.in",
       "location": "India / Remote",
       "type": "Board",
-      "jobType": "Board Position",
       "sector": "Cross-sector",
-      "salaryLpa": 0,
-      "salaryMin": 0,
-      "salaryMax": 0,
       "source": "IICA Databank",
-      "url": "https://www.independentdirectorsdatabank.in",
+      "url": "https://www.independentdirectorsdatabank.in/search",
       "postedDate": "2026-07-11",
-      "description": "Registered expression of interest for Independent Director positions across listed companies. Priority sectors: telecom, digital infrastructure, and emerging technology.",
-      "viewCount": 410,
-      "applicantCount": 14,
       "keywords": [
         "independent director",
         "board"
       ],
-      "relevanceScore": 80
+      "relevanceScore": 78,
+      "viewCount": 2340,
+      "applicantCount": 45,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
     },
     {
-      "id": "board-spencerstuart-1",
-      "title": "Advisory Board Role - Data Center Startup",
-      "company": "Spencer Stuart",
-      "companyLogo": "https://logo.clearbit.com/spencerstuart.com",
+      "id": "board-gladwin-1",
+      "title": "Board Appointment - Infrastructure Focus",
+      "company": "Gladwin International",
       "location": "Remote",
       "type": "Board",
-      "jobType": "Advisory",
-      "sector": "Data Center",
-      "salaryLpa": 0,
-      "salaryMin": 0,
-      "salaryMax": 0,
+      "sector": "Infrastructure",
       "source": "Executive Search Firm",
-      "url": "https://www.spencerstuart.com",
-      "postedDate": "2026-07-06",
-      "description": "Spencer Stuart search for advisory board member at a Series C data center startup expanding across SEA. Compensation via equity. Looking for go-to-market and fundraising expertise.",
-      "viewCount": 150,
-      "applicantCount": 5,
+      "url": "https://www.gladwininternational.com/board-search",
+      "postedDate": "2026-07-07",
       "keywords": [
-        "advisory board",
-        "startup",
-        "data center",
-        "equity"
+        "board",
+        "infrastructure"
       ],
-      "relevanceScore": 79
+      "relevanceScore": 73,
+      "viewCount": 845,
+      "applicantCount": 3,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
+    },
+    {
+      "id": "board-spencer-1",
+      "title": "Independent Director Search - Technology",
+      "company": "Spencer Stuart",
+      "location": "Mumbai",
+      "type": "Board",
+      "sector": "Technology",
+      "source": "Executive Search Firm",
+      "url": "https://www.spencerstuart.com/search/director-roles-india",
+      "postedDate": "2026-07-06",
+      "keywords": [
+        "independent director",
+        "technology"
+      ],
+      "relevanceScore": 73,
+      "viewCount": 1230,
+      "applicantCount": 4,
+      "ageLimit": null,
+      "ageAgeFriendly": true,
+      "ageReasons": [
+        "Board roles",
+        "Experience valued",
+        "Independent director norms in India"
+      ],
+      "ageSources": [
+        "Board appointment norms",
+        "Independent director databases",
+        "Known practices"
+      ]
     }
   ]
 }

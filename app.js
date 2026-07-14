@@ -1,17 +1,13 @@
 const DATA_URL = "./data/opportunities.json";
 const TRACKER_KEY = "dadsjobsearch_tracker_v1";
-const SAVES_KEY = "dadsjobsearch_saves_v1";
 const ITEMS_PER_PAGE = 10;
 
 const searchInput = document.getElementById("search");
-const sourceFilter = document.getElementById("sourceFilter");
 const locationFilter = document.getElementById("locationFilter");
-const salaryFilter = document.getElementById("salaryFilter");
 const statusFilter = document.getElementById("statusFilter");
+const ageFilter = document.getElementById("ageFilter");
 const executiveList = document.getElementById("executiveList");
 const boardList = document.getElementById("boardList");
-const executiveCount = document.getElementById("executiveCount");
-const boardCount = document.getElementById("boardCount");
 const template = document.getElementById("opportunityTemplate");
 const meta = document.getElementById("meta");
 
@@ -30,18 +26,6 @@ function writeTracker(data) {
   localStorage.setItem(TRACKER_KEY, JSON.stringify(data));
 }
 
-function readSaves() {
-  try {
-    return JSON.parse(localStorage.getItem(SAVES_KEY) || "{}");
-  } catch {
-    return {};
-  }
-}
-
-function writeSaves(data) {
-  localStorage.setItem(SAVES_KEY, JSON.stringify(data));
-}
-
 function getCombinedText(opportunity) {
   return [
     opportunity.title,
@@ -49,10 +33,33 @@ function getCombinedText(opportunity) {
     opportunity.location,
     opportunity.sector,
     opportunity.source,
-    opportunity.description,
+    ...(opportunity.ageReasons || []),
   ]
     .join(" ")
     .toLowerCase();
+}
+
+function ageFilterMatches(filter, opportunity) {
+  if (filter === "all") return true;
+  if (filter === "friendly") return opportunity.ageAgeFriendly === true;
+  if (filter === "flagged") return opportunity.ageAgeFriendly !== true;
+  return true;
+}
+
+function getAgePriority(opportunity) {
+  return opportunity.ageAgeFriendly === true ? 1 : 0;
+}
+
+function getAgeCounts() {
+  const all = [...(dataset.executiveRoles || []), ...(dataset.boardRoles || [])];
+  return all.reduce(
+    (acc, item) => {
+      if (item.ageAgeFriendly === true) acc.friendly += 1;
+      else acc.flagged += 1;
+      return acc;
+    },
+    { friendly: 0, flagged: 0 }
+  );
 }
 
 function statusMatches(selected, storedStatus) {
@@ -67,129 +74,31 @@ function locationMatches(filter, locationText) {
   return lower.includes(filter);
 }
 
-function sourceMatches(filter, source) {
-  if (filter === "all") return true;
-  return (source || "").toLowerCase().includes(filter.toLowerCase());
-}
-
-function salaryMatches(filter, opportunity) {
-  if (filter === "all") return true;
-  const floor = parseInt(filter, 10);
-  const salaryMin = opportunity.salaryMin || opportunity.salaryLpa || 0;
-  const salaryMax = opportunity.salaryMax || opportunity.salaryLpa || 0;
-  return salaryMax >= floor || salaryMin >= floor;
-}
-
-function formatSalary(opportunity) {
-  const min = opportunity.salaryMin || opportunity.salaryLpa;
-  const max = opportunity.salaryMax || opportunity.salaryLpa;
-  if (!min && !max) return "Board Role";
-  if (min === max || !max) return `₹${min}L`;
-  return `₹${min}L – ₹${max}L`;
-}
-
-function formatDate(dateStr) {
-  if (!dateStr) return "";
-  const d = new Date(dateStr);
-  const now = new Date();
-  const diffDays = Math.round((now - d) / (1000 * 60 * 60 * 24));
-  if (diffDays <= 0) return "Today";
-  if (diffDays === 1) return "1d ago";
-  if (diffDays < 30) return `${diffDays}d ago`;
-  if (diffDays < 60) return "1mo ago";
-  return `${Math.floor(diffDays / 30)}mo ago`;
-}
-
-function formatNumber(n) {
-  if (!n) return "0";
-  if (n >= 1000) return `${(n / 1000).toFixed(1)}k`;
-  return String(n);
-}
-
 function buildCard(opportunity) {
   const tracker = readTracker();
-  const saves = readSaves();
   const state = tracker[opportunity.id] || { status: "", notes: "" };
-  const isSaved = !!saves[opportunity.id];
-
   const node = template.content.firstElementChild.cloneNode(true);
 
-  // Status colour stripe
-  if (state.status) node.dataset.status = state.status;
-
-  // Logo
-  const logoImg = node.querySelector(".company-logo");
-  const logoFallback = node.querySelector(".company-logo-fallback");
-  if (opportunity.companyLogo) {
-    logoImg.src = opportunity.companyLogo;
-    logoImg.alt = opportunity.company || "";
-    logoImg.onerror = () => {
-      logoImg.style.display = "none";
-      logoFallback.style.display = "flex";
-    };
+  node.querySelector(".title").textContent = opportunity.title;
+  node.querySelector(".company").textContent = `${opportunity.company} · ${opportunity.location}`;
+  node.querySelector(".details").textContent = `${opportunity.type} · Sector: ${opportunity.sector} · Posted: ${opportunity.postedDate || "N/A"}`;
+  node.querySelector(".source").textContent = `Source: ${opportunity.source}`;
+  node.querySelector(".score").textContent = `Relevance: ${opportunity.relevanceScore ?? "N/A"}${opportunity.salaryLpa ? ` · Salary: ₹${opportunity.salaryLpa}L` : ""}`;
+  const ageBadge = node.querySelector(".age-badge");
+  const ageReasons = node.querySelector(".age-reasons");
+  if (opportunity.ageAgeFriendly === true) {
+    ageBadge.textContent = "✓ Age-Friendly 60+";
+    ageBadge.className = "age-badge age-friendly";
   } else {
-    logoImg.style.display = "none";
+    ageBadge.textContent = "⚠️ May have age limits";
+    ageBadge.className = "age-badge age-flagged";
   }
+  const reasons = (opportunity.ageReasons || []).join(", ");
+  ageReasons.textContent = reasons ? `Why: ${reasons}` : "";
 
-  // Header info
-  node.querySelector(".company-name").textContent = opportunity.company || "";
-  node.querySelector(".location-text").textContent = opportunity.location || "";
-  node.querySelector(".source-text").textContent = `Via: ${opportunity.source || "Unknown"}`;
-  node.querySelector(".posted-text").textContent = formatDate(opportunity.postedDate);
+  const link = node.querySelector(".link");
+  link.href = opportunity.url;
 
-  // Body
-  node.querySelector(".job-title").textContent = opportunity.title || "";
-  node.querySelector(".job-type-badge").textContent = opportunity.jobType || opportunity.type || "";
-  node.querySelector(".sector-badge").textContent = opportunity.sector || "";
-  node.querySelector(".job-description").textContent = opportunity.description || "";
-
-  // Salary & relevance
-  node.querySelector(".salary-text").textContent = formatSalary(opportunity);
-  node.querySelector(".relevance-text").textContent = opportunity.relevanceScore ?? "N/A";
-
-  // Engagement
-  node.querySelector(".views-text").textContent = formatNumber(opportunity.viewCount);
-  node.querySelector(".applicants-text").textContent = formatNumber(opportunity.applicantCount);
-
-  // Save button
-  const saveBtn = node.querySelector(".btn-save");
-  if (isSaved) {
-    saveBtn.classList.add("saved");
-    saveBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Saved';
-  }
-  saveBtn.addEventListener("click", () => {
-    const currentSaves = readSaves();
-    if (currentSaves[opportunity.id]) {
-      delete currentSaves[opportunity.id];
-      saveBtn.classList.remove("saved");
-      saveBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i> Save';
-    } else {
-      currentSaves[opportunity.id] = { savedAt: new Date().toISOString() };
-      saveBtn.classList.add("saved");
-      saveBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i> Saved';
-    }
-    writeSaves(currentSaves);
-  });
-
-  // Apply button
-  const applyBtn = node.querySelector(".btn-apply");
-  applyBtn.href = opportunity.url || "#";
-
-  // Share button
-  const shareBtn = node.querySelector(".btn-share");
-  shareBtn.addEventListener("click", () => {
-    const text = `${opportunity.title} at ${opportunity.company} — ${opportunity.url || window.location.href}`;
-    if (navigator.share) {
-      navigator.share({ title: opportunity.title, text, url: opportunity.url || window.location.href }).catch(() => {});
-    } else if (navigator.clipboard) {
-      navigator.clipboard.writeText(text).then(() => {
-        shareBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
-        setTimeout(() => { shareBtn.innerHTML = '<i class="fa-solid fa-share-nodes"></i>'; }, 1500);
-      });
-    }
-  });
-
-  // Tracker
   const statusEl = node.querySelector(".tracker-status");
   const notesEl = node.querySelector(".tracker-notes");
   statusEl.value = state.status || "";
@@ -203,7 +112,7 @@ function buildCard(opportunity) {
       updatedAt: new Date().toISOString(),
     };
     writeTracker(next);
-    node.dataset.status = statusEl.value;
+    render();
   };
 
   statusEl.addEventListener("change", save);
@@ -215,16 +124,14 @@ function buildCard(opportunity) {
 function applyFilters(list) {
   const q = searchInput.value.trim().toLowerCase();
   const tracker = readTracker();
-  const salaryVal = salaryFilter.value;
   return list.filter((item) => {
     const status = tracker[item.id]?.status || "";
     const queryMatches = !q || getCombinedText(item).includes(q);
     return (
       queryMatches &&
-      sourceMatches(sourceFilter.value, item.source) &&
       locationMatches(locationFilter.value, item.location) &&
-      salaryMatches(salaryVal, item) &&
-      statusMatches(statusFilter.value, status)
+      statusMatches(statusFilter.value, status) &&
+      ageFilterMatches(ageFilter.value, item)
     );
   });
 }
@@ -235,7 +142,7 @@ function paginate(items, page) {
   return items.slice(start, end);
 }
 
-function createPaginationControls(totalItems, page, type) {
+function createPaginationControls(totalItems, currentPage, type) {
   const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
   if (totalPages <= 1) return null;
 
@@ -243,28 +150,26 @@ function createPaginationControls(totalItems, page, type) {
   controls.className = "pagination";
 
   const prevBtn = document.createElement("button");
-  prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i> Previous';
-  prevBtn.disabled = page === 1;
+  prevBtn.textContent = "← Previous";
+  prevBtn.disabled = currentPage === 1;
   prevBtn.addEventListener("click", () => {
-    if (currentPage[type] > 1) {
-      currentPage[type]--;
+    if (currentPage > 1) {
+      currentPage[type] = currentPage - 1;
       render();
-      document.querySelector(`.jobs-section:has(#${type}List)`)?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 
   const pageInfo = document.createElement("span");
   pageInfo.className = "page-info";
-  pageInfo.textContent = `${page} / ${totalPages}`;
+  pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
 
   const nextBtn = document.createElement("button");
-  nextBtn.innerHTML = 'Next <i class="fa-solid fa-chevron-right"></i>';
-  nextBtn.disabled = page === totalPages;
+  nextBtn.textContent = "Next →";
+  nextBtn.disabled = currentPage === totalPages;
   nextBtn.addEventListener("click", () => {
-    if (currentPage[type] < totalPages) {
-      currentPage[type]++;
+    if (currentPage < totalPages) {
+      currentPage[type] = currentPage + 1;
       render();
-      document.querySelector(`.jobs-section:has(#${type}List)`)?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
 
@@ -274,16 +179,10 @@ function createPaginationControls(totalItems, page, type) {
   return controls;
 }
 
-function renderList(container, items, emptyText, type, countEl) {
+function renderList(container, items, emptyText, type) {
   container.innerHTML = "";
-
-  if (countEl) countEl.textContent = items.length;
-
   if (!items.length) {
-    const empty = document.createElement("div");
-    empty.className = "empty-state";
-    empty.innerHTML = `<i class="fa-solid fa-inbox"></i><p>${emptyText}</p>`;
-    container.appendChild(empty);
+    container.textContent = emptyText;
     return;
   }
 
@@ -293,15 +192,23 @@ function renderList(container, items, emptyText, type, countEl) {
   container.appendChild(fragment);
 
   const pagination = createPaginationControls(items.length, currentPage[type], type);
-  if (pagination) container.appendChild(pagination);
+  if (pagination) {
+    container.appendChild(pagination);
+  }
 }
 
 function render() {
-  const executive = applyFilters(dataset.executiveRoles || []);
-  const board = applyFilters(dataset.boardRoles || []);
+  const executive = applyFilters(dataset.executiveRoles || []).sort(
+    (a, b) => getAgePriority(b) - getAgePriority(a) || (b.relevanceScore || 0) - (a.relevanceScore || 0)
+  );
+  const board = applyFilters(dataset.boardRoles || []).sort(
+    (a, b) => getAgePriority(b) - getAgePriority(a) || (b.relevanceScore || 0) - (a.relevanceScore || 0)
+  );
+  const ageCounts = getAgeCounts();
+  meta.textContent = `Data generated: ${new Date(dataset.generatedAt).toLocaleString()} (${(dataset.executiveRoles || []).length} executive, ${(dataset.boardRoles || []).length} board) · ${ageCounts.friendly} age-friendly opportunities · ${ageCounts.flagged} flagged opportunities`;
 
-  renderList(executiveList, executive, "No executive opportunities match current filters.", "executive", executiveCount);
-  renderList(boardList, board, "No board signals match current filters.", "board", boardCount);
+  renderList(executiveList, executive, "No executive opportunities match current filters.", "executive");
+  renderList(boardList, board, "No board signals match current filters.", "board");
 }
 
 async function init() {
@@ -309,13 +216,11 @@ async function init() {
     const response = await fetch(DATA_URL, { cache: "no-store" });
     if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
     dataset = await response.json();
-    const genDate = dataset.generatedAt ? new Date(dataset.generatedAt).toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }) : "Unknown";
-    meta.textContent = `Updated: ${genDate} IST · ${(dataset.executiveRoles || []).length} executive · ${(dataset.boardRoles || []).length} board`;
   } catch (error) {
-    meta.textContent = `Unable to load data. ${error.message}`;
+    meta.textContent = `Unable to load data file. ${error.message}`;
   }
 
-  [searchInput, sourceFilter, locationFilter, salaryFilter, statusFilter].forEach((input) =>
+  [searchInput, locationFilter, statusFilter, ageFilter].forEach((input) =>
     input.addEventListener("input", () => {
       currentPage = { executive: 1, board: 1 };
       render();
