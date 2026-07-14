@@ -28,6 +28,11 @@
           <option value="archived">Archived</option>
           <option value="untracked">Untracked</option>
         </select>
+        <select id="ageFilter">
+          <option value="all">All opportunities</option>
+          <option value="friendly">Age-friendly (60+)</option>
+          <option value="flagged">Flagged age concerns</option>
+        </select>
       </div>
       <p class="meta" id="meta"></p>
     </header>
@@ -47,10 +52,12 @@
     <template id="opportunityTemplate">
       <article class="card">
         <h3 class="title"></h3>
+        <p class="age-badge"></p>
         <p class="company"></p>
         <p class="details"></p>
         <p class="source"></p>
         <p class="score"></p>
+        <p class="age-reasons"></p>
         <a class="link" target="_blank" rel="noopener noreferrer">Open Source Link</a>
         <div class="tracker">
           <label>
