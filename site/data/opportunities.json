@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-07-14T00:00:00.000Z",
+  "profile": {
+    "name": "Dad's Next-Innings Opportunity Radar",
+    "focus": [
+      "Senior telecom leadership",
+      "Data center and digital infrastructure",
+      "Executive advisory roles",
+      "Board and independent director seats"
+    ],
+    "preferredLocations": [
+      "Mumbai",
+      "India",
+      "Remote"
+    ]
+  },
+  "stats": {
+    "total": 0,
+    "executive": 0,
+    "board": 0,
+    "sources": 0
+  },
+  "alerts": [
+    "No live opportunities cached yet. Run the refresh workflow or npm run refresh-data to pull the latest matches."
+  ],
+  "searchLinks": {
+    "executive": [
+      {
+        "label": "Naukri: telecom executive roles in Mumbai",
+        "url": "https://www.naukri.com/telecom-executive-jobs-in-mumbai"
+      },
+      {
+        "label": "Naukri: data center leadership roles in Mumbai",
+        "url": "https://www.naukri.com/data-center-jobs-in-mumbai"
+      },
+      {
+        "label": "Bayt: data center jobs in Mumbai",
+        "url": "https://www.bayt.com/en/india/jobs/data-center-jobs-in-mumbai/"
+      },
+      {
+        "label": "Jobsora: telecom jobs in Mumbai",
+        "url": "https://in.jobsora.com/jobs-telecom-mumbai"
+      }
+    ],
+    "board": [
+      {
+        "label": "Naukri: board and advisory searches in Mumbai",
+        "url": "https://www.naukri.com/board-member-jobs-in-mumbai"
+      },
+      {
+        "label": "LinkedIn: telecom advisory roles in India",
+        "url": "https://www.linkedin.com/jobs/search/?keywords=telecom%20advisor%20india"
+      },
+      {
+        "label": "LinkedIn: board member roles in India",
+        "url": "https://www.linkedin.com/jobs/search/?keywords=board%20member%20india"
+      }
+    ]
+  },
+  "opportunities": {
+    "executive": [],
+    "board": []
+  }
+}

@@ -1,0 +1,193 @@
+:root {
+  color-scheme: light;
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --border: #d7deea;
+  --text: #142033;
+  --muted: #5f6c84;
+  --primary: #1a56db;
+  --accent: #0f766e;
+  --warning: #92400e;
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: inherit; }
+
+.hero,
+main {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+  padding: 3rem 0 2rem;
+}
+
+h1, h2, h3, p { margin-top: 0; }
+
+h1 { font-size: clamp(2.2rem, 4vw, 3.5rem); margin-bottom: 0.75rem; }
+.intro { max-width: 760px; color: var(--muted); }
+.eyebrow { color: var(--primary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.78rem; }
+.muted { color: var(--muted); }
+
+.hero-actions,
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.8rem 1.15rem;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.button.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+.button.secondary { background: #e8f0ff; border-color: #bfd0ff; color: #153c9e; }
+.button.ghost { background: transparent; }
+
+main { padding-bottom: 3rem; }
+
+.stats,
+.search-grid,
+.tracker-summary,
+.opportunity-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.stats { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); margin-bottom: 1rem; }
+.search-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.tracker-summary { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.opportunity-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+.panel,
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.panel { padding: 1.4rem; margin-bottom: 1rem; }
+.card { padding: 1rem; }
+.panel-header,
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: start;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #e8f5f3;
+  color: var(--accent);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.score-badge { background: #eef2ff; color: #3730a3; }
+.source-line,
+.company-line,
+.meta,
+.summary,
+.link-list,
+label,
+textarea,
+select { color: var(--muted); }
+
+.summary { min-height: 4.5rem; }
+.meta { font-size: 0.95rem; }
+.source-line { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+.company-line { font-weight: 600; }
+
+.link-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.tag-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.8rem;
+}
+
+.tracker-controls {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.7rem 0.9rem;
+  font: inherit;
+  background: #fff;
+}
+
+.metric-card h3,
+.metric-card p { margin-bottom: 0; }
+.metric-card p:first-child { color: var(--muted); }
+.metric-card h3 { margin-top: 0.4rem; font-size: 1.8rem; }
+.alerts { display: grid; gap: 0.75rem; }
+.alert {
+  border-radius: 16px;
+  padding: 0.85rem 1rem;
+  background: #fff7ed;
+  color: var(--warning);
+  border: 1px solid #fed7aa;
+}
+.empty {
+  border: 1px dashed var(--border);
+  border-radius: 18px;
+  padding: 1rem;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  .hero { flex-direction: column; align-items: start; }
+}
