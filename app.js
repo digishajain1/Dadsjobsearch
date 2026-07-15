@@ -61,7 +61,14 @@ function buildCard(opportunity) {
   node.querySelector(".score").textContent = `Relevance: ${opportunity.relevanceScore ?? "N/A"}${opportunity.salaryLpa ? ` · Salary: ₹${opportunity.salaryLpa}L` : ""}`;
 
   const link = node.querySelector(".link");
-  link.href = opportunity.url;
+  if (opportunity.careerPageUrl) {
+    link.href = opportunity.careerPageUrl;
+    link.textContent = "🏢 Apply on Company Career Site";
+    link.classList.add("link--direct");
+  } else {
+    link.href = opportunity.url;
+    link.textContent = "🔗 View on Job Board";
+  }
 
   const statusEl = node.querySelector(".tracker-status");
   const notesEl = node.querySelector(".tracker-notes");
