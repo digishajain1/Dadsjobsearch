@@ -21,7 +21,7 @@ jobs:
           node-version: "20"
 
       - name: Refresh aggregated opportunities
-        run: node scripts/fetch-opportunities.mjs
+        run: npm run refresh-data
 
       - name: Commit updates
         run: |
