@@ -60,9 +60,53 @@ main {
   margin: 0;
 }
 
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #d9ecff;
+  color: #0b4ab6;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.age-friendly {
+  background: #dff7ea;
+  color: #0c5f37;
+}
+
+.age-flagged {
+  background: #fff4d6;
+  color: #8f5d00;
+}
+
+.age-reasons {
+  color: #4d607f;
+  font-size: 0.9rem;
+}
+
 .link {
   color: #0b4ab6;
   font-weight: 700;
+}
+
+.link--direct {
+  color: #0a7c42;
+  background: #e8f5ee;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.link--direct:hover {
+  background: #c8ebd8;
 }
 
 .tracker {
