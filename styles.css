@@ -65,6 +65,18 @@ main {
   font-weight: 700;
 }
 
+.link--direct {
+  color: #0a7c42;
+  background: #e8f5ee;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.link--direct:hover {
+  background: #c8ebd8;
+}
+
 .tracker {
   display: grid;
   gap: 0.5rem;
