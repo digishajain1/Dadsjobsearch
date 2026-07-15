@@ -6,6 +6,7 @@ const searchInput = document.getElementById("search");
 const locationFilter = document.getElementById("locationFilter");
 const statusFilter = document.getElementById("statusFilter");
 const recencyFilter = document.getElementById("recencyFilter");
+const ageFilter = document.getElementById("ageFilter");
 const executiveList = document.getElementById("executiveList");
 const boardList = document.getElementById("boardList");
 const template = document.getElementById("opportunityTemplate");
@@ -33,6 +34,7 @@ function getCombinedText(opportunity) {
     opportunity.location,
     opportunity.sector,
     opportunity.source,
+    ...(opportunity.ageReasons || []),
   ]
     .join(" ")
     .toLowerCase();
@@ -48,6 +50,13 @@ function locationMatches(filter, locationText) {
   if (filter === "all") return true;
   const lower = (locationText || "").toLowerCase();
   return lower.includes(filter);
+}
+
+function ageFilterMatches(filter, opportunity) {
+  if (filter === "all") return true;
+  if (filter === "friendly") return opportunity.ageAgeFriendly === true;
+  if (filter === "flagged") return opportunity.ageAgeFriendly !== true;
+  return true;
 }
 
 function formatPostedDate(opportunity) {
@@ -98,6 +107,17 @@ function getActiveOpportunities(list) {
   );
 }
 
+function getAgeCounts(list) {
+  return list.reduce(
+    (acc, item) => {
+      if (item.ageAgeFriendly === true) acc.friendly += 1;
+      else acc.flagged += 1;
+      return acc;
+    },
+    { friendly: 0, flagged: 0 }
+  );
+}
+
 function buildCard(opportunity) {
   const tracker = readTracker();
   const state = tracker[opportunity.id] || { status: "", notes: "" };
@@ -106,6 +126,16 @@ function buildCard(opportunity) {
   node.querySelector(".title").textContent = opportunity.title;
   const latestBadge = node.querySelector(".latest-badge");
   latestBadge.hidden = !isLatestOpportunity(opportunity);
+  const ageBadge = node.querySelector(".age-badge");
+  const ageReasons = node.querySelector(".age-reasons");
+  if (opportunity.ageAgeFriendly === true) {
+    ageBadge.textContent = "✓ Age-Friendly 60+";
+    ageBadge.className = "badge age-badge age-friendly";
+  } else {
+    ageBadge.textContent = "⚠️ Verify age fit";
+    ageBadge.className = "badge age-badge age-flagged";
+  }
+  ageReasons.textContent = (opportunity.ageReasons || []).length ? `Why: ${(opportunity.ageReasons || []).join(", ")}` : "";
   node.querySelector(".company").textContent = `${opportunity.company} · ${opportunity.location}`;
   node.querySelector(".details").textContent = `${opportunity.type} · Sector: ${opportunity.sector} · Posted: ${formatPostedDate(opportunity)}`;
   node.querySelector(".source").textContent = `Source: ${opportunity.source}`;
@@ -152,6 +182,7 @@ function applyFilters(list) {
     return (
       queryMatches &&
       (recencyFilter.value !== "latest" || isLatestOpportunity(item)) &&
+      ageFilterMatches(ageFilter.value, item) &&
       locationMatches(locationFilter.value, item.location) &&
       statusMatches(statusFilter.value, status)
     );
@@ -226,9 +257,10 @@ function render() {
   const board = applyFilters(dataset.boardRoles || []);
   const latestExecutiveCount = activeExecutive.filter(isLatestOpportunity).length;
   const latestBoardCount = activeBoard.filter(isLatestOpportunity).length;
+  const ageCounts = getAgeCounts(activeExecutive.concat(activeBoard));
 
   if (dataset.generatedAt) {
-    meta.textContent = `Data generated: ${new Date(dataset.generatedAt).toLocaleString()} · Executive: ${activeExecutive.length} active (${latestExecutiveCount} latest) · Board: ${activeBoard.length} active (${latestBoardCount} latest) · Showing ${recencyFilter.value === "latest" ? "latest active positions" : "all active positions"}`;
+    meta.textContent = `Data generated: ${new Date(dataset.generatedAt).toLocaleString()} · Executive: ${activeExecutive.length} active (${latestExecutiveCount} latest) · Board: ${activeBoard.length} active (${latestBoardCount} latest) · ${ageCounts.friendly} age-friendly · ${ageCounts.flagged} need age check · Showing ${recencyFilter.value === "latest" ? "latest active positions" : "all active positions"}`;
   }
 
   renderList(executiveList, executive, "No executive opportunities match current filters.", "executive");
@@ -244,7 +276,7 @@ async function init() {
     meta.textContent = `Unable to load data file. ${error.message}`;
   }
 
-  [searchInput, locationFilter, statusFilter, recencyFilter].forEach((input) =>
+  [searchInput, locationFilter, statusFilter, recencyFilter, ageFilter].forEach((input) =>
     input.addEventListener("input", () => {
       currentPage = { executive: 1, board: 1 };
       render();

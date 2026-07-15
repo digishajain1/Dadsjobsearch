@@ -31,6 +31,11 @@
           <option value="latest" selected>Latest positions</option>
           <option value="all">All positions</option>
         </select>
+        <select id="ageFilter">
+          <option value="all">All age profiles</option>
+          <option value="friendly">Age-friendly (60+)</option>
+          <option value="flagged">Needs age check</option>
+        </select>
       </div>
       <p class="meta" id="meta"></p>
     </header>
@@ -50,11 +55,15 @@
     <template id="opportunityTemplate">
       <article class="card">
         <h3 class="title"></h3>
-        <span class="badge latest-badge" hidden>Latest</span>
+        <div class="badge-row">
+          <span class="badge latest-badge" hidden>Latest</span>
+          <span class="badge age-badge"></span>
+        </div>
         <p class="company"></p>
         <p class="details"></p>
         <p class="source"></p>
         <p class="score"></p>
+        <p class="age-reasons"></p>
         <a class="link" target="_blank" rel="noopener noreferrer"></a>
         <div class="tracker">
           <label>

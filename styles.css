@@ -71,6 +71,27 @@ main {
   font-weight: 700;
 }
 
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.age-friendly {
+  background: #dff7ea;
+  color: #0c5f37;
+}
+
+.age-flagged {
+  background: #fff4d6;
+  color: #8f5d00;
+}
+
+.age-reasons {
+  color: #4d607f;
+  font-size: 0.9rem;
+}
+
 .link {
   color: #0b4ab6;
   font-weight: 700;

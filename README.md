@@ -11,9 +11,11 @@ Static dashboard for tracking Mumbai and remote senior opportunities in telecom/
   - `shortlist`, `applied`, `networking`, `interview`, `archived`
   - freeform notes
   - saved in browser `localStorage`
-- Search + filters (location, tracker status, and latest/all position toggle)
+- Search + filters (location, tracker status, latest/all position toggle, and age profile)
 - Data aggregation script with normalization and relevance scoring
 - Active/latest metadata on generated opportunities, with latest postings prioritized first
+- Age-friendliness guidance for 60+ applicants
+- Direct company career-page links when a role-specific company URL is known
 - Fallback data so UI always works even if live data sources are unavailable
 - Scheduled GitHub Actions refresh at **6:00 AM and 6:00 PM IST** (`00:30` and `12:30` UTC)
 - GitHub Pages deploy workflow
