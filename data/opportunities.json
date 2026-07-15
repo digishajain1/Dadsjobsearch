@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T03:44:44.096Z",
+  "generatedAt": "2026-07-15T14:19:40.378Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,80 +108,6 @@
       "relevanceScore": 90
     },
     {
-      "id": "remoteok-1134738",
-      "title": "Director of Customer Success",
-      "company": "INNERGY",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Connectivity",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-customer-success-innergy-1134738",
-      "postedDate": "2026-07-10T19:36:18+00:00",
-      "keywords": [
-        "c",
-        "music",
-        "game dev",
-        "dev",
-        "video",
-        "content writing",
-        "ops",
-        "marketing",
-        "internship",
-        "non tech",
-        "digital nomad",
-        "design",
-        "teaching",
-        "education",
-        "designer",
-        "technical",
-        "web dev",
-        "mobile",
-        "photoshop",
-        "illustrator",
-        "data entry",
-        "customer support",
-        "microsoft",
-        "exec",
-        "medical",
-        "consulting",
-        "saas",
-        "sys admin",
-        "cloud",
-        "sales",
-        "engineer",
-        "recruiter"
-      ],
-      "relevanceScore": 70
-    },
-    {
-      "id": "remoteok-1134731",
-      "title": "Deputy Chief Executive Officer",
-      "company": "TheHiveCareers",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-deputy-chief-executive-officer-thehivecareers-1134731",
-      "postedDate": "2026-07-10T14:18:43+00:00",
-      "keywords": [
-        "exec",
-        "infosec",
-        "customer support",
-        "marketing",
-        "travel",
-        "accounting",
-        "finance",
-        "education",
-        "senior",
-        "ops",
-        "legal",
-        "sales"
-      ],
-      "relevanceScore": 70
-    },
-    {
       "id": "remoteok-1134791",
       "title": "Head of Creative Studio &amp; Brand Operations YOUNG",
       "company": "YOUNG",
@@ -231,6 +157,29 @@
       "relevanceScore": 65
     },
     {
+      "id": "remoteok-1134844",
+      "title": "Director of Operations",
+      "company": "Confidential Careers",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-operations-confidential-careers-1134844",
+      "postedDate": "2026-07-13T06:47:18+00:00",
+      "keywords": [
+        "exec",
+        "customer support",
+        "marketing",
+        "travel",
+        "finance",
+        "senior",
+        "ops",
+        "medical"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1134723",
       "title": "Heading",
       "company": "UX/UI Design K7 Tech",
@@ -244,29 +193,6 @@
       "keywords": [
         "design",
         "digital nomad"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1134746",
-      "title": "Director Social Media Marketing",
-      "company": "Starface World",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-social-media-marketing-starface-world-1134746",
-      "postedDate": "2026-07-10T14:05:08+00:00",
-      "keywords": [
-        "exec",
-        "strategy",
-        "customer support",
-        "testing",
-        "content writing",
-        "marketing",
-        "medical",
-        "social media"
       ],
       "relevanceScore": 65
     }
