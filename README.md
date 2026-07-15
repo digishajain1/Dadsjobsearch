@@ -14,8 +14,9 @@ Static dashboard for tracking Mumbai and remote senior opportunities in telecom/
 - Search + filters (location and tracker status)
 - Data aggregation script with normalization and relevance scoring
 - Fallback data so UI always works even if live data sources are unavailable
-- Scheduled GitHub Actions refresh at **6:00 AM and 6:00 PM IST** (`00:30` and `12:30` UTC)
+- Scheduled GitHub Actions refresh at **6:00 AM and 6:00 PM IST** (`00:30` and `12:30` UTC), with **Run workflow** support for manual refreshes
 - GitHub Pages deploy workflow
+- Live executive source aggregation from **RemoteOK**, **Jobicy**, and **Arbeitnow**, with last-known-good data retained when a source is unavailable
 
 ## Files
 
@@ -34,6 +35,7 @@ Static dashboard for tracking Mumbai and remote senior opportunities in telecom/
    ```bash
    npm run refresh-data
    ```
+   This refresh keeps the last generated dashboard data in place if one or more live job sources are temporarily unavailable.
 2. Serve locally (example):
    ```bash
    python -m http.server 8080
