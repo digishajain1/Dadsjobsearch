@@ -24,7 +24,8 @@ header {
 
 input,
 select,
-textarea {
+textarea,
+button {
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #b9c3d3;
@@ -60,9 +61,56 @@ main {
   margin: 0;
 }
 
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #d9ecff;
+  color: #0b4ab6;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.age-badge {
+  display: inline-block;
+  width: fit-content;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+}
+
+.age-friendly {
+  color: #0c5f37;
+  background: #dff7ea;
+}
+
+.age-flagged {
+  color: #8f5d00;
+  background: #fff4d6;
+}
+
+.age-reasons,
+.meta {
+  color: #4d607f;
+}
+
 .link {
   color: #0b4ab6;
   font-weight: 700;
+}
+
+.link--direct {
+  color: #0a7c42;
+  background: #e8f5ee;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.link--direct:hover {
+  background: #c8ebd8;
 }
 
 .tracker {
@@ -71,6 +119,13 @@ main {
   margin-top: 0.4rem;
 }
 
-.meta {
-  color: #4d607f;
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.pagination button {
+  width: auto;
 }

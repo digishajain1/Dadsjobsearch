@@ -37,6 +37,116 @@ const BOARD_SOURCES = [
 ];
 
 const SALARY_FLOOR = 60;
+const LATEST_WINDOW_DAYS = 7;
+const AGE_DEFAULT_LIMIT = 60;
+
+const AGE_FRIENDLY_COMPANIES = new Set([
+  "korn ferry",
+  "egon zehnder",
+  "spencer stuart",
+  "russell reynolds associates",
+  "heidrick & struggles",
+  "iica independent director's databank",
+  "iica independent directors databank",
+  "prime database",
+  "gladwin international",
+  "nse/bse filing - large telecom infra co."
+]);
+
+const AGE_NEEDS_INVESTIGATION = new Set([
+  "reliance jio",
+  "equinix",
+  "tata communications",
+  "ntt global data centers",
+  "stt gdc india",
+  "adaniconnex",
+  "digital realty",
+  "ctrls datacenters",
+  "airtel (nxtra)",
+  "nxtra by airtel",
+  "web werks (iron mountain)"
+]);
+
+const CAREER_PAGE_BY_COMPANY = {
+  equinix: "https://careers.equinix.com/jobs?q=vice+president+india&location=Mumbai",
+  "ntt global data centers": "https://www.global.ntt/en/careers#senior-advisor-connectivity",
+  "stt gdc india": "https://careers.sttelemedia.com/jobs/search?query=senior+vice+president+operations",
+  "reliance jio": "https://careers.ril.com/jobs?q=chief+growth+officer+enterprise+fiber",
+  adaniconnex: "https://www.adaniconnex.com/careers",
+  "airtel (nxtra)": "https://www.airtel.in/careers/",
+  "nxtra by airtel": "https://www.airtel.in/business/solutions/data-center-services/careers",
+  "ctrls datacenters": "https://www.ctrls.in/careers/",
+  "digital realty": "https://careers.digitalrealty.com/search/jobs?q=india",
+  "web werks (iron mountain)": "https://careers.ironmountain.com/us/en/search-results?keywords=web+werks",
+  "tata communications": "https://careers.tatacommunications.com/jobs?q=svp+data+center+interconnect"
+};
+
+function normalizeCompanyName(name = "") {
+  return name.toLowerCase().replace(/[^a-z0-9&/()' -]/g, "").replace(/\s+/g, " ").trim();
+}
+
+function normalizeListingStatus(status) {
+  const normalized = `${status || "active"}`.trim().toLowerCase();
+  return normalized === "archived" || normalized === "closed" ? normalized : "active";
+}
+
+function getPostedDate(item) {
+  const raw = item.postedDate || item.postedAt || null;
+  if (!raw) return null;
+  const parsed = new Date(raw);
+  if (Number.isNaN(parsed.getTime())) return null;
+  return parsed.toISOString();
+}
+
+function isLatestPosting(postedAt, referenceDate) {
+  if (!postedAt) return false;
+  const postedDay = new Date(new Date(postedAt).toISOString().slice(0, 10));
+  const referenceDay = new Date(referenceDate.toISOString().slice(0, 10));
+  const ageMs = referenceDay.getTime() - postedDay.getTime();
+  return ageMs >= 0 && ageMs <= LATEST_WINDOW_DAYS * 24 * 60 * 60 * 1000;
+}
+
+function getAgeProfile(item) {
+  const company = normalizeCompanyName(item.company);
+  const combined = `${item.title || ""} ${item.type || ""} ${(item.keywords || []).join(" ")}`.toLowerCase();
+  const isBoardLike = /board|independent director/.test(combined);
+  const isExecutiveSearch = /executive search/.test((item.source || "").toLowerCase());
+  const isAgeFriendly = isBoardLike || isExecutiveSearch || AGE_FRIENDLY_COMPANIES.has(company);
+
+  if (isAgeFriendly) {
+    return {
+      ageLimit: null,
+      ageAgeFriendly: true,
+      ageReasons: isBoardLike
+        ? ["Board roles", "Experience valued", "Independent director norms in India"]
+        : ["Executive search focus", "Seasoned leadership profiles", "Experience valued"],
+      ageSources: isBoardLike
+        ? ["Board appointment norms", "Independent director databases", "Known practices"]
+        : ["Known practices", "Public commitment", "Search firm specialization"]
+    };
+  }
+
+  if (AGE_NEEDS_INVESTIGATION.has(company)) {
+    return {
+      ageLimit: AGE_DEFAULT_LIMIT,
+      ageAgeFriendly: false,
+      ageReasons: ["Operating company role", "Age policy not clearly public", "Verify before applying"],
+      ageSources: ["Company HR policies", "LinkedIn/Glassdoor signals", "Known practices in telecom/DC sector"]
+    };
+  }
+
+  return {
+    ageLimit: AGE_DEFAULT_LIMIT,
+    ageAgeFriendly: false,
+    ageReasons: ["Policy unknown", "Verify before applying"],
+    ageSources: ["Company HR policies", "Public statements on age diversity"]
+  };
+}
+
+function getCareerPageUrl(item) {
+  if (item.careerPageUrl) return item.careerPageUrl;
+  return CAREER_PAGE_BY_COMPANY[normalizeCompanyName(item.company)] || null;
+}
 
 function scoreOpportunity(item, type) {
   const text = `${item.title} ${item.company} ${item.sector} ${(item.keywords || []).join(" ")}`.toLowerCase();
@@ -44,24 +154,51 @@ function scoreOpportunity(item, type) {
   const keywordHits = scoringKeywords.reduce((acc, key) => acc + (text.includes(key) ? 1 : 0), 0);
   const locationBoost = /mumbai|remote/.test((item.location || "").toLowerCase()) ? 10 : 0;
   const salaryBoost = type === "executive" ? Math.min(20, Math.max(0, (item.salaryLpa || 0) - SALARY_FLOOR)) : 0;
-  return Math.min(100, 50 + keywordHits * 5 + locationBoost + salaryBoost);
+  const ageBoost = item.ageAgeFriendly ? 8 : -2;
+  return Math.min(100, 50 + keywordHits * 5 + locationBoost + salaryBoost + ageBoost);
 }
 
 function normalizeExecutive(item) {
+  const postedAt = getPostedDate(item);
+  const listingStatus = normalizeListingStatus(item.listingStatus || item.status);
+  const ageProfile = getAgeProfile(item);
   const normalized = {
     ...item,
     type: item.type || "Executive",
-    relevanceScore: scoreOpportunity(item, "executive")
+    postedAt,
+    postedDate: postedAt ? postedAt.slice(0, 10) : item.postedDate || null,
+    listingStatus,
+    isActive: listingStatus === "active",
+    careerPageUrl: getCareerPageUrl(item),
+    ...ageProfile
   };
+  normalized.relevanceScore = scoreOpportunity(normalized, "executive");
   return normalized.salaryLpa >= SALARY_FLOOR ? normalized : null;
 }
 
 function normalizeBoard(item) {
-  return {
+  const postedAt = getPostedDate(item);
+  const listingStatus = normalizeListingStatus(item.listingStatus || item.status);
+  const ageProfile = getAgeProfile(item);
+  const normalized = {
     ...item,
     type: item.type || "Board",
-    relevanceScore: scoreOpportunity(item, "board")
+    postedAt,
+    postedDate: postedAt ? postedAt.slice(0, 10) : item.postedDate || null,
+    listingStatus,
+    isActive: listingStatus === "active",
+    ...ageProfile
   };
+  normalized.relevanceScore = scoreOpportunity(normalized, "board");
+  return normalized;
+}
+
+function sortOpportunities(a, b) {
+  const postedDiff = new Date(b.postedAt || 0).getTime() - new Date(a.postedAt || 0).getTime();
+  if (postedDiff) return postedDiff;
+  const ageDiff = Number(b.ageAgeFriendly) - Number(a.ageAgeFriendly);
+  if (ageDiff) return ageDiff;
+  return (b.relevanceScore || 0) - (a.relevanceScore || 0);
 }
 
 async function tryFetchRemoteSignals() {
@@ -71,7 +208,7 @@ async function tryFetchRemoteSignals() {
     });
     if (!response.ok) throw new Error(`Remote API failed: ${response.status}`);
     const payload = await response.json();
-    const items = (Array.isArray(payload) ? payload : [])
+    return (Array.isArray(payload) ? payload : [])
       .filter((entry) => entry?.position && /vp|chief|director|head/i.test(entry.position))
       .slice(0, 6)
       .map((entry, index) => ({
@@ -89,8 +226,6 @@ async function tryFetchRemoteSignals() {
       }))
       .map(normalizeExecutive)
       .filter(Boolean);
-
-    return items;
   } catch (error) {
     console.warn(`Live fetch unavailable, using fallback only: ${error.message}`);
     return [];
@@ -103,24 +238,49 @@ async function main() {
 
   const fallback = JSON.parse(await fs.readFile(fallbackPath, "utf8"));
   const liveExecutive = await tryFetchRemoteSignals();
+  const generatedAt = new Date();
 
   const executiveRoles = (fallback.executiveRoles || [])
     .map(normalizeExecutive)
     .filter(Boolean)
     .concat(liveExecutive)
-    .sort((a, b) => (b.relevanceScore || 0) - (a.relevanceScore || 0));
+    .map((item) => ({
+      ...item,
+      isLatest: isLatestPosting(item.postedAt, generatedAt)
+    }))
+    .sort(sortOpportunities);
 
   const boardRoles = (fallback.boardRoles || [])
     .map(normalizeBoard)
-    .sort((a, b) => (b.relevanceScore || 0) - (a.relevanceScore || 0));
+    .map((item) => ({
+      ...item,
+      isLatest: isLatestPosting(item.postedAt, generatedAt)
+    }))
+    .sort(sortOpportunities);
+
+  const activeExecutiveCount = executiveRoles.filter((item) => item.isActive).length;
+  const latestExecutiveCount = executiveRoles.filter((item) => item.isActive && item.isLatest).length;
+  const activeBoardCount = boardRoles.filter((item) => item.isActive).length;
+  const latestBoardCount = boardRoles.filter((item) => item.isActive && item.isLatest).length;
+  const allRoles = executiveRoles.concat(boardRoles);
+  const ageFriendlyCount = allRoles.filter((item) => item.ageAgeFriendly).length;
+  const flaggedAgeCount = allRoles.length - ageFriendlyCount;
 
   const output = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAt.toISOString(),
     metadata: {
       salaryFloorLpa: SALARY_FLOOR,
+      latestWindowDays: LATEST_WINDOW_DAYS,
+      ageDefaultLimit: AGE_DEFAULT_LIMIT,
       executiveCompaniesCovered: EXECUTIVE_COMPANIES,
       boardSignalSourcesCovered: BOARD_SOURCES,
-      notes: "Includes fallback records and live remote signals when available."
+      counts: {
+        executive: { active: activeExecutiveCount, latest: latestExecutiveCount },
+        board: { active: activeBoardCount, latest: latestBoardCount }
+      },
+      ageFriendlyCount,
+      flaggedAgeCount,
+      notes: "Includes active/latest filtering, direct company career links where available, and age-friendliness signals for 60+ prioritization."
     },
     executiveRoles,
     boardRoles
