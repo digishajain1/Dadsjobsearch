@@ -17,9 +17,10 @@ header {
 
 .controls {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.75rem;
   margin: 1rem 0;
+  align-items: center;
 }
 
 input,
@@ -32,6 +33,47 @@ textarea {
   padding: 0.5rem;
   font: inherit;
 }
+
+/* ── Refresh button ─────────────────────────────────────────────────────────── */
+
+.refresh-btn {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  background: #0b4ab6;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  background: #0938a0;
+}
+
+.refresh-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.refresh-status {
+  font-size: 0.875rem;
+  min-height: 1.25em;
+  margin: 0.25rem 0 0;
+}
+
+.refresh-success {
+  color: #1a7a3c;
+}
+
+.refresh-error {
+  color: #c0392b;
+}
+
+/* ── Card grid ──────────────────────────────────────────────────────────────── */
 
 main {
   max-width: 1200px;
@@ -60,10 +102,84 @@ main {
   margin: 0;
 }
 
+/* ── Card header with badges ────────────────────────────────────────────────── */
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.card-header .title {
+  flex: 1;
+  margin: 0;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.badge-active {
+  background: #d4f7e1;
+  color: #1a7a3c;
+}
+
+.badge-archived {
+  background: #ffe4e4;
+  color: #c0392b;
+}
+
+.badge-platform-colored {
+  background: color-mix(in srgb, var(--platform-color) 12%, #fff);
+  color: var(--platform-color);
+  border: 1px solid color-mix(in srgb, var(--platform-color) 30%, #fff);
+}
+
+/* ── Platform links ─────────────────────────────────────────────────────────── */
+
+.platform-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.platform-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  text-decoration: none;
+  background: color-mix(in srgb, var(--platform-color) 10%, #fff);
+  color: var(--platform-color);
+  border: 1px solid color-mix(in srgb, var(--platform-color) 25%, #fff);
+  transition: background 0.12s;
+}
+
+.platform-link:hover {
+  background: color-mix(in srgb, var(--platform-color) 20%, #fff);
+}
+
+/* ── Primary source link ────────────────────────────────────────────────────── */
+
 .link {
   color: #0b4ab6;
   font-weight: 700;
 }
+
+/* ── Tracker ────────────────────────────────────────────────────────────────── */
 
 .tracker {
   display: grid;
@@ -71,6 +187,23 @@ main {
   margin-top: 0.4rem;
 }
 
+/* ── Meta ───────────────────────────────────────────────────────────────────── */
+
 .meta {
   color: #4d607f;
 }
+
+/* ── Pagination ─────────────────────────────────────────────────────────────── */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.page-info {
+  color: #4d607f;
+  font-size: 0.875rem;
+}
+
