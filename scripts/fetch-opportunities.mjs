@@ -37,6 +37,28 @@ const BOARD_SOURCES = [
 ];
 
 const SALARY_FLOOR = 60;
+const LATEST_WINDOW_DAYS = 7;
+
+function normalizeListingStatus(status) {
+  const normalized = `${status || "active"}`.trim().toLowerCase();
+  return normalized === "archived" || normalized === "closed" ? normalized : "active";
+}
+
+function getPostedDate(item) {
+  const raw = item.postedDate || item.postedAt || null;
+  if (!raw) return null;
+  const parsed = new Date(raw);
+  if (Number.isNaN(parsed.getTime())) return null;
+  return parsed.toISOString();
+}
+
+function isLatestPosting(postedAt, referenceDate) {
+  if (!postedAt) return false;
+  const postedDay = new Date(new Date(postedAt).toISOString().slice(0, 10));
+  const referenceDay = new Date(referenceDate.toISOString().slice(0, 10));
+  const ageMs = referenceDay.getTime() - postedDay.getTime();
+  return ageMs >= 0 && ageMs <= LATEST_WINDOW_DAYS * 24 * 60 * 60 * 1000;
+}
 
 function scoreOpportunity(item, type) {
   const text = `${item.title} ${item.company} ${item.sector} ${(item.keywords || []).join(" ")}`.toLowerCase();
@@ -48,18 +70,30 @@ function scoreOpportunity(item, type) {
 }
 
 function normalizeExecutive(item) {
+  const postedAt = getPostedDate(item);
+  const listingStatus = normalizeListingStatus(item.listingStatus || item.status);
   const normalized = {
     ...item,
     type: item.type || "Executive",
+    postedAt,
+    postedDate: postedAt ? postedAt.slice(0, 10) : item.postedDate || null,
+    listingStatus,
+    isActive: listingStatus === "active",
     relevanceScore: scoreOpportunity(item, "executive")
   };
   return normalized.salaryLpa >= SALARY_FLOOR ? normalized : null;
 }
 
 function normalizeBoard(item) {
+  const postedAt = getPostedDate(item);
+  const listingStatus = normalizeListingStatus(item.listingStatus || item.status);
   return {
     ...item,
     type: item.type || "Board",
+    postedAt,
+    postedDate: postedAt ? postedAt.slice(0, 10) : item.postedDate || null,
+    listingStatus,
+    isActive: listingStatus === "active",
     relevanceScore: scoreOpportunity(item, "board")
   };
 }
@@ -103,24 +137,49 @@ async function main() {
 
   const fallback = JSON.parse(await fs.readFile(fallbackPath, "utf8"));
   const liveExecutive = await tryFetchRemoteSignals();
+  const generatedAt = new Date();
 
   const executiveRoles = (fallback.executiveRoles || [])
     .map(normalizeExecutive)
     .filter(Boolean)
     .concat(liveExecutive)
-    .sort((a, b) => (b.relevanceScore || 0) - (a.relevanceScore || 0));
+    .map((item) => ({
+      ...item,
+      isLatest: isLatestPosting(item.postedAt, generatedAt)
+    }))
+    .sort((a, b) => {
+      const postedDiff = new Date(b.postedAt || 0).getTime() - new Date(a.postedAt || 0).getTime();
+      return postedDiff || (b.relevanceScore || 0) - (a.relevanceScore || 0);
+    });
 
   const boardRoles = (fallback.boardRoles || [])
     .map(normalizeBoard)
-    .sort((a, b) => (b.relevanceScore || 0) - (a.relevanceScore || 0));
+    .map((item) => ({
+      ...item,
+      isLatest: isLatestPosting(item.postedAt, generatedAt)
+    }))
+    .sort((a, b) => {
+      const postedDiff = new Date(b.postedAt || 0).getTime() - new Date(a.postedAt || 0).getTime();
+      return postedDiff || (b.relevanceScore || 0) - (a.relevanceScore || 0);
+    });
+
+  const activeExecutiveCount = executiveRoles.filter((item) => item.isActive).length;
+  const latestExecutiveCount = executiveRoles.filter((item) => item.isActive && item.isLatest).length;
+  const activeBoardCount = boardRoles.filter((item) => item.isActive).length;
+  const latestBoardCount = boardRoles.filter((item) => item.isActive && item.isLatest).length;
 
   const output = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: generatedAt.toISOString(),
     metadata: {
       salaryFloorLpa: SALARY_FLOOR,
+      latestWindowDays: LATEST_WINDOW_DAYS,
       executiveCompaniesCovered: EXECUTIVE_COMPANIES,
       boardSignalSourcesCovered: BOARD_SOURCES,
-      notes: "Includes fallback records and live remote signals when available."
+      counts: {
+        executive: { active: activeExecutiveCount, latest: latestExecutiveCount },
+        board: { active: activeBoardCount, latest: latestBoardCount }
+      },
+      notes: "Includes only active positions in dashboard counts and marks postings from the last 7 days as latest."
     },
     executiveRoles,
     boardRoles
