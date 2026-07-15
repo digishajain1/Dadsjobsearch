@@ -5,6 +5,9 @@ const ITEMS_PER_PAGE = 10;
 const searchInput = document.getElementById("search");
 const locationFilter = document.getElementById("locationFilter");
 const statusFilter = document.getElementById("statusFilter");
+const activeFilter = document.getElementById("activeFilter");
+const refreshBtn = document.getElementById("refreshBtn");
+const refreshStatus = document.getElementById("refreshStatus");
 const executiveList = document.getElementById("executiveList");
 const boardList = document.getElementById("boardList");
 const template = document.getElementById("opportunityTemplate");
@@ -12,6 +15,7 @@ const meta = document.getElementById("meta");
 
 let dataset = { executiveRoles: [], boardRoles: [], generatedAt: null };
 let currentPage = { executive: 1, board: 1 };
+let isRefreshing = false;
 
 function readTracker() {
   try {
@@ -49,6 +53,45 @@ function locationMatches(filter, locationText) {
   return lower.includes(filter);
 }
 
+function isJobActive(opportunity) {
+  // Consider archived jobs as inactive
+  const tracker = readTracker();
+  const state = tracker[opportunity.id];
+  if (state?.status === "archived") return false;
+  return true;
+}
+
+function getPlatformBadge(source) {
+  const badges = {
+    "LinkedIn": "🔵 LinkedIn",
+    "Indeed": "📋 Indeed",
+    "AngelList": "🚀 AngelList",
+    "Glassdoor": "💼 Glassdoor",
+    "RemoteOK": "🌍 RemoteOK",
+    "Jobicy": "💼 Jobicy",
+    "Arbeitnow": "🌐 Arbeitnow",
+    "Korn Ferry": "🎯 Korn Ferry",
+    "Spencer Stuart": "⭐ Spencer Stuart",
+  };
+  return badges[source] || `📌 ${source}`;
+}
+
+function getPlatformLink(opportunity) {
+  // If there's a direct career page URL, use it
+  if (opportunity.careerPageUrl) {
+    return opportunity.careerPageUrl;
+  }
+  // Otherwise use the job board link
+  return opportunity.url || "#";
+}
+
+function getPlatformLabel(opportunity) {
+  if (opportunity.careerPageUrl) {
+    return "🏢 Apply on Company Career Site";
+  }
+  return `🔗 View on ${opportunity.source || "Job Board"}`;
+}
+
 function buildCard(opportunity) {
   const tracker = readTracker();
   const state = tracker[opportunity.id] || { status: "", notes: "" };
@@ -57,11 +100,19 @@ function buildCard(opportunity) {
   node.querySelector(".title").textContent = opportunity.title;
   node.querySelector(".company").textContent = `${opportunity.company} · ${opportunity.location}`;
   node.querySelector(".details").textContent = `${opportunity.type} · Sector: ${opportunity.sector} · Posted: ${opportunity.postedDate || "N/A"}`;
-  node.querySelector(".source").textContent = `Source: ${opportunity.source}`;
+  
+  const sourceBadge = node.querySelector(".source-badge");
+  sourceBadge.textContent = getPlatformBadge(opportunity.source);
+  sourceBadge.className = "source-badge";
+  
   node.querySelector(".score").textContent = `Relevance: ${opportunity.relevanceScore ?? "N/A"}${opportunity.salaryLpa ? ` · Salary: ₹${opportunity.salaryLpa}L` : ""}`;
 
   const link = node.querySelector(".link");
-  link.href = opportunity.url;
+  link.href = getPlatformLink(opportunity);
+  link.textContent = getPlatformLabel(opportunity);
+  if (opportunity.careerPageUrl) {
+    link.classList.add("link--direct");
+  }
 
   const statusEl = node.querySelector(".tracker-status");
   const notesEl = node.querySelector(".tracker-notes");
@@ -88,13 +139,18 @@ function buildCard(opportunity) {
 function applyFilters(list) {
   const q = searchInput.value.trim().toLowerCase();
   const tracker = readTracker();
+  const showOnlyActive = activeFilter.value === "active";
+
   return list.filter((item) => {
     const status = tracker[item.id]?.status || "";
     const queryMatches = !q || getCombinedText(item).includes(q);
+    const isActive = !showOnlyActive || isJobActive(item);
+    
     return (
       queryMatches &&
       locationMatches(locationFilter.value, item.location) &&
-      statusMatches(statusFilter.value, status)
+      statusMatches(statusFilter.value, status) &&
+      isActive
     );
   });
 }
@@ -166,6 +222,66 @@ function render() {
 
   renderList(executiveList, executive, "No executive opportunities match current filters.", "executive");
   renderList(boardList, board, "No board signals match current filters.", "board");
+
+  // Update meta info
+  const totalExec = dataset.executiveRoles?.length || 0;
+  const totalBoard = dataset.boardRoles?.length || 0;
+  const lastUpdate = dataset.generatedAt ? new Date(dataset.generatedAt).toLocaleString() : "N/A";
+  meta.textContent = `Last updated: ${lastUpdate} · ${totalExec} executive + ${totalBoard} board opportunities`;
+}
+
+async function refreshData() {
+  if (isRefreshing) return;
+  
+  isRefreshing = true;
+  refreshBtn.disabled = true;
+  refreshBtn.classList.add("refreshing");
+  refreshStatus.textContent = "🔄 Refreshing data...";
+  refreshStatus.className = "refresh-status loading";
+
+  try {
+    const response = await fetch(DATA_URL, { 
+      cache: "no-store",
+      headers: { "Cache-Control": "no-cache" }
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch: ${response.status}`);
+    }
+
+    const newData = await response.json();
+    
+    // Preserve tracker data
+    const tracker = readTracker();
+    
+    dataset = newData;
+    
+    // Restore tracker data
+    writeTracker(tracker);
+    
+    render();
+    
+    refreshStatus.textContent = "✅ Data refreshed successfully!";
+    refreshStatus.className = "refresh-status success";
+    
+    setTimeout(() => {
+      refreshStatus.textContent = "";
+      refreshStatus.className = "refresh-status";
+    }, 3000);
+  } catch (error) {
+    console.error("Refresh error:", error);
+    refreshStatus.textContent = `❌ Refresh failed: ${error.message}`;
+    refreshStatus.className = "refresh-status error";
+    
+    setTimeout(() => {
+      refreshStatus.textContent = "";
+      refreshStatus.className = "refresh-status";
+    }, 3000);
+  } finally {
+    isRefreshing = false;
+    refreshBtn.disabled = false;
+    refreshBtn.classList.remove("refreshing");
+  }
 }
 
 async function init() {
@@ -173,17 +289,19 @@ async function init() {
     const response = await fetch(DATA_URL, { cache: "no-store" });
     if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
     dataset = await response.json();
-    meta.textContent = `Data generated: ${new Date(dataset.generatedAt).toLocaleString()} (${(dataset.executiveRoles || []).length} executive, ${(dataset.boardRoles || []).length} board)`;
   } catch (error) {
     meta.textContent = `Unable to load data file. ${error.message}`;
+    return;
   }
 
-  [searchInput, locationFilter, statusFilter].forEach((input) =>
+  [searchInput, locationFilter, statusFilter, activeFilter].forEach((input) =>
     input.addEventListener("input", () => {
       currentPage = { executive: 1, board: 1 };
       render();
     })
   );
+
+  refreshBtn.addEventListener("click", refreshData);
 
   render();
 }
