@@ -28,8 +28,14 @@
           <option value="archived">Archived</option>
           <option value="untracked">Untracked</option>
         </select>
+        <select id="activeFilter">
+          <option value="active">Active Jobs Only</option>
+          <option value="all">All Jobs</option>
+        </select>
+        <button id="refreshBtn" class="refresh-btn" type="button">🔄 Refresh Now</button>
       </div>
       <p class="meta" id="meta"></p>
+      <p class="refresh-status" id="refreshStatus"></p>
     </header>
 
     <main>
@@ -46,11 +52,18 @@
 
     <template id="opportunityTemplate">
       <article class="card">
-        <h3 class="title"></h3>
+        <div class="card-header">
+          <h3 class="title"></h3>
+          <div class="badges">
+            <span class="badge badge-active">Active</span>
+            <span class="badge badge-platform"></span>
+          </div>
+        </div>
         <p class="company"></p>
         <p class="details"></p>
         <p class="source"></p>
         <p class="score"></p>
+        <div class="platform-links"></div>
         <a class="link" target="_blank" rel="noopener noreferrer">Open Source Link</a>
         <div class="tracker">
           <label>
