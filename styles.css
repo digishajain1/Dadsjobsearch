@@ -60,6 +60,17 @@ main {
   margin: 0;
 }
 
+.badge {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #d9ecff;
+  color: #0b4ab6;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .link {
   color: #0b4ab6;
   font-weight: 700;
