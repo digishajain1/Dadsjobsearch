@@ -11,6 +11,7 @@
       "salaryLpa": 95,
       "source": "Equinix Careers",
       "url": "https://careers.equinix.com",
+      "careerPageUrl": "https://careers.equinix.com/jobs?q=vice+president+india&location=Mumbai",
       "postedDate": "2026-07-10",
       "keywords": ["vp", "data center", "strategy", "india"],
       "relevanceScore": 93
@@ -25,6 +26,7 @@
       "salaryLpa": 80,
       "source": "NTT GDC Careers",
       "url": "https://www.global.ntt/en/careers",
+      "careerPageUrl": "https://www.global.ntt/en/careers#senior-advisor-connectivity",
       "postedDate": "2026-07-09",
       "keywords": ["advisor", "connectivity", "telecom"],
       "relevanceScore": 90
@@ -39,6 +41,7 @@
       "salaryLpa": 110,
       "source": "Reliance Careers",
       "url": "https://careers.ril.com",
+      "careerPageUrl": "https://careers.ril.com/jobs?q=chief+growth+officer+enterprise+fiber",
       "postedDate": "2026-07-08",
       "keywords": ["chief", "enterprise", "fiber", "telecom"],
       "relevanceScore": 95
@@ -53,6 +56,7 @@
       "salaryLpa": 88,
       "source": "Tata Communications Careers",
       "url": "https://careers.tatacommunications.com",
+      "careerPageUrl": "https://careers.tatacommunications.com/jobs?q=svp+data+center+interconnect",
       "postedDate": "2026-07-11",
       "keywords": ["svp", "interconnect", "network"],
       "relevanceScore": 91
