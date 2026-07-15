@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-14T23:15:00.000Z",
+  "generatedAt": "2026-07-15T02:05:33.957Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -30,7 +30,35 @@
       "IICA Independent Director's Databank",
       "Prime Database"
     ],
-    "notes": "Live job links updated daily from verified sources. All links point to active job boards and company career pages."
+    "liveExecutiveSourcesCovered": [
+      "RemoteOK",
+      "Jobicy",
+      "Arbeitnow"
+    ],
+    "liveRefresh": {
+      "attemptedAt": "2026-07-15T02:05:33.958Z",
+      "sources": [
+        {
+          "source": "RemoteOK",
+          "status": "error",
+          "fetched": 0,
+          "error": "fetch failed"
+        },
+        {
+          "source": "Jobicy",
+          "status": "error",
+          "fetched": 0,
+          "error": "fetch failed"
+        },
+        {
+          "source": "Arbeitnow",
+          "status": "error",
+          "fetched": 0,
+          "error": "fetch failed"
+        }
+      ]
+    },
+    "notes": "Includes curated fallback data, last-known dashboard data, and live signals when available."
   },
   "executiveRoles": [
     {
@@ -45,12 +73,23 @@
       "source": "Naukri.com",
       "url": "https://www.naukri.com/jobs-search?k=Vice%20President%20Data%20Center%20Equinix%20Mumbai",
       "postedDate": "2026-07-10",
-      "keywords": ["vp", "data center", "strategy", "india"],
+      "keywords": [
+        "vp",
+        "data center",
+        "strategy",
+        "india"
+      ],
       "relevanceScore": 93,
       "viewCount": 1240,
       "applicantCount": 48,
       "ageFriendly": false,
-      "ageReason": "MNC with potential age considerations - verify before applying"
+      "ageReason": "MNC with potential age considerations - verify before applying",
+      "salaryLpa": 98,
+      "postedAgeDays": 5,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-ntt-1",
@@ -64,12 +103,22 @@
       "source": "LinkedIn Jobs",
       "url": "https://www.linkedin.com/jobs/search/?keywords=Senior%20Advisor%20NTT%20Global%20Data%20Centers%20Mumbai&location=Mumbai",
       "postedDate": "2026-07-09",
-      "keywords": ["advisor", "connectivity", "telecom"],
+      "keywords": [
+        "advisor",
+        "connectivity",
+        "telecom"
+      ],
       "relevanceScore": 91,
       "viewCount": 856,
       "applicantCount": 32,
       "ageFriendly": false,
-      "ageReason": "MNC - verify age policies before applying"
+      "ageReason": "MNC - verify age policies before applying",
+      "salaryLpa": 85,
+      "postedAgeDays": 6,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-jio-1",
@@ -83,12 +132,23 @@
       "source": "Naukri.com",
       "url": "https://www.naukri.com/jobs-search?k=Chief%20Growth%20Officer%20Reliance%20Jio%20Mumbai",
       "postedDate": "2026-07-08",
-      "keywords": ["chief", "enterprise", "fiber", "telecom"],
+      "keywords": [
+        "chief",
+        "enterprise",
+        "fiber",
+        "telecom"
+      ],
       "relevanceScore": 95,
       "viewCount": 2150,
       "applicantCount": 67,
       "ageFriendly": false,
-      "ageReason": "Check company policy - C-level roles may have preferences"
+      "ageReason": "Check company policy - C-level roles may have preferences",
+      "salaryLpa": 115,
+      "postedAgeDays": 7,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-tatacomm-1",
@@ -102,12 +162,22 @@
       "source": "Indeed",
       "url": "https://in.indeed.com/jobs?q=SVP%20Data%20Center%20Tata%20Communications&l=Mumbai",
       "postedDate": "2026-07-11",
-      "keywords": ["svp", "interconnect", "network"],
+      "keywords": [
+        "svp",
+        "interconnect",
+        "network"
+      ],
       "relevanceScore": 90,
       "viewCount": 1032,
       "applicantCount": 41,
       "ageFriendly": false,
-      "ageReason": "Verify with HR - Indian company, may be more flexible"
+      "ageReason": "Verify with HR - Indian company, may be more flexible",
+      "salaryLpa": 93,
+      "postedAgeDays": 4,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-stt-1",
@@ -121,12 +191,22 @@
       "source": "Michael Page",
       "url": "https://www.michaelpage.co.in/jobs/senior-vice-president/mumbai?keyword=Operations",
       "postedDate": "2026-07-12",
-      "keywords": ["svp", "operations", "infrastructure"],
+      "keywords": [
+        "svp",
+        "operations",
+        "infrastructure"
+      ],
       "relevanceScore": 88,
       "viewCount": 743,
       "applicantCount": 28,
       "ageFriendly": false,
-      "ageReason": "Verify experience requirements"
+      "ageReason": "Verify experience requirements",
+      "salaryLpa": 100,
+      "postedAgeDays": 3,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-adaniconnex-1",
@@ -140,12 +220,22 @@
       "source": "Glassdoor",
       "url": "https://www.glassdoor.co.in/Job/mumbai-vice-president-jobs-SRCH_IL.0,6_IC2851180_KO7,21.htm",
       "postedDate": "2026-07-07",
-      "keywords": ["vp", "infrastructure", "growth"],
+      "keywords": [
+        "vp",
+        "infrastructure",
+        "growth"
+      ],
       "relevanceScore": 87,
       "viewCount": 1567,
       "applicantCount": 52,
       "ageFriendly": false,
-      "ageReason": "Indian company - verify with HR directly"
+      "ageReason": "Indian company - verify with HR directly",
+      "salaryLpa": 108,
+      "postedAgeDays": 8,
+      "isRecent": false,
+      "recencyLabel": "Recent",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-airtel-1",
@@ -159,12 +249,22 @@
       "source": "Indeed",
       "url": "https://in.indeed.com/jobs?q=CTO%20Cloud%20Division%20Airtel%20Nxtra",
       "postedDate": "2026-07-06",
-      "keywords": ["cto", "cloud", "telecom"],
+      "keywords": [
+        "cto",
+        "cloud",
+        "telecom"
+      ],
       "relevanceScore": 86,
       "viewCount": 2341,
       "applicantCount": 73,
       "ageFriendly": false,
-      "ageReason": "Tech role - age may be a factor, verify first"
+      "ageReason": "Tech role - age may be a factor, verify first",
+      "salaryLpa": 115,
+      "postedAgeDays": 9,
+      "isRecent": false,
+      "recencyLabel": "Recent",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-digitalrealty-1",
@@ -178,12 +278,22 @@
       "source": "LinkedIn Jobs",
       "url": "https://www.linkedin.com/jobs/search/?keywords=Regional%20Director%20India%20Digital%20Realty",
       "postedDate": "2026-07-05",
-      "keywords": ["director", "operations", "region"],
+      "keywords": [
+        "director",
+        "operations",
+        "region"
+      ],
       "relevanceScore": 85,
       "viewCount": 892,
       "applicantCount": 35,
       "ageFriendly": false,
-      "ageReason": "MNC - check diversity policy"
+      "ageReason": "MNC - check diversity policy",
+      "salaryLpa": 104,
+      "postedAgeDays": 10,
+      "isRecent": false,
+      "recencyLabel": "Recent",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-ctrlsdata-1",
@@ -197,12 +307,21 @@
       "source": "Naukri.com",
       "url": "https://www.naukri.com/jobs-search?k=VP%20Business%20Development%20CtrlS",
       "postedDate": "2026-07-04",
-      "keywords": ["vp", "business development"],
+      "keywords": [
+        "vp",
+        "business development"
+      ],
       "relevanceScore": 82,
       "viewCount": 645,
       "applicantCount": 22,
       "ageFriendly": false,
-      "ageReason": "Indian startup - generally more flexible on age"
+      "ageReason": "Indian startup - generally more flexible on age",
+      "salaryLpa": 90,
+      "postedAgeDays": 11,
+      "isRecent": false,
+      "recencyLabel": "Recent",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "exec-webwerks-1",
@@ -216,12 +335,21 @@
       "source": "Indeed",
       "url": "https://in.indeed.com/jobs?q=Senior%20Director%20Infrastructure%20Web%20Werks%20Mumbai",
       "postedDate": "2026-07-03",
-      "keywords": ["director", "infrastructure"],
+      "keywords": [
+        "director",
+        "infrastructure"
+      ],
       "relevanceScore": 80,
       "viewCount": 567,
       "applicantCount": 18,
       "ageFriendly": false,
-      "ageReason": "Verify experience requirements"
+      "ageReason": "Verify experience requirements",
+      "salaryLpa": 95,
+      "postedAgeDays": 12,
+      "isRecent": false,
+      "recencyLabel": "Recent",
+      "isActive": true,
+      "activityStatus": "active"
     }
   ],
   "boardRoles": [
@@ -235,12 +363,21 @@
       "source": "NSE/BSE Corporate Filings",
       "url": "https://www.nseindia.com/companies-listing/corporate-filings-announcements",
       "postedDate": "2026-07-12",
-      "keywords": ["independent director", "filing", "board"],
+      "keywords": [
+        "independent director",
+        "filing",
+        "board"
+      ],
       "relevanceScore": 86,
       "viewCount": 1850,
       "applicantCount": 12,
       "ageFriendly": true,
-      "ageReason": "Board roles in India have no age limit by law"
+      "ageReason": "Board roles in India have no age limit by law",
+      "postedAgeDays": 3,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "board-egon-1",
@@ -252,12 +389,21 @@
       "source": "Executive Search Firm",
       "url": "https://www.egonzehnder.com/board-advisory-services",
       "postedDate": "2026-07-11",
-      "keywords": ["board", "advisor", "executive search"],
+      "keywords": [
+        "board",
+        "advisor",
+        "executive search"
+      ],
       "relevanceScore": 84,
       "viewCount": 1420,
       "applicantCount": 8,
       "ageFriendly": true,
-      "ageReason": "Specializes in seasoned executives for board roles"
+      "ageReason": "Specializes in seasoned executives for board roles",
+      "postedAgeDays": 4,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "board-kornferry-1",
@@ -269,12 +415,21 @@
       "source": "Executive Search Firm",
       "url": "https://www.kornferry.com/en/solutions/board-ascent",
       "postedDate": "2026-07-10",
-      "keywords": ["board", "advisor", "independent director"],
+      "keywords": [
+        "board",
+        "advisor",
+        "independent director"
+      ],
       "relevanceScore": 82,
       "viewCount": 1320,
       "applicantCount": 6,
       "ageFriendly": true,
-      "ageReason": "Specializes in board placements - experience valued"
+      "ageReason": "Specializes in board placements - experience valued",
+      "postedAgeDays": 5,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "board-heidrick-1",
@@ -286,12 +441,20 @@
       "source": "Executive Search Firm",
       "url": "https://www.heidrick.com/what-we-do/board-talent-and-governance",
       "postedDate": "2026-07-09",
-      "keywords": ["independent director", "telecom"],
+      "keywords": [
+        "independent director",
+        "telecom"
+      ],
       "relevanceScore": 80,
       "viewCount": 1150,
       "applicantCount": 7,
       "ageFriendly": true,
-      "ageReason": "Board specialist - experience is asset"
+      "ageReason": "Board specialist - experience is asset",
+      "postedAgeDays": 6,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "board-russell-1",
@@ -303,12 +466,21 @@
       "source": "Executive Search Firm",
       "url": "https://www.russellreynolds.com/en/solutions/board-services",
       "postedDate": "2026-07-08",
-      "keywords": ["board", "director", "connectivity"],
+      "keywords": [
+        "board",
+        "director",
+        "connectivity"
+      ],
       "relevanceScore": 78,
       "viewCount": 980,
       "applicantCount": 5,
       "ageFriendly": true,
-      "ageReason": "Expert in board appointments - seasoned executives preferred"
+      "ageReason": "Expert in board appointments - seasoned executives preferred",
+      "postedAgeDays": 7,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "board-iica-1",
@@ -320,12 +492,20 @@
       "source": "IICA Databank",
       "url": "https://www.independentdirectorsdatabank.in/",
       "postedDate": "2026-07-11",
-      "keywords": ["independent director", "board"],
+      "keywords": [
+        "independent director",
+        "board"
+      ],
       "relevanceScore": 76,
       "viewCount": 2340,
       "applicantCount": 45,
       "ageFriendly": true,
-      "ageReason": "India's largest board network - no age limit"
+      "ageReason": "India's largest board network - no age limit",
+      "postedAgeDays": 4,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "board-prime-1",
@@ -337,12 +517,21 @@
       "source": "Prime Database",
       "url": "https://www.primedatabasegroup.com/",
       "postedDate": "2026-07-09",
-      "keywords": ["appointment", "board", "director"],
+      "keywords": [
+        "appointment",
+        "board",
+        "director"
+      ],
       "relevanceScore": 74,
       "viewCount": 1680,
       "applicantCount": 22,
       "ageFriendly": true,
-      "ageReason": "Board tracker - no age discrimination"
+      "ageReason": "Board tracker - no age discrimination",
+      "postedAgeDays": 6,
+      "isRecent": true,
+      "recencyLabel": "Latest",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "board-gladwin-1",
@@ -354,12 +543,20 @@
       "source": "Executive Search Firm",
       "url": "https://www.gladwininternational.com/functions/board-non-executive-directors",
       "postedDate": "2026-07-07",
-      "keywords": ["board", "infrastructure"],
+      "keywords": [
+        "board",
+        "infrastructure"
+      ],
       "relevanceScore": 72,
       "viewCount": 845,
       "applicantCount": 3,
       "ageFriendly": true,
-      "ageReason": "Specialist in board search - values expertise"
+      "ageReason": "Specialist in board search - values expertise",
+      "postedAgeDays": 8,
+      "isRecent": false,
+      "recencyLabel": "Recent",
+      "isActive": true,
+      "activityStatus": "active"
     },
     {
       "id": "board-spencer-1",
@@ -371,12 +568,20 @@
       "source": "Executive Search Firm",
       "url": "https://www.spencerstuart.com/solutions/board-services",
       "postedDate": "2026-07-06",
-      "keywords": ["independent director", "technology"],
+      "keywords": [
+        "independent director",
+        "technology"
+      ],
       "relevanceScore": 70,
       "viewCount": 1230,
       "applicantCount": 4,
       "ageFriendly": true,
-      "ageReason": "Board specialist - experience is valued"
+      "ageReason": "Board specialist - experience is valued",
+      "postedAgeDays": 9,
+      "isRecent": false,
+      "recencyLabel": "Recent",
+      "isActive": true,
+      "activityStatus": "active"
     }
   ]
 }
