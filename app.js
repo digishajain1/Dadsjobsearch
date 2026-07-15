@@ -2,15 +2,43 @@ const DATA_URL = "./data/opportunities.json";
 const TRACKER_KEY = "dadsjobsearch_tracker_v1";
 const ITEMS_PER_PAGE = 10;
 
+const PLATFORMS = [
+  {
+    name: "LinkedIn",
+    url: (title, company) =>
+      `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(`${title} ${company}`)}&location=India`,
+  },
+  {
+    name: "Indeed",
+    url: (title, company) =>
+      `https://in.indeed.com/jobs?q=${encodeURIComponent(`${title} ${company}`)}&l=India`,
+  },
+  {
+    name: "Naukri",
+    url: (title, company) =>
+      `https://www.naukri.com/${encodeURIComponent(title.replace(/\s+/g, "-").toLowerCase())}-jobs-in-india?k=${encodeURIComponent(`${title} ${company}`)}`,
+  },
+  {
+    name: "AngelList",
+    url: (title) =>
+      `https://angel.co/jobs?q=${encodeURIComponent(title)}`,
+  },
+];
+
 const searchInput = document.getElementById("search");
 const locationFilter = document.getElementById("locationFilter");
 const statusFilter = document.getElementById("statusFilter");
+const recencyFilter = document.getElementById("recencyFilter");
+const ageFilter = document.getElementById("ageFilter");
+const activeFilter = document.getElementById("activeFilter");
+const refreshBtn = document.getElementById("refreshBtn");
+const refreshStatus = document.getElementById("refreshStatus");
 const executiveList = document.getElementById("executiveList");
 const boardList = document.getElementById("boardList");
 const template = document.getElementById("opportunityTemplate");
 const meta = document.getElementById("meta");
 
-let dataset = { executiveRoles: [], boardRoles: [], generatedAt: null };
+let dataset = { executiveRoles: [], boardRoles: [], generatedAt: null, metadata: {} };
 let currentPage = { executive: 1, board: 1 };
 
 function readTracker() {
@@ -32,6 +60,7 @@ function getCombinedText(opportunity) {
     opportunity.location,
     opportunity.sector,
     opportunity.source,
+    ...(opportunity.ageReasons || []),
   ]
     .join(" ")
     .toLowerCase();
@@ -49,19 +78,123 @@ function locationMatches(filter, locationText) {
   return lower.includes(filter);
 }
 
+function ageFilterMatches(filter, opportunity) {
+  if (filter === "all") return true;
+  if (filter === "friendly") return opportunity.ageAgeFriendly === true;
+  if (filter === "flagged") return opportunity.ageAgeFriendly !== true;
+  return true;
+}
+
+function getAgePriority(opportunity) {
+  return opportunity.ageAgeFriendly === true ? 1 : 0;
+}
+
+function formatPostedDate(opportunity) {
+  if (!opportunity.postedAt && !opportunity.postedDate) return "N/A";
+  const parsed = new Date(opportunity.postedAt || opportunity.postedDate);
+  return Number.isNaN(parsed.getTime()) ? opportunity.postedDate : parsed.toLocaleDateString();
+}
+
+function getPostedTime(opportunity) {
+  const parsed = new Date(opportunity.postedAt || opportunity.postedDate || 0);
+  return Number.isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+}
+
+function isOpportunityActive(opportunity, trackerStatus = "") {
+  const listingStatus = `${opportunity.listingStatus || ""}`.toLowerCase();
+  if (trackerStatus === "archived") return false;
+  if (listingStatus === "archived" || listingStatus === "closed") return false;
+  return opportunity.isActive !== false;
+}
+
+function shouldIncludeByActiveFilter(opportunity, trackerStatus = "") {
+  if (activeFilter.value !== "active") return true;
+  return isOpportunityActive(opportunity, trackerStatus);
+}
+
+function isLatestOpportunity(opportunity) {
+  if (typeof opportunity.isLatest === "boolean") return opportunity.isLatest;
+  const latestWindowDays = dataset.metadata?.latestWindowDays || 7;
+  const postedAt = opportunity.postedAt || opportunity.postedDate;
+  const generatedDate = new Date(dataset.generatedAt || Date.now());
+  const postedDate = new Date(postedAt || 0);
+  if (Number.isNaN(generatedDate.getTime()) || Number.isNaN(postedDate.getTime())) return false;
+  const generatedDay = new Date(generatedDate.toISOString().slice(0, 10)).getTime();
+  const postedDay = new Date(postedDate.toISOString().slice(0, 10)).getTime();
+  const ageMs = generatedDay - postedDay;
+  return ageMs >= 0 && ageMs <= latestWindowDays * 24 * 60 * 60 * 1000;
+}
+
+function sortOpportunities(items) {
+  return [...items].sort((a, b) => {
+    const postedDiff = getPostedTime(b) - getPostedTime(a);
+    if (postedDiff) return postedDiff;
+    const ageDiff = getAgePriority(b) - getAgePriority(a);
+    if (ageDiff) return ageDiff;
+    return (b.relevanceScore || 0) - (a.relevanceScore || 0);
+  });
+}
+
+function getActiveOpportunities(list) {
+  const tracker = readTracker();
+  return sortOpportunities(
+    list.filter((item) => {
+      const status = tracker[item.id]?.status || "";
+      return shouldIncludeByActiveFilter(item, status);
+    })
+  );
+}
+
 function buildCard(opportunity) {
   const tracker = readTracker();
   const state = tracker[opportunity.id] || { status: "", notes: "" };
   const node = template.content.firstElementChild.cloneNode(true);
 
   node.querySelector(".title").textContent = opportunity.title;
+
+  const latestBadge = node.querySelector(".latest-badge");
+  latestBadge.hidden = !isLatestOpportunity(opportunity);
+
   node.querySelector(".company").textContent = `${opportunity.company} · ${opportunity.location}`;
-  node.querySelector(".details").textContent = `${opportunity.type} · Sector: ${opportunity.sector} · Posted: ${opportunity.postedDate || "N/A"}`;
+  node.querySelector(".details").textContent = `${opportunity.type} · Sector: ${opportunity.sector} · Posted: ${formatPostedDate(opportunity)}`;
   node.querySelector(".source").textContent = `Source: ${opportunity.source}`;
   node.querySelector(".score").textContent = `Relevance: ${opportunity.relevanceScore ?? "N/A"}${opportunity.salaryLpa ? ` · Salary: ₹${opportunity.salaryLpa}L` : ""}`;
 
+  const ageBadge = node.querySelector(".age-badge");
+  if (opportunity.ageAgeFriendly === true) {
+    ageBadge.textContent = "✓ Age-Friendly 60+";
+    ageBadge.className = "age-badge age-friendly";
+  } else {
+    ageBadge.textContent = "⚠️ May have age limits";
+    ageBadge.className = "age-badge age-flagged";
+  }
+
+  const ageReasons = node.querySelector(".age-reasons");
+  const reasons = (opportunity.ageReasons || []).join(", ");
+  ageReasons.textContent = reasons ? `Why: ${reasons}` : "";
+  ageReasons.hidden = !reasons;
+
   const link = node.querySelector(".link");
-  link.href = opportunity.url;
+  if (opportunity.careerPageUrl) {
+    link.href = opportunity.careerPageUrl;
+    link.textContent = "🏢 Apply on Company Career Site";
+    link.classList.add("link--direct");
+  } else {
+    link.href = opportunity.url;
+    link.textContent = "🔗 View on Job Board";
+    link.classList.remove("link--direct");
+  }
+
+  const platformLinksEl = node.querySelector(".platform-links");
+  PLATFORMS.forEach(({ name, url }) => {
+    const a = document.createElement("a");
+    a.href = url(opportunity.title, opportunity.company);
+    a.textContent = `Search ${name}`;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.className = "platform-link";
+    platformLinksEl.appendChild(a);
+  });
 
   const statusEl = node.querySelector(".tracker-status");
   const notesEl = node.querySelector(".tracker-notes");
@@ -88,24 +221,25 @@ function buildCard(opportunity) {
 function applyFilters(list) {
   const q = searchInput.value.trim().toLowerCase();
   const tracker = readTracker();
-  return list.filter((item) => {
+  return getActiveOpportunities(list).filter((item) => {
     const status = tracker[item.id]?.status || "";
     const queryMatches = !q || getCombinedText(item).includes(q);
     return (
       queryMatches &&
+      (recencyFilter.value !== "latest" || isLatestOpportunity(item)) &&
       locationMatches(locationFilter.value, item.location) &&
-      statusMatches(statusFilter.value, status)
+      statusMatches(statusFilter.value, status) &&
+      ageFilterMatches(ageFilter.value, item)
     );
   });
 }
 
 function paginate(items, page) {
   const start = (page - 1) * ITEMS_PER_PAGE;
-  const end = start + ITEMS_PER_PAGE;
-  return items.slice(start, end);
+  return items.slice(start, start + ITEMS_PER_PAGE);
 }
 
-function createPaginationControls(totalItems, currentPage, type) {
+function createPaginationControls(totalItems, page, type) {
   const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
   if (totalPages <= 1) return null;
 
@@ -114,31 +248,29 @@ function createPaginationControls(totalItems, currentPage, type) {
 
   const prevBtn = document.createElement("button");
   prevBtn.textContent = "← Previous";
-  prevBtn.disabled = currentPage === 1;
+  prevBtn.disabled = page === 1;
   prevBtn.addEventListener("click", () => {
-    if (currentPage > 1) {
-      currentPage[type] = currentPage - 1;
+    if (page > 1) {
+      currentPage[type] = page - 1;
       render();
     }
   });
 
   const pageInfo = document.createElement("span");
   pageInfo.className = "page-info";
-  pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+  pageInfo.textContent = `Page ${page} of ${totalPages}`;
 
   const nextBtn = document.createElement("button");
   nextBtn.textContent = "Next →";
-  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.disabled = page === totalPages;
   nextBtn.addEventListener("click", () => {
-    if (currentPage < totalPages) {
-      currentPage[type] = currentPage + 1;
+    if (page < totalPages) {
+      currentPage[type] = page + 1;
       render();
     }
   });
 
-  controls.appendChild(prevBtn);
-  controls.appendChild(pageInfo);
-  controls.appendChild(nextBtn);
+  controls.append(prevBtn, pageInfo, nextBtn);
   return controls;
 }
 
@@ -155,35 +287,66 @@ function renderList(container, items, emptyText, type) {
   container.appendChild(fragment);
 
   const pagination = createPaginationControls(items.length, currentPage[type], type);
-  if (pagination) {
-    container.appendChild(pagination);
-  }
+  if (pagination) container.appendChild(pagination);
 }
 
 function render() {
+  const activeExecutive = getActiveOpportunities(dataset.executiveRoles || []);
+  const activeBoard = getActiveOpportunities(dataset.boardRoles || []);
   const executive = applyFilters(dataset.executiveRoles || []);
   const board = applyFilters(dataset.boardRoles || []);
+  const latestExecutiveCount = activeExecutive.filter(isLatestOpportunity).length;
+  const latestBoardCount = activeBoard.filter(isLatestOpportunity).length;
+  const allActive = [...activeExecutive, ...activeBoard];
+  const ageFriendlyCount = allActive.filter((item) => item.ageAgeFriendly === true).length;
+  const flaggedAgeCount = allActive.length - ageFriendlyCount;
+
+  if (dataset.generatedAt) {
+    meta.textContent = `Data generated: ${new Date(dataset.generatedAt).toLocaleString()} · Executive: ${activeExecutive.length} active (${latestExecutiveCount} latest) · Board: ${activeBoard.length} active (${latestBoardCount} latest) · ${ageFriendlyCount} age-friendly · ${flaggedAgeCount} flagged · Showing ${recencyFilter.value === "latest" ? "latest active positions" : "all active positions"}`;
+  }
 
   renderList(executiveList, executive, "No executive opportunities match current filters.", "executive");
   renderList(boardList, board, "No board signals match current filters.", "board");
 }
 
+async function loadData() {
+  const response = await fetch(DATA_URL, { cache: "no-store" });
+  if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
+  dataset = await response.json();
+}
+
 async function init() {
   try {
-    const response = await fetch(DATA_URL, { cache: "no-store" });
-    if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
-    dataset = await response.json();
-    meta.textContent = `Data generated: ${new Date(dataset.generatedAt).toLocaleString()} (${(dataset.executiveRoles || []).length} executive, ${(dataset.boardRoles || []).length} board)`;
+    await loadData();
   } catch (error) {
     meta.textContent = `Unable to load data file. ${error.message}`;
   }
 
-  [searchInput, locationFilter, statusFilter].forEach((input) =>
+  [searchInput, locationFilter, statusFilter, recencyFilter, ageFilter, activeFilter].forEach((input) =>
     input.addEventListener("input", () => {
       currentPage = { executive: 1, board: 1 };
       render();
     })
   );
+
+  refreshBtn.addEventListener("click", async () => {
+    refreshBtn.disabled = true;
+    refreshBtn.textContent = "⏳ Refreshing…";
+    refreshStatus.hidden = false;
+    refreshStatus.textContent = "Fetching latest data…";
+    try {
+      await loadData();
+      const updated = dataset.generatedAt ? new Date(dataset.generatedAt).toLocaleString() : "unknown";
+      refreshStatus.textContent = `✅ Data refreshed · Last updated: ${updated}`;
+      currentPage = { executive: 1, board: 1 };
+      render();
+    } catch (error) {
+      refreshStatus.textContent = `❌ Refresh failed: ${error.message}`;
+    } finally {
+      refreshBtn.disabled = false;
+      refreshBtn.textContent = "🔄 Refresh Now";
+    }
+  });
 
   render();
 }
