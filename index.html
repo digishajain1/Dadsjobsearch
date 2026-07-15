@@ -25,11 +25,25 @@
           <option value="applied">Applied</option>
           <option value="networking">Networking</option>
           <option value="interview">Interview</option>
-          <option value="archived">Archived</option>
           <option value="untracked">Untracked</option>
         </select>
+        <select id="recencyFilter">
+          <option value="latest" selected>Latest positions</option>
+          <option value="all">All positions</option>
+        </select>
+        <select id="ageFilter">
+          <option value="all">All opportunities</option>
+          <option value="friendly">Age-friendly (60+)</option>
+          <option value="flagged">Flagged age concerns</option>
+        </select>
+        <select id="activeFilter">
+          <option value="active" selected>Active jobs only</option>
+          <option value="all">All jobs (inc. archived)</option>
+        </select>
+        <button id="refreshBtn" type="button">🔄 Refresh Now</button>
       </div>
       <p class="meta" id="meta"></p>
+      <p class="refresh-status" id="refreshStatus" hidden></p>
     </header>
 
     <main>
@@ -47,11 +61,15 @@
     <template id="opportunityTemplate">
       <article class="card">
         <h3 class="title"></h3>
+        <span class="badge latest-badge" hidden>Latest</span>
+        <p class="age-badge"></p>
         <p class="company"></p>
         <p class="details"></p>
         <p class="source"></p>
         <p class="score"></p>
-        <a class="link" target="_blank" rel="noopener noreferrer">Open Source Link</a>
+        <p class="age-reasons"></p>
+        <a class="link" target="_blank" rel="noopener noreferrer"></a>
+        <div class="platform-links"></div>
         <div class="tracker">
           <label>
             Tracker status
