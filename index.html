@@ -25,8 +25,11 @@
           <option value="applied">Applied</option>
           <option value="networking">Networking</option>
           <option value="interview">Interview</option>
-          <option value="archived">Archived</option>
           <option value="untracked">Untracked</option>
+        </select>
+        <select id="recencyFilter">
+          <option value="latest" selected>Latest positions</option>
+          <option value="all">All positions</option>
         </select>
       </div>
       <p class="meta" id="meta"></p>
@@ -47,6 +50,7 @@
     <template id="opportunityTemplate">
       <article class="card">
         <h3 class="title"></h3>
+        <span class="badge latest-badge" hidden>Latest</span>
         <p class="company"></p>
         <p class="details"></p>
         <p class="source"></p>
