@@ -34,6 +34,29 @@ button {
   font: inherit;
 }
 
+button {
+  cursor: pointer;
+  background: #0b4ab6;
+  color: #fff;
+  font-weight: 700;
+  border-color: #0b4ab6;
+}
+
+button:hover:not(:disabled) {
+  background: #0939a0;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.refresh-status {
+  font-size: 0.9rem;
+  color: #4d607f;
+  margin: 0.25rem 0 0.5rem;
+}
+
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -113,6 +136,28 @@ main {
   background: #c8ebd8;
 }
 
+.platform-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.25rem;
+}
+
+.platform-link {
+  font-size: 0.78rem;
+  color: #0b4ab6;
+  background: #eef3fb;
+  border: 1px solid #c0cfe8;
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.platform-link:hover {
+  background: #d9e6f8;
+}
+
 .tracker {
   display: grid;
   gap: 0.5rem;
@@ -128,4 +173,12 @@ main {
 
 .pagination button {
   width: auto;
+  background: #f0f4ff;
+  color: #0b4ab6;
+  border-color: #c0cfe8;
+  font-weight: 400;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #dce5f8;
 }

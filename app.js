@@ -2,11 +2,37 @@ const DATA_URL = "./data/opportunities.json";
 const TRACKER_KEY = "dadsjobsearch_tracker_v1";
 const ITEMS_PER_PAGE = 10;
 
+const PLATFORMS = [
+  {
+    name: "LinkedIn",
+    url: (title, company) =>
+      `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(`${title} ${company}`)}&location=India`,
+  },
+  {
+    name: "Indeed",
+    url: (title, company) =>
+      `https://in.indeed.com/jobs?q=${encodeURIComponent(`${title} ${company}`)}&l=India`,
+  },
+  {
+    name: "Naukri",
+    url: (title, company) =>
+      `https://www.naukri.com/${encodeURIComponent(title.replace(/\s+/g, "-").toLowerCase())}-jobs-in-india?k=${encodeURIComponent(`${title} ${company}`)}`,
+  },
+  {
+    name: "AngelList",
+    url: (title) =>
+      `https://angel.co/jobs?q=${encodeURIComponent(title)}`,
+  },
+];
+
 const searchInput = document.getElementById("search");
 const locationFilter = document.getElementById("locationFilter");
 const statusFilter = document.getElementById("statusFilter");
 const recencyFilter = document.getElementById("recencyFilter");
 const ageFilter = document.getElementById("ageFilter");
+const activeFilter = document.getElementById("activeFilter");
+const refreshBtn = document.getElementById("refreshBtn");
+const refreshStatus = document.getElementById("refreshStatus");
 const executiveList = document.getElementById("executiveList");
 const boardList = document.getElementById("boardList");
 const template = document.getElementById("opportunityTemplate");
@@ -81,6 +107,11 @@ function isOpportunityActive(opportunity, trackerStatus = "") {
   return opportunity.isActive !== false;
 }
 
+function shouldIncludeByActiveFilter(opportunity, trackerStatus = "") {
+  if (activeFilter.value !== "active") return true;
+  return isOpportunityActive(opportunity, trackerStatus);
+}
+
 function isLatestOpportunity(opportunity) {
   if (typeof opportunity.isLatest === "boolean") return opportunity.isLatest;
   const latestWindowDays = dataset.metadata?.latestWindowDays || 7;
@@ -109,7 +140,7 @@ function getActiveOpportunities(list) {
   return sortOpportunities(
     list.filter((item) => {
       const status = tracker[item.id]?.status || "";
-      return isOpportunityActive(item, status);
+      return shouldIncludeByActiveFilter(item, status);
     })
   );
 }
@@ -153,6 +184,17 @@ function buildCard(opportunity) {
     link.textContent = "🔗 View on Job Board";
     link.classList.remove("link--direct");
   }
+
+  const platformLinksEl = node.querySelector(".platform-links");
+  PLATFORMS.forEach(({ name, url }) => {
+    const a = document.createElement("a");
+    a.href = url(opportunity.title, opportunity.company);
+    a.textContent = `Search ${name}`;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.className = "platform-link";
+    platformLinksEl.appendChild(a);
+  });
 
   const statusEl = node.querySelector(".tracker-status");
   const notesEl = node.querySelector(".tracker-notes");
@@ -267,21 +309,44 @@ function render() {
   renderList(boardList, board, "No board signals match current filters.", "board");
 }
 
+async function loadData() {
+  const response = await fetch(DATA_URL, { cache: "no-store" });
+  if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
+  dataset = await response.json();
+}
+
 async function init() {
   try {
-    const response = await fetch(DATA_URL, { cache: "no-store" });
-    if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
-    dataset = await response.json();
+    await loadData();
   } catch (error) {
     meta.textContent = `Unable to load data file. ${error.message}`;
   }
 
-  [searchInput, locationFilter, statusFilter, recencyFilter, ageFilter].forEach((input) =>
+  [searchInput, locationFilter, statusFilter, recencyFilter, ageFilter, activeFilter].forEach((input) =>
     input.addEventListener("input", () => {
       currentPage = { executive: 1, board: 1 };
       render();
     })
   );
+
+  refreshBtn.addEventListener("click", async () => {
+    refreshBtn.disabled = true;
+    refreshBtn.textContent = "⏳ Refreshing…";
+    refreshStatus.hidden = false;
+    refreshStatus.textContent = "Fetching latest data…";
+    try {
+      await loadData();
+      const updated = dataset.generatedAt ? new Date(dataset.generatedAt).toLocaleString() : "unknown";
+      refreshStatus.textContent = `✅ Data refreshed · Last updated: ${updated}`;
+      currentPage = { executive: 1, board: 1 };
+      render();
+    } catch (error) {
+      refreshStatus.textContent = `❌ Refresh failed: ${error.message}`;
+    } finally {
+      refreshBtn.disabled = false;
+      refreshBtn.textContent = "🔄 Refresh Now";
+    }
+  });
 
   render();
 }
