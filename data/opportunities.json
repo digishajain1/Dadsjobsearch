@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T03:47:04.385Z",
+  "generatedAt": "2026-07-16T14:32:48.407Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,6 +108,72 @@
       "relevanceScore": 90
     },
     {
+      "id": "remoteok-1134888",
+      "title": "Chief Operating Officer",
+      "company": "Verity Search Limited",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-chief-operating-officer-verity-search-limited-1134888",
+      "postedDate": "2026-07-15T10:14:05+00:00",
+      "keywords": [
+        "copywriting",
+        "non tech",
+        "product manager",
+        "exec",
+        "design",
+        "saas",
+        "embedded",
+        "customer support",
+        "marketing",
+        "content writing",
+        "senior",
+        "ops",
+        "recruiter",
+        "digital nomad",
+        "admin",
+        "education",
+        "technical",
+        "dev",
+        "finance",
+        "junior",
+        "engineer",
+        "architecture",
+        "designer",
+        "testing",
+        "medical"
+      ],
+      "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1134854",
+      "title": "Servpro is Hiring",
+      "company": "SERVPRO of Vacaville / Dixon",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-servpro-is-hiring-servpro-of-vacaville-dixon-1134854",
+      "postedDate": "2026-07-15T08:03:13+00:00",
+      "keywords": [
+        "education",
+        "non tech",
+        "ops",
+        "exec",
+        "full time",
+        "part time",
+        "customer support",
+        "marketing",
+        "travel",
+        "content writing",
+        "sys admin"
+      ],
+      "relevanceScore": 70
+    },
+    {
       "id": "remoteok-1134878",
       "title": "Chief Growth Officer",
       "company": "Original Peptide",
@@ -150,6 +216,35 @@
         "medical"
       ],
       "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1134884",
+      "title": "Product Director EdTech Digital Learning",
+      "company": "peopleworth",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-product-director-edtech-digital-learning-peopleworth-1134884",
+      "postedDate": "2026-07-15T13:27:56+00:00",
+      "keywords": [
+        "copywriting",
+        "non tech",
+        "product manager",
+        "exec",
+        "design",
+        "saas",
+        "embedded",
+        "customer support",
+        "marketing",
+        "content writing",
+        "senior",
+        "ops",
+        "recruiter",
+        "digital nomad"
+      ],
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1134791",
@@ -197,48 +292,6 @@
         "ops",
         "exec",
         "social media"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1134844",
-      "title": "Director of Operations",
-      "company": "Confidential Careers",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-operations-confidential-careers-1134844",
-      "postedDate": "2026-07-13T06:47:18+00:00",
-      "keywords": [
-        "exec",
-        "customer support",
-        "marketing",
-        "travel",
-        "finance",
-        "senior",
-        "ops",
-        "medical"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1134872",
-      "title": "Heading",
-      "company": "Yaundry - Dublin's Laundry App",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-heading-yaundry-dublins-laundry-app-1134872",
-      "postedDate": "2026-07-12T01:23:57+00:00",
-      "keywords": [
-        "sys admin",
-        "video",
-        "content writing",
-        "non tech"
       ],
       "relevanceScore": 65
     }
