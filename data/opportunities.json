@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-15T14:19:40.378Z",
+  "generatedAt": "2026-07-16T03:47:04.385Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,6 +108,50 @@
       "relevanceScore": 90
     },
     {
+      "id": "remoteok-1134878",
+      "title": "Chief Growth Officer",
+      "company": "Original Peptide",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-chief-growth-officer-original-peptide-1134878",
+      "postedDate": "2026-07-14T20:44:20+00:00",
+      "keywords": [
+        "design",
+        "marketing",
+        "exec",
+        "web dev",
+        "video",
+        "content writing",
+        "senior",
+        "photoshop",
+        "engineer",
+        "ecommerce",
+        "digital nomad",
+        "customer support",
+        "travel",
+        "education",
+        "finance",
+        "ops",
+        "legal",
+        "sales",
+        "golang",
+        "full time",
+        "part time",
+        "strategy",
+        "admin",
+        "full stack",
+        "technical",
+        "dev",
+        "social media",
+        "stats",
+        "medical"
+      ],
+      "relevanceScore": 70
+    },
+    {
       "id": "remoteok-1134791",
       "title": "Head of Creative Studio &amp; Brand Operations YOUNG",
       "company": "YOUNG",
@@ -180,19 +224,21 @@
       "relevanceScore": 65
     },
     {
-      "id": "remoteok-1134723",
+      "id": "remoteok-1134872",
       "title": "Heading",
-      "company": "UX/UI Design K7 Tech",
+      "company": "Yaundry - Dublin's Laundry App",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-heading-ux-ui-design-k7-tech-1134723",
-      "postedDate": "2026-07-11T16:20:00+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-heading-yaundry-dublins-laundry-app-1134872",
+      "postedDate": "2026-07-12T01:23:57+00:00",
       "keywords": [
-        "design",
-        "digital nomad"
+        "sys admin",
+        "video",
+        "content writing",
+        "non tech"
       ],
       "relevanceScore": 65
     }
