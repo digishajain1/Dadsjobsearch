@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-16T14:32:48.407Z",
+  "generatedAt": "2026-07-17T03:46:35.627Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -218,6 +218,34 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1134901",
+      "title": "Associate Director of Athlete Engagement",
+      "company": "Axe Sports Group",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-associate-director-of-athlete-engagement-axe-sports-group-1134901",
+      "postedDate": "2026-07-15T15:26:28+00:00",
+      "keywords": [
+        "hr",
+        "education",
+        "customer support",
+        "marketing",
+        "exec",
+        "medical",
+        "virtual assistant",
+        "travel",
+        "finance",
+        "content writing",
+        "ops",
+        "golang",
+        "part time"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1134884",
       "title": "Product Director EdTech Digital Learning",
       "company": "peopleworth",
@@ -273,25 +301,6 @@
         "ads",
         "full time",
         "digital nomad"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1134775",
-      "title": "Director of Social Media",
-      "company": "TruHeight Vitamins",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-social-media-truheight-vitamins-1134775",
-      "postedDate": "2026-07-13T17:09:50+00:00",
-      "keywords": [
-        "coordinator",
-        "ops",
-        "exec",
-        "social media"
       ],
       "relevanceScore": 65
     }
