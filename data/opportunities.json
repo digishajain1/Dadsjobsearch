@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T14:12:11.095Z",
+  "generatedAt": "2026-07-18T03:41:30.835Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -218,6 +218,43 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1134952",
+      "title": "Director Business Development Army",
+      "company": "NOBLE",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-business-development-army-noble-1134952",
+      "postedDate": "2026-07-16T17:48:43+00:00",
+      "keywords": [
+        "exec",
+        "design",
+        "amazon",
+        "customer support",
+        "marketing",
+        "travel",
+        "speech",
+        "video",
+        "ads",
+        "content writing",
+        "ops",
+        "shopify",
+        "full time",
+        "digital nomad",
+        "salesforce",
+        "sys admin",
+        "infosec",
+        "microsoft",
+        "senior",
+        "bus dev",
+        "sales",
+        "medical"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1134901",
       "title": "Associate Director of Athlete Engagement",
       "company": "Axe Sports Group",
@@ -270,36 +307,6 @@
         "senior",
         "ops",
         "recruiter",
-        "digital nomad"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1134791",
-      "title": "Head of Creative Studio &amp; Brand Operations YOUNG",
-      "company": "YOUNG",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-creative-studio-amp-brand-operations-young-young-1134791",
-      "postedDate": "2026-07-13T20:27:54+00:00",
-      "keywords": [
-        "customer support",
-        "exec",
-        "ops",
-        "medical",
-        "writer",
-        "content writing",
-        "junior",
-        "design",
-        "travel",
-        "video",
-        "senior",
-        "marketing",
-        "ads",
-        "full time",
         "digital nomad"
       ],
       "relevanceScore": 65
