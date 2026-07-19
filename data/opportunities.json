@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T04:03:25.653Z",
+  "generatedAt": "2026-07-19T14:01:35.505Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -183,63 +183,6 @@
         "bus dev",
         "sales",
         "medical"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1134901",
-      "title": "Associate Director of Athlete Engagement",
-      "company": "Axe Sports Group",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-associate-director-of-athlete-engagement-axe-sports-group-1134901",
-      "postedDate": "2026-07-15T15:26:28+00:00",
-      "keywords": [
-        "hr",
-        "education",
-        "customer support",
-        "marketing",
-        "exec",
-        "medical",
-        "virtual assistant",
-        "travel",
-        "finance",
-        "content writing",
-        "ops",
-        "golang",
-        "part time"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1134884",
-      "title": "Product Director EdTech Digital Learning",
-      "company": "peopleworth",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-product-director-edtech-digital-learning-peopleworth-1134884",
-      "postedDate": "2026-07-15T13:27:56+00:00",
-      "keywords": [
-        "copywriting",
-        "non tech",
-        "product manager",
-        "exec",
-        "design",
-        "saas",
-        "embedded",
-        "customer support",
-        "marketing",
-        "content writing",
-        "senior",
-        "ops",
-        "recruiter",
-        "digital nomad"
       ],
       "relevanceScore": 65
     }
