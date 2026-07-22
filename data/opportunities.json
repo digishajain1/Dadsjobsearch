@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T14:34:12.626Z",
+  "generatedAt": "2026-07-22T03:57:20.028Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -106,6 +106,36 @@
         "telecom"
       ],
       "relevanceScore": 90
+    },
+    {
+      "id": "remoteok-1135129",
+      "title": "Head of People",
+      "company": "Bizee",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-people-bizee-1135129",
+      "postedDate": "2026-07-20T23:14:28+00:00",
+      "keywords": [
+        "design",
+        "customer support",
+        "video",
+        "exec",
+        "content writing",
+        "digital nomad",
+        "saas",
+        "hr",
+        "sys admin",
+        "marketing",
+        "payroll",
+        "education",
+        "ops",
+        "legal",
+        "medical"
+      ],
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1135134",
