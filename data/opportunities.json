@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T03:57:20.028Z",
+  "generatedAt": "2026-07-22T14:33:57.509Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,6 +108,29 @@
       "relevanceScore": 90
     },
     {
+      "id": "remoteok-1135146",
+      "title": "Brand &amp; Marketing Director",
+      "company": "Peas Recruitment Ltd",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-brand-amp-marketing-director-peas-recruitment-ltd-1135146",
+      "postedDate": "2026-07-21T08:08:44+00:00",
+      "keywords": [
+        "exec",
+        "design",
+        "c",
+        "content writing",
+        "marketing",
+        "recruiter",
+        "ecommerce",
+        "digital nomad"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1135129",
       "title": "Head of People",
       "company": "Bizee",
@@ -212,48 +235,6 @@
         "senior",
         "engineer",
         "recruiter"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1134988",
-      "title": "Creative Director",
-      "company": "Bellweather Agency",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-creative-director-bellweather-agency-1134988",
-      "postedDate": "2026-07-17T14:41:58+00:00",
-      "keywords": [
-        "part time",
-        "hr",
-        "medical",
-        "exec",
-        "design",
-        "salesforce",
-        "customer support",
-        "dev",
-        "copywriting",
-        "testing",
-        "travel",
-        "speech",
-        "video",
-        "content writing",
-        "marketing",
-        "stats",
-        "sales",
-        "social media",
-        "digital nomad",
-        "recruiter",
-        "finance",
-        "microsoft",
-        "excel",
-        "education",
-        "art direction",
-        "ops",
-        "full time"
       ],
       "relevanceScore": 65
     }
