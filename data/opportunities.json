@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T14:33:57.509Z",
+  "generatedAt": "2026-07-23T03:54:14.069Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -106,6 +106,32 @@
         "telecom"
       ],
       "relevanceScore": 90
+    },
+    {
+      "id": "remoteok-1135193",
+      "title": "Head of Business Operations",
+      "company": "Wing",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-business-operations-wing-1135193",
+      "postedDate": "2026-07-21T14:44:06+00:00",
+      "keywords": [
+        "design",
+        "sys admin",
+        "recruiter",
+        "marketing",
+        "exec",
+        "senior",
+        "ops",
+        "stats",
+        "medical",
+        "full time",
+        "digital nomad"
+      ],
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1135146",
