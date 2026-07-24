@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T03:53:23.334Z",
+  "generatedAt": "2026-07-24T14:20:48.157Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -211,6 +211,20 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1135276",
+      "title": "Heading",
+      "company": "SkillKraft Technologies",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-heading-skillkraft-technologies-1135276",
+      "postedDate": "2026-07-23T09:31:19+00:00",
+      "keywords": [],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1135241",
       "title": "Director of IT",
       "company": "Emergence",
@@ -333,32 +347,6 @@
         "sales",
         "art direction",
         "consulting"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1135193",
-      "title": "Head of Business Operations",
-      "company": "Wing",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-business-operations-wing-1135193",
-      "postedDate": "2026-07-21T14:44:06+00:00",
-      "keywords": [
-        "design",
-        "sys admin",
-        "recruiter",
-        "marketing",
-        "exec",
-        "senior",
-        "ops",
-        "stats",
-        "medical",
-        "full time",
-        "digital nomad"
       ],
       "relevanceScore": 65
     }
