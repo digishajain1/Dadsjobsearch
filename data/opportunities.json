@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T04:12:45.759Z",
+  "generatedAt": "2026-07-27T15:24:27.351Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -190,6 +190,26 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1135453",
+      "title": "Non Executive Director",
+      "company": "Ambulance Provident Fund Limited",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-non-executive-director-ambulance-provident-fund-limited-1135453",
+      "postedDate": "2026-07-25T01:30:45+00:00",
+      "keywords": [
+        "exec",
+        "customer support",
+        "marketing",
+        "finance",
+        "medical"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1135384",
       "title": "Head of Operations",
       "company": "OpenTrack",
@@ -239,20 +259,6 @@
         "web dev",
         "api"
       ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1135276",
-      "title": "Heading",
-      "company": "SkillKraft Technologies",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-heading-skillkraft-technologies-1135276",
-      "postedDate": "2026-07-23T09:31:19+00:00",
-      "keywords": [],
       "relevanceScore": 65
     }
   ],
