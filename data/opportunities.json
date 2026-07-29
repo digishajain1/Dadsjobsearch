@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T03:49:29.809Z",
+  "generatedAt": "2026-07-29T14:41:05.161Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -221,34 +221,32 @@
       "relevanceScore": 70
     },
     {
-      "id": "remoteok-1135519",
-      "title": "Chief Operating Officer",
-      "company": "DSD Recruitment",
+      "id": "remoteok-1135575",
+      "title": "Sales &amp; Marketing Director",
+      "company": "Hustler Marketing",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-chief-operating-officer-dsd-recruitment-1135519",
-      "postedDate": "2026-07-27T07:58:03+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sales-amp-marketing-director-hustler-marketing-1135575",
+      "postedDate": "2026-07-28T14:19:29+00:00",
       "keywords": [
         "exec",
-        "education",
-        "customer support",
+        "saas",
         "marketing",
-        "travel",
         "finance",
-        "microsoft",
-        "junior",
-        "excel",
-        "stats",
+        "seo",
+        "content writing",
+        "senior",
+        "ops",
         "sales",
         "medical",
-        "architecture",
-        "ops",
-        "recruiter"
+        "recruiter",
+        "ecommerce",
+        "full time"
       ],
-      "relevanceScore": 70
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1135527",
