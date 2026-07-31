@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T03:59:52.949Z",
+  "generatedAt": "2026-07-31T14:58:44.629Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -141,42 +141,6 @@
       "relevanceScore": 70
     },
     {
-      "id": "remoteok-1135523",
-      "title": "VP of Operations",
-      "company": "Milemarker, Inc.",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-vp-of-operations-milemarker-inc-1135523",
-      "postedDate": "2026-07-28T02:08:04+00:00",
-      "keywords": [
-        "exec",
-        "education",
-        "customer support",
-        "marketing",
-        "travel",
-        "finance",
-        "microsoft",
-        "junior",
-        "excel",
-        "stats",
-        "sales",
-        "medical",
-        "architecture",
-        "ops",
-        "recruiter",
-        "design",
-        "hr",
-        "senior",
-        "digital nomad",
-        "content writing",
-        "golang"
-      ],
-      "relevanceScore": 70
-    },
-    {
       "id": "remoteok-1135575",
       "title": "Sales &amp; Marketing Director",
       "company": "Hustler Marketing",
@@ -201,57 +165,6 @@
         "recruiter",
         "ecommerce",
         "full time"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1135527",
-      "title": "Head of Operations",
-      "company": "CXD Ventures",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-operations-cxd-ventures-1135527",
-      "postedDate": "2026-07-28T03:23:15+00:00",
-      "keywords": [
-        "education",
-        "medical",
-        "full time",
-        "non tech",
-        "admin",
-        "ops"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1135546",
-      "title": "Influencer Marketing Associate Director",
-      "company": "Newhouse",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-influencer-marketing-associate-director-newhouse-1135546",
-      "postedDate": "2026-07-28T03:02:54+00:00",
-      "keywords": [
-        "exec",
-        "hr",
-        "sys admin",
-        "technical",
-        "customer support",
-        "finance",
-        "education",
-        "ops",
-        "stats",
-        "legal",
-        "medical",
-        "recruiter",
-        "content writing",
-        "marketing",
-        "golang"
       ],
       "relevanceScore": 65
     }
