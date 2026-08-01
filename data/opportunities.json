@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T04:01:46.303Z",
+  "generatedAt": "2026-08-01T14:06:39.609Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -139,34 +139,6 @@
         "ops"
       ],
       "relevanceScore": 70
-    },
-    {
-      "id": "remoteok-1135575",
-      "title": "Sales &amp; Marketing Director",
-      "company": "Hustler Marketing",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sales-amp-marketing-director-hustler-marketing-1135575",
-      "postedDate": "2026-07-28T14:19:29+00:00",
-      "keywords": [
-        "exec",
-        "saas",
-        "marketing",
-        "finance",
-        "seo",
-        "content writing",
-        "senior",
-        "ops",
-        "sales",
-        "medical",
-        "recruiter",
-        "ecommerce",
-        "full time"
-      ],
-      "relevanceScore": 65
     }
   ],
   "boardRoles": [
