@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-02T04:03:34.163Z",
+  "generatedAt": "2026-08-02T14:08:09.733Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -144,6 +144,55 @@
         "digital nomad"
       ],
       "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1135908",
+      "title": "Managing Director",
+      "company": "Berni and Mick Ireland",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-managing-director-berni-and-mick-ireland-1135908",
+      "postedDate": "2026-08-01T06:38:19+00:00",
+      "keywords": [
+        "exec",
+        "consulting",
+        "marketing",
+        "senior",
+        "ops"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1135901",
+      "title": "Freelance Creative Director",
+      "company": "BMWL",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-freelance-creative-director-bmwl-1135901",
+      "postedDate": "2026-07-31T23:38:35+00:00",
+      "keywords": [
+        "design",
+        "amazon",
+        "designer",
+        "customer support",
+        "video",
+        "exec",
+        "junior",
+        "marketing",
+        "ecommerce",
+        "digital nomad",
+        "art direction",
+        "consulting",
+        "ads",
+        "content writing"
+      ],
+      "relevanceScore": 65
     }
   ],
   "boardRoles": [
