@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T03:48:25.367Z",
+  "generatedAt": "2026-08-04T15:00:54.486Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -144,6 +144,40 @@
         "digital nomad"
       ],
       "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1136056",
+      "title": "Managing Director Discovery and Insight",
+      "company": "TED Conferences",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-managing-director-discovery-and-insight-ted-conferences-1136056",
+      "postedDate": "2026-08-03T14:04:26+00:00",
+      "keywords": [
+        "exec",
+        "design",
+        "education",
+        "recruiter",
+        "customer support",
+        "travel",
+        "finance",
+        "ops",
+        "medical",
+        "full time",
+        "digital nomad",
+        "coordinator",
+        "microsoft",
+        "excel",
+        "sales",
+        "sys admin",
+        "technical",
+        "testing",
+        "senior"
+      ],
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1135908",
