@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T03:28:06.385Z",
+  "generatedAt": "2026-08-07T13:49:05.951Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -180,36 +180,6 @@
         "postgres",
         "typescript",
         "ruby"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1136209",
-      "title": "Senior Director of Global Operations",
-      "company": "Wing",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-senior-director-of-global-operations-wing-1136209",
-      "postedDate": "2026-08-04T23:14:59+00:00",
-      "keywords": [
-        "exec",
-        "design",
-        "architecture",
-        "recruiter",
-        "customer support",
-        "marketing",
-        "content writing",
-        "ops",
-        "golang",
-        "full time",
-        "digital nomad",
-        "dev",
-        "senior",
-        "medical",
-        "engineer"
       ],
       "relevanceScore": 65
     }
