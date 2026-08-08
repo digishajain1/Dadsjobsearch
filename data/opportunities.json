@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T13:49:05.951Z",
+  "generatedAt": "2026-08-08T02:27:58.413Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,6 +108,22 @@
       "relevanceScore": 90
     },
     {
+      "id": "remoteok-1136275",
+      "title": "Chief Engineer",
+      "company": "Svitzer",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-chief-engineer-svitzer-1136275",
+      "postedDate": "2026-08-06T15:21:14+00:00",
+      "keywords": [
+        "engineer"
+      ],
+      "relevanceScore": 70
+    },
+    {
       "id": "remoteok-1136204",
       "title": "Go Ahead London",
       "company": "Kent Country",
@@ -141,45 +157,6 @@
         "golang",
         "recruiter",
         "engineer"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1136210",
-      "title": "Head of Security",
-      "company": "Tremendous",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-security-tremendous-1136210",
-      "postedDate": "2026-08-05T01:57:42+00:00",
-      "keywords": [
-        "exec",
-        "design",
-        "architecture",
-        "recruiter",
-        "customer support",
-        "marketing",
-        "content writing",
-        "ops",
-        "golang",
-        "full time",
-        "digital nomad",
-        "dev",
-        "senior",
-        "medical",
-        "engineer",
-        "infosec",
-        "react",
-        "embedded",
-        "technical",
-        "finance",
-        "cloud",
-        "postgres",
-        "typescript",
-        "ruby"
       ],
       "relevanceScore": 65
     }
