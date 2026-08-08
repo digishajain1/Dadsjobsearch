@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T02:27:58.413Z",
+  "generatedAt": "2026-08-08T13:26:45.302Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -122,43 +122,6 @@
         "engineer"
       ],
       "relevanceScore": 70
-    },
-    {
-      "id": "remoteok-1136204",
-      "title": "Go Ahead London",
-      "company": "Kent Country",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-go-ahead-london-kent-country-1136204",
-      "postedDate": "2026-08-05T04:08:49+00:00",
-      "keywords": [
-        "education",
-        "non tech",
-        "finance",
-        "exec",
-        "saas",
-        "sys admin",
-        "vfx",
-        "c",
-        "embedded",
-        "infosec",
-        "technical",
-        "customer support",
-        "web dev",
-        "travel",
-        "html",
-        "ads",
-        "content writing",
-        "marketing",
-        "stats",
-        "golang",
-        "recruiter",
-        "engineer"
-      ],
-      "relevanceScore": 65
     }
   ],
   "boardRoles": [
