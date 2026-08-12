@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T03:04:34.010Z",
+  "generatedAt": "2026-08-12T13:57:03.234Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -122,6 +122,48 @@
         "engineer"
       ],
       "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1136470",
+      "title": "Director Proposal Management Defense and Space",
+      "company": "Honeywell Aerospace",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-proposal-management-defense-and-space-honeywell-aerospace-1136470",
+      "postedDate": "2026-08-08T11:49:53+00:00",
+      "keywords": [
+        "excel",
+        "non tech",
+        "supervisor",
+        "dev",
+        "marketing",
+        "exec",
+        "virtual assistant",
+        "finance",
+        "education",
+        "math",
+        "ops",
+        "sales",
+        "medical",
+        "digital nomad",
+        "travel",
+        "speech",
+        "full time",
+        "c",
+        "customer support",
+        "payroll",
+        "recruiter",
+        "internship",
+        "salesforce",
+        "microsoft",
+        "senior",
+        "stats",
+        "engineer"
+      ],
+      "relevanceScore": 65
     }
   ],
   "boardRoles": [
