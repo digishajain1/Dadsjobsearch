@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T13:57:03.234Z",
+  "generatedAt": "2026-08-13T03:07:47.792Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -106,22 +106,6 @@
         "telecom"
       ],
       "relevanceScore": 90
-    },
-    {
-      "id": "remoteok-1136275",
-      "title": "Chief Engineer",
-      "company": "Svitzer",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-chief-engineer-svitzer-1136275",
-      "postedDate": "2026-08-06T15:21:14+00:00",
-      "keywords": [
-        "engineer"
-      ],
-      "relevanceScore": 70
     },
     {
       "id": "remoteok-1136470",
