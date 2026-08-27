@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T10:07:30.053Z",
+  "generatedAt": "2026-08-27T22:28:47.297Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -106,6 +106,24 @@
         "telecom"
       ],
       "relevanceScore": 90
+    },
+    {
+      "id": "remoteok-1137139",
+      "title": "Course Director UX UI and AI",
+      "company": "Interaction Design Foundation",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-course-director-ux-ui-and-ai-interaction-design-foundation-1137139",
+      "postedDate": "2026-08-26T12:44:41+00:00",
+      "keywords": [
+        "education",
+        "design",
+        "content writing"
+      ],
+      "relevanceScore": 65
     }
   ],
   "boardRoles": [
