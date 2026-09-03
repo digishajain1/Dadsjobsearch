@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T16:46:26.701Z",
+  "generatedAt": "2026-09-03T04:52:08.344Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -106,6 +106,25 @@
         "telecom"
       ],
       "relevanceScore": 90
+    },
+    {
+      "id": "remoteok-1137272",
+      "title": "Chief Steward",
+      "company": "W Hotels",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-chief-steward-w-hotels-1137272",
+      "postedDate": "2026-09-02T03:32:55+00:00",
+      "keywords": [
+        "infosec",
+        "education",
+        "customer support",
+        "exec"
+      ],
+      "relevanceScore": 70
     },
     {
       "id": "remoteok-1137175",
