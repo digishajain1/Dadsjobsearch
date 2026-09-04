@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T16:36:13.194Z",
+  "generatedAt": "2026-09-04T04:55:01.804Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -149,24 +149,6 @@
         "flutter",
         "medical",
         "digital nomad"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137139",
-      "title": "Course Director UX UI and AI",
-      "company": "Interaction Design Foundation",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-course-director-ux-ui-and-ai-interaction-design-foundation-1137139",
-      "postedDate": "2026-08-26T12:44:41+00:00",
-      "keywords": [
-        "education",
-        "design",
-        "content writing"
       ],
       "relevanceScore": 65
     }
