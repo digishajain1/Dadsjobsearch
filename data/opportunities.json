@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T04:59:36.150Z",
+  "generatedAt": "2026-09-09T16:49:26.768Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -125,32 +125,6 @@
         "exec"
       ],
       "relevanceScore": 70
-    },
-    {
-      "id": "remoteok-1137175",
-      "title": "People Director",
-      "company": "Sisal Hub Albania",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-people-director-sisal-hub-albania-1137175",
-      "postedDate": "2026-08-27T15:08:08+00:00",
-      "keywords": [
-        "exec",
-        "hr",
-        "education",
-        "game dev",
-        "customer support",
-        "dev",
-        "marketing",
-        "finance",
-        "flutter",
-        "medical",
-        "digital nomad"
-      ],
-      "relevanceScore": 65
     }
   ],
   "boardRoles": [
