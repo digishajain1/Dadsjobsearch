@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T16:49:26.768Z",
+  "generatedAt": "2026-09-10T05:03:15.335Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,23 +108,110 @@
       "relevanceScore": 90
     },
     {
-      "id": "remoteok-1137272",
-      "title": "Chief Steward",
-      "company": "W Hotels",
+      "id": "remoteok-1137139",
+      "title": "Course Director UX UI and AI",
+      "company": "Interaction Design Foundation",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-chief-steward-w-hotels-1137272",
-      "postedDate": "2026-09-02T03:32:55+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-course-director-ux-ui-and-ai-interaction-design-foundation-1137139",
+      "postedDate": "2026-08-26T12:44:41+00:00",
       "keywords": [
-        "infosec",
         "education",
-        "customer support",
-        "exec"
+        "design",
+        "content writing"
       ],
-      "relevanceScore": 70
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1136210",
+      "title": "Head of Security",
+      "company": "Tremendous",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-security-tremendous-1136210",
+      "postedDate": "2026-08-05T01:57:42+00:00",
+      "keywords": [
+        "exec",
+        "design",
+        "architecture",
+        "recruiter",
+        "customer support",
+        "marketing",
+        "content writing",
+        "ops",
+        "golang",
+        "full time",
+        "digital nomad",
+        "dev",
+        "senior",
+        "medical",
+        "engineer",
+        "infosec",
+        "react",
+        "embedded",
+        "technical",
+        "finance",
+        "cloud",
+        "postgres",
+        "typescript",
+        "ruby"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1135908",
+      "title": "Managing Director",
+      "company": "Berni and Mick Ireland",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-managing-director-berni-and-mick-ireland-1135908",
+      "postedDate": "2026-08-01T06:38:19+00:00",
+      "keywords": [
+        "exec",
+        "consulting",
+        "marketing",
+        "senior",
+        "ops"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1135901",
+      "title": "Freelance Creative Director",
+      "company": "BMWL",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-freelance-creative-director-bmwl-1135901",
+      "postedDate": "2026-07-31T23:38:35+00:00",
+      "keywords": [
+        "design",
+        "amazon",
+        "designer",
+        "customer support",
+        "video",
+        "exec",
+        "junior",
+        "marketing",
+        "ecommerce",
+        "digital nomad",
+        "art direction",
+        "consulting",
+        "ads",
+        "content writing"
+      ],
+      "relevanceScore": 65
     }
   ],
   "boardRoles": [
