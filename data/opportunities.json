@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T15:59:40.362Z",
+  "generatedAt": "2026-09-20T05:12:09.478Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -106,6 +106,37 @@
         "telecom"
       ],
       "relevanceScore": 90
+    },
+    {
+      "id": "remoteok-1137407",
+      "title": "VP Pricing & Packaging",
+      "company": "Delinea",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-vp-pricing-packaging-delinea-1137407",
+      "postedDate": "2026-09-19T00:00:16+00:00",
+      "keywords": [
+        "design",
+        "saas",
+        "salesforce",
+        "infosec",
+        "vfx",
+        "dev",
+        "finance",
+        "education",
+        "cloud",
+        "admin",
+        "exec",
+        "ops",
+        "marketing",
+        "sales",
+        "medical",
+        "digital nomad"
+      ],
+      "relevanceScore": 70
     },
     {
       "id": "remoteok-1137139",
