@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T05:17:41.302Z",
+  "generatedAt": "2026-09-26T16:34:45.848Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -139,24 +139,6 @@
       "relevanceScore": 70
     },
     {
-      "id": "remoteok-1137139",
-      "title": "Course Director UX UI and AI",
-      "company": "Interaction Design Foundation",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-course-director-ux-ui-and-ai-interaction-design-foundation-1137139",
-      "postedDate": "2026-08-26T12:44:41+00:00",
-      "keywords": [
-        "education",
-        "design",
-        "content writing"
-      ],
-      "relevanceScore": 65
-    },
-    {
       "id": "remoteok-1136210",
       "title": "Head of Security",
       "company": "Tremendous",
@@ -212,6 +194,35 @@
         "marketing",
         "senior",
         "ops"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1135901",
+      "title": "Freelance Creative Director",
+      "company": "BMWL",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-freelance-creative-director-bmwl-1135901",
+      "postedDate": "2026-07-31T23:38:35+00:00",
+      "keywords": [
+        "design",
+        "amazon",
+        "designer",
+        "customer support",
+        "video",
+        "exec",
+        "junior",
+        "marketing",
+        "ecommerce",
+        "digital nomad",
+        "art direction",
+        "consulting",
+        "ads",
+        "content writing"
       ],
       "relevanceScore": 65
     }
