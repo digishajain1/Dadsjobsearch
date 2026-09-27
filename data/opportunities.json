@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T05:35:00.140Z",
+  "generatedAt": "2026-09-27T17:09:09.369Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -137,6 +137,33 @@
         "digital nomad"
       ],
       "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1137434",
+      "title": "Director Payment Integrity",
+      "company": "SIHO Insurance Services ",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-payment-integrity-siho-insurance-services-1137434",
+      "postedDate": "2026-09-26T16:00:26+00:00",
+      "keywords": [
+        "exec",
+        "sys admin",
+        "education",
+        "supervisor",
+        "customer support",
+        "quality assurance",
+        "c",
+        "microsoft",
+        "ops",
+        "excel",
+        "legal",
+        "medical"
+      ],
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1136210",
