@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T06:02:36.167Z",
+  "generatedAt": "2026-10-05T20:49:38.217Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -139,6 +139,33 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1137463",
+      "title": "Federal Business Development Director",
+      "company": "Fortanix",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-federal-business-development-director-fortanix-1137463",
+      "postedDate": "2026-10-04T16:00:03+00:00",
+      "keywords": [
+        "exec",
+        "infosec",
+        "teaching",
+        "consulting",
+        "technical",
+        "customer support",
+        "marketing",
+        "speech",
+        "cloud",
+        "bus dev",
+        "sales",
+        "medical"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1137461",
       "title": "Head of Operations",
       "company": "Leverage Live Local",
@@ -239,35 +266,6 @@
         "marketing",
         "senior",
         "ops"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1135901",
-      "title": "Freelance Creative Director",
-      "company": "BMWL",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-freelance-creative-director-bmwl-1135901",
-      "postedDate": "2026-07-31T23:38:35+00:00",
-      "keywords": [
-        "design",
-        "amazon",
-        "designer",
-        "customer support",
-        "video",
-        "exec",
-        "junior",
-        "marketing",
-        "ecommerce",
-        "digital nomad",
-        "art direction",
-        "consulting",
-        "ads",
-        "content writing"
       ],
       "relevanceScore": 65
     }
