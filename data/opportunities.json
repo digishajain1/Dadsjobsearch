@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T16:55:59.044Z",
+  "generatedAt": "2026-10-05T06:02:36.167Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -137,6 +137,24 @@
         "digital nomad"
       ],
       "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1137461",
+      "title": "Head of Operations",
+      "company": "Leverage Live Local",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-operations-leverage-live-local-1137461",
+      "postedDate": "2026-10-03T20:20:32+00:00",
+      "keywords": [
+        "non tech",
+        "ops",
+        "exec"
+      ],
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1137434",
