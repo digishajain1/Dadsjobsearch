@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T06:18:49.176Z",
+  "generatedAt": "2026-10-12T21:21:34.587Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -139,6 +139,32 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1137497",
+      "title": "Product Design Director",
+      "company": "Midnite",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-product-design-director-midnite-1137497",
+      "postedDate": "2026-10-11T16:00:03+00:00",
+      "keywords": [
+        "design",
+        "exec",
+        "sys admin",
+        "game dev",
+        "testing",
+        "marketing",
+        "web dev",
+        "scheme",
+        "medical",
+        "engineer",
+        "digital nomad"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1137463",
       "title": "Federal Business Development Director",
       "company": "Fortanix",
@@ -246,26 +272,6 @@
         "postgres",
         "typescript",
         "ruby"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1135908",
-      "title": "Managing Director",
-      "company": "Berni and Mick Ireland",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-managing-director-berni-and-mick-ireland-1135908",
-      "postedDate": "2026-08-01T06:38:19+00:00",
-      "keywords": [
-        "exec",
-        "consulting",
-        "marketing",
-        "senior",
-        "ops"
       ],
       "relevanceScore": 65
     }
