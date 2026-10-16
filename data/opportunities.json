@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T04:49:09.648Z",
+  "generatedAt": "2026-10-16T16:51:19.617Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -139,6 +139,38 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1137525",
+      "title": "Director US Tax & Accounting #35344",
+      "company": "Manila Recruitment",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-us-tax-accounting-35344-manila-recruitment-1137525",
+      "postedDate": "2026-10-15T08:00:17+00:00",
+      "keywords": [
+        "exec",
+        "accounting",
+        "education",
+        "technical",
+        "customer support",
+        "dev",
+        "marketing",
+        "speech",
+        "finance",
+        "c",
+        "microsoft",
+        "senior",
+        "junior",
+        "ops",
+        "recruiter",
+        "full time",
+        "digital nomad"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1137497",
       "title": "Product Design Director",
       "company": "Midnite",
@@ -233,45 +265,6 @@
         "excel",
         "legal",
         "medical"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1136210",
-      "title": "Head of Security",
-      "company": "Tremendous",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-security-tremendous-1136210",
-      "postedDate": "2026-08-05T01:57:42+00:00",
-      "keywords": [
-        "exec",
-        "design",
-        "architecture",
-        "recruiter",
-        "customer support",
-        "marketing",
-        "content writing",
-        "ops",
-        "golang",
-        "full time",
-        "digital nomad",
-        "dev",
-        "senior",
-        "medical",
-        "engineer",
-        "infosec",
-        "react",
-        "embedded",
-        "technical",
-        "finance",
-        "cloud",
-        "postgres",
-        "typescript",
-        "ruby"
       ],
       "relevanceScore": 65
     }
