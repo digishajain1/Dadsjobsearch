@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T16:51:19.617Z",
+  "generatedAt": "2026-10-17T04:49:28.749Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,35 +108,40 @@
       "relevanceScore": 90
     },
     {
-      "id": "remoteok-1137407",
-      "title": "VP Pricing & Packaging",
-      "company": "Delinea",
+      "id": "remoteok-1137530",
+      "title": "Director of IT and Workplace",
+      "company": "Hippocratic AI",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-vp-pricing-packaging-delinea-1137407",
-      "postedDate": "2026-09-19T00:00:16+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-it-and-workplace-hippocratic-ai-1137530",
+      "postedDate": "2026-10-16T00:00:50+00:00",
       "keywords": [
-        "design",
+        "exec",
         "saas",
-        "salesforce",
         "infosec",
-        "vfx",
+        "python",
+        "technical",
+        "customer support",
+        "testing",
+        "marketing",
         "dev",
         "finance",
         "education",
-        "cloud",
+        "c",
         "admin",
-        "exec",
+        "microsoft",
+        "senior",
         "ops",
-        "marketing",
-        "sales",
+        "legal",
         "medical",
+        "recruiter",
+        "engineer",
         "digital nomad"
       ],
-      "relevanceScore": 70
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1137525",
