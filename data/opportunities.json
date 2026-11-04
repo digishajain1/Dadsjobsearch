@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T06:51:30.611Z",
+  "generatedAt": "2026-11-04T19:57:36.538Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -211,45 +211,6 @@
         "excel",
         "legal",
         "medical"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1136210",
-      "title": "Head of Security",
-      "company": "Tremendous",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-security-tremendous-1136210",
-      "postedDate": "2026-08-05T01:57:42+00:00",
-      "keywords": [
-        "exec",
-        "design",
-        "architecture",
-        "recruiter",
-        "customer support",
-        "marketing",
-        "content writing",
-        "ops",
-        "golang",
-        "full time",
-        "digital nomad",
-        "dev",
-        "senior",
-        "medical",
-        "engineer",
-        "infosec",
-        "react",
-        "embedded",
-        "technical",
-        "finance",
-        "cloud",
-        "postgres",
-        "typescript",
-        "ruby"
       ],
       "relevanceScore": 65
     }
