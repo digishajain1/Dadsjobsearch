@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:57:36.538Z",
+  "generatedAt": "2026-11-05T07:10:11.805Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -211,6 +211,65 @@
         "excel",
         "legal",
         "medical"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1136210",
+      "title": "Head of Security",
+      "company": "Tremendous",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-security-tremendous-1136210",
+      "postedDate": "2026-08-05T01:57:42+00:00",
+      "keywords": [
+        "exec",
+        "design",
+        "architecture",
+        "recruiter",
+        "customer support",
+        "marketing",
+        "content writing",
+        "ops",
+        "golang",
+        "full time",
+        "digital nomad",
+        "dev",
+        "senior",
+        "medical",
+        "engineer",
+        "infosec",
+        "react",
+        "embedded",
+        "technical",
+        "finance",
+        "cloud",
+        "postgres",
+        "typescript",
+        "ruby"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1135908",
+      "title": "Managing Director",
+      "company": "Berni and Mick Ireland",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-managing-director-berni-and-mick-ireland-1135908",
+      "postedDate": "2026-08-01T06:38:19+00:00",
+      "keywords": [
+        "exec",
+        "consulting",
+        "marketing",
+        "senior",
+        "ops"
       ],
       "relevanceScore": 65
     }
