@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T07:03:13.127Z",
+  "generatedAt": "2026-11-16T22:25:12.602Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -106,26 +106,6 @@
         "telecom"
       ],
       "relevanceScore": 90
-    },
-    {
-      "id": "remoteok-1137537",
-      "title": "Head of Technology",
-      "company": "Sanctuary Computer",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-technology-sanctuary-computer-1137537",
-      "postedDate": "2026-10-16T17:55:35+00:00",
-      "keywords": [
-        "dev",
-        "engineer",
-        "senior",
-        "full stack",
-        "front end"
-      ],
-      "relevanceScore": 65
     },
     {
       "id": "remoteok-1137536",
