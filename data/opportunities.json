@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T07:37:55.296Z",
+  "generatedAt": "2026-11-20T20:38:25.211Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,89 +108,82 @@
       "relevanceScore": 90
     },
     {
-      "id": "remoteok-1137536",
-      "title": "Director of Product Management and IT Operations",
-      "company": "Self Bill Pro",
+      "id": "remoteok-1137832",
+      "title": "Global Head of GSI Solutions Architecture",
+      "company": "Rubrik Job Board",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-product-management-and-it-operations-self-bill-pro-1137536",
-      "postedDate": "2026-10-16T16:00:39+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-global-head-of-gsi-solutions-architecture-rubrik-job-board-1137832",
+      "postedDate": "2026-11-19T15:15:01+00:00",
       "keywords": [
-        "product manager",
-        "exec",
-        "infosec",
-        "technical",
-        "customer support",
-        "dev",
-        "testing",
-        "ops",
-        "digital nomad"
+        "sales"
+      ],
+      "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1137845",
+      "title": "Velocity, Sales Director - USA & Europe",
+      "company": "Storyblok",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-velocity-sales-director-usa-europe-storyblok-1137845",
+      "postedDate": "2026-11-19T17:30:23+00:00",
+      "keywords": [
+        "programming"
       ],
       "relevanceScore": 65
     },
     {
-      "id": "remoteok-1137530",
-      "title": "Director of IT and Workplace",
-      "company": "Hippocratic AI",
+      "id": "remoteok-1137841",
+      "title": "Director, Enterprise Sales",
+      "company": "Abnormal",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-it-and-workplace-hippocratic-ai-1137530",
-      "postedDate": "2026-10-16T00:00:50+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-enterprise-sales-abnormal-1137841",
+      "postedDate": "2026-11-19T16:30:11+00:00",
       "keywords": [
-        "exec",
-        "saas",
-        "infosec",
-        "python",
-        "technical",
-        "customer support",
-        "testing",
-        "marketing",
-        "dev",
-        "finance",
-        "education",
-        "c",
-        "admin",
-        "microsoft",
-        "senior",
-        "ops",
-        "legal",
-        "medical",
-        "recruiter",
-        "engineer",
-        "digital nomad"
+        "sales"
       ],
       "relevanceScore": 65
     },
     {
-      "id": "remoteok-1137434",
-      "title": "Director Payment Integrity",
-      "company": "SIHO Insurance Services ",
+      "id": "remoteok-1137816",
+      "title": "Head of Channel Sales & Alliances",
+      "company": "Salesloft",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-payment-integrity-siho-insurance-services-1137434",
-      "postedDate": "2026-09-26T16:00:26+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-channel-sales-alliances-salesloft-1137816",
+      "postedDate": "2026-11-19T11:15:01+00:00",
       "keywords": [
-        "exec",
-        "sys admin",
-        "education",
-        "supervisor",
-        "customer support",
-        "quality assurance",
-        "c",
-        "microsoft",
-        "ops",
-        "excel",
-        "legal",
-        "medical"
+        "customer support"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1137811",
+      "title": "Agency Partnerships Director",
+      "company": "6sense",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-agency-partnerships-director-6sense-1137811",
+      "postedDate": "2026-11-19T10:03:02+00:00",
+      "keywords": [
+        "customer support"
       ],
       "relevanceScore": 65
     }
