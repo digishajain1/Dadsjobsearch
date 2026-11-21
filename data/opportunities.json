@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T20:38:25.211Z",
+  "generatedAt": "2026-11-21T07:33:40.646Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,20 +108,68 @@
       "relevanceScore": 90
     },
     {
-      "id": "remoteok-1137832",
-      "title": "Global Head of GSI Solutions Architecture",
-      "company": "Rubrik Job Board",
+      "id": "remoteok-1137883",
+      "title": "Technical Chief of Staff to the CTO",
+      "company": "Clover Health",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-global-head-of-gsi-solutions-architecture-rubrik-job-board-1137832",
-      "postedDate": "2026-11-19T15:15:01+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-technical-chief-of-staff-to-the-cto-clover-health-1137883",
+      "postedDate": "2026-11-20T04:30:14+00:00",
       "keywords": [
-        "sales"
+        "exec"
       ],
       "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1137890",
+      "title": "Sr Director, L2C Process Owner",
+      "company": "BeyondTrust",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sr-director-l2c-process-owner-beyondtrust-1137890",
+      "postedDate": "2026-11-20T06:15:14+00:00",
+      "keywords": [
+        "devops"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1137885",
+      "title": "Senior Director of Product Management (R14361)",
+      "company": "Oportun",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-senior-director-of-product-management-r14361-oportun-1137885",
+      "postedDate": "2026-11-20T05:00:13+00:00",
+      "keywords": [
+        "product"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1137884",
+      "title": "Director, Sales",
+      "company": "Ping Identity",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-sales-ping-identity-1137884",
+      "postedDate": "2026-11-20T04:45:30+00:00",
+      "keywords": [
+        "devops"
+      ],
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1137845",
@@ -152,38 +200,6 @@
       "postedDate": "2026-11-19T16:30:11+00:00",
       "keywords": [
         "sales"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137816",
-      "title": "Head of Channel Sales & Alliances",
-      "company": "Salesloft",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-channel-sales-alliances-salesloft-1137816",
-      "postedDate": "2026-11-19T11:15:01+00:00",
-      "keywords": [
-        "customer support"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137811",
-      "title": "Agency Partnerships Director",
-      "company": "6sense",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-agency-partnerships-director-6sense-1137811",
-      "postedDate": "2026-11-19T10:03:02+00:00",
-      "keywords": [
-        "customer support"
       ],
       "relevanceScore": 65
     }
