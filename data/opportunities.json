@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T07:33:40.646Z",
+  "generatedAt": "2026-11-21T19:38:21.189Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -124,6 +124,49 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1137913",
+      "title": "Account Director",
+      "company": "Princeton10",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-account-director-princeton10-1137913",
+      "postedDate": "2026-11-20T16:00:11+00:00",
+      "keywords": [
+        "exec",
+        "design",
+        "marketing",
+        "web dev",
+        "travel",
+        "finance",
+        "senior",
+        "ops",
+        "legal",
+        "golang",
+        "medical",
+        "digital nomad"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1137901",
+      "title": "Art Director",
+      "company": "Abnormal",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-art-director-abnormal-1137901",
+      "postedDate": "2026-11-20T08:20:14+00:00",
+      "keywords": [
+        "devops"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1137890",
       "title": "Sr Director, L2C Process Owner",
       "company": "BeyondTrust",
@@ -168,38 +211,6 @@
       "postedDate": "2026-11-20T04:45:30+00:00",
       "keywords": [
         "devops"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137845",
-      "title": "Velocity, Sales Director - USA & Europe",
-      "company": "Storyblok",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-velocity-sales-director-usa-europe-storyblok-1137845",
-      "postedDate": "2026-11-19T17:30:23+00:00",
-      "keywords": [
-        "programming"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137841",
-      "title": "Director, Enterprise Sales",
-      "company": "Abnormal",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-enterprise-sales-abnormal-1137841",
-      "postedDate": "2026-11-19T16:30:11+00:00",
-      "keywords": [
-        "sales"
       ],
       "relevanceScore": 65
     }
