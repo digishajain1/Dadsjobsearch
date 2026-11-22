@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T19:38:21.189Z",
+  "generatedAt": "2026-11-22T07:16:07.396Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,20 +108,36 @@
       "relevanceScore": 90
     },
     {
-      "id": "remoteok-1137883",
-      "title": "Technical Chief of Staff to the CTO",
-      "company": "Clover Health",
+      "id": "remoteok-1137949",
+      "title": "VP, Customer Experience Operations",
+      "company": "Ping Identity",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-technical-chief-of-staff-to-the-cto-clover-health-1137883",
-      "postedDate": "2026-11-20T04:30:14+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-vp-customer-experience-operations-ping-identity-1137949",
+      "postedDate": "2026-11-21T05:20:06+00:00",
       "keywords": [
-        "exec"
+        "devops"
       ],
       "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1137941",
+      "title": "Sr. Technology Partner Director, Product Partnerships",
+      "company": "Databricks",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sr-technology-partner-director-product-partnerships-databricks-1137941",
+      "postedDate": "2026-11-21T04:00:06+00:00",
+      "keywords": [
+        "product"
+      ],
+      "relevanceScore": 65
     },
     {
       "id": "remoteok-1137913",
@@ -195,22 +211,6 @@
       "postedDate": "2026-11-20T05:00:13+00:00",
       "keywords": [
         "product"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137884",
-      "title": "Director, Sales",
-      "company": "Ping Identity",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-sales-ping-identity-1137884",
-      "postedDate": "2026-11-20T04:45:30+00:00",
-      "keywords": [
-        "devops"
       ],
       "relevanceScore": 65
     }
