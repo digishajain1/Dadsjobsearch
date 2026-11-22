@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T07:16:07.396Z",
+  "generatedAt": "2026-11-22T19:54:17.878Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -124,6 +124,22 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1137960",
+      "title": "Director, Revenue Accounting",
+      "company": "6sense",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-revenue-accounting-6sense-1137960",
+      "postedDate": "2026-11-21T10:40:05+00:00",
+      "keywords": [
+        "finance"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1137941",
       "title": "Sr. Technology Partner Director, Product Partnerships",
       "company": "Databricks",
@@ -195,22 +211,6 @@
       "postedDate": "2026-11-20T06:15:14+00:00",
       "keywords": [
         "devops"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137885",
-      "title": "Senior Director of Product Management (R14361)",
-      "company": "Oportun",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-senior-director-of-product-management-r14361-oportun-1137885",
-      "postedDate": "2026-11-20T05:00:13+00:00",
-      "keywords": [
-        "product"
       ],
       "relevanceScore": 65
     }
