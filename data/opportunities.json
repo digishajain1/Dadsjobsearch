@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T19:54:17.878Z",
+  "generatedAt": "2026-11-23T07:59:31.150Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -124,6 +124,22 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1137964",
+      "title": "Regional Sales Director, Canada",
+      "company": "GitLab",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-regional-sales-director-canada-gitlab-1137964",
+      "postedDate": "2026-11-22T00:00:08+00:00",
+      "keywords": [
+        "sales"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1137960",
       "title": "Director, Revenue Accounting",
       "company": "6sense",
@@ -193,22 +209,6 @@
       "source": "RemoteOK",
       "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-art-director-abnormal-1137901",
       "postedDate": "2026-11-20T08:20:14+00:00",
-      "keywords": [
-        "devops"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137890",
-      "title": "Sr Director, L2C Process Owner",
-      "company": "BeyondTrust",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sr-director-l2c-process-owner-beyondtrust-1137890",
-      "postedDate": "2026-11-20T06:15:14+00:00",
       "keywords": [
         "devops"
       ],
