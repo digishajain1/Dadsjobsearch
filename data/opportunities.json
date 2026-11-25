@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T08:58:01.868Z",
+  "generatedAt": "2026-11-25T21:54:51.783Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -124,6 +124,38 @@
       "relevanceScore": 70
     },
     {
+      "id": "remoteok-1138085",
+      "title": "Director, Product Marketing (Contractor)",
+      "company": "Glossier",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-product-marketing-contractor-glossier-1138085",
+      "postedDate": "2026-11-24T09:40:05+00:00",
+      "keywords": [
+        "marketing"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1138082",
+      "title": "Region Head, Asia",
+      "company": "Dropbox",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-region-head-asia-dropbox-1138082",
+      "postedDate": "2026-11-24T09:20:04+00:00",
+      "keywords": [
+        "customer support"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1137964",
       "title": "Regional Sales Director, Canada",
       "company": "GitLab",
@@ -168,49 +200,6 @@
       "postedDate": "2026-11-21T04:00:06+00:00",
       "keywords": [
         "product"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137913",
-      "title": "Account Director",
-      "company": "Princeton10",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-account-director-princeton10-1137913",
-      "postedDate": "2026-11-20T16:00:11+00:00",
-      "keywords": [
-        "exec",
-        "design",
-        "marketing",
-        "web dev",
-        "travel",
-        "finance",
-        "senior",
-        "ops",
-        "legal",
-        "golang",
-        "medical",
-        "digital nomad"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137901",
-      "title": "Art Director",
-      "company": "Abnormal",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-art-director-abnormal-1137901",
-      "postedDate": "2026-11-20T08:20:14+00:00",
-      "keywords": [
-        "devops"
       ],
       "relevanceScore": 65
     }
