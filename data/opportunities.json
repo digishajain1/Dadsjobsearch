@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T08:44:29.622Z",
+  "generatedAt": "2026-11-26T21:48:28.379Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,109 +108,98 @@
       "relevanceScore": 90
     },
     {
-      "id": "remoteok-1138085",
-      "title": "Director, Product Marketing (Contractor)",
-      "company": "Glossier",
+      "id": "remoteok-1138146",
+      "title": "Creative Director",
+      "company": "Luxury Presence",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-product-marketing-contractor-glossier-1138085",
-      "postedDate": "2026-11-24T09:40:05+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-creative-director-luxury-presence-1138146",
+      "postedDate": "2026-11-25T14:01:01+00:00",
       "keywords": [
         "marketing"
       ],
       "relevanceScore": 65
     },
     {
-      "id": "remoteok-1138082",
-      "title": "Region Head, Asia",
-      "company": "Dropbox",
+      "id": "remoteok-1138143",
+      "title": "Director of Sales, North America",
+      "company": "Insider One",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-region-head-asia-dropbox-1138082",
-      "postedDate": "2026-11-24T09:20:04+00:00",
-      "keywords": [
-        "customer support"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1137964",
-      "title": "Regional Sales Director, Canada",
-      "company": "GitLab",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-regional-sales-director-canada-gitlab-1137964",
-      "postedDate": "2026-11-22T00:00:08+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-sales-north-america-insider-one-1138143",
+      "postedDate": "2026-11-25T13:40:30+00:00",
       "keywords": [
         "sales"
       ],
       "relevanceScore": 65
     },
     {
-      "id": "remoteok-1137960",
-      "title": "Director, Revenue Accounting",
-      "company": "6sense",
+      "id": "remoteok-1138124",
+      "title": "North America Alliance and Partnerships Director (Remote)",
+      "company": "Vendavo",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-revenue-accounting-6sense-1137960",
-      "postedDate": "2026-11-21T10:40:05+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-north-america-alliance-and-partnerships-director-remote-vendavo-1138124",
+      "postedDate": "2026-11-25T10:20:29+00:00",
       "keywords": [
-        "finance"
+        "marketing"
       ],
       "relevanceScore": 65
     },
     {
-      "id": "remoteok-1137941",
-      "title": "Sr. Technology Partner Director, Product Partnerships",
-      "company": "Databricks",
+      "id": "remoteok-1138121",
+      "title": "Associate Director of Field Marketing - Quality Cloud - Europe",
+      "company": "Veeva Systems",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sr-technology-partner-director-product-partnerships-databricks-1137941",
-      "postedDate": "2026-11-21T04:00:06+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-associate-director-of-field-marketing-quality-cloud-europe-veeva-systems-1138121",
+      "postedDate": "2026-11-25T10:00:26+00:00",
       "keywords": [
-        "product"
+        "marketing"
       ],
       "relevanceScore": 65
     },
     {
-      "id": "remoteok-1137913",
-      "title": "Account Director",
-      "company": "Princeton10",
+      "id": "remoteok-1138118",
+      "title": "Sales Enablement Director",
+      "company": "Jobgether",
       "location": "Remote",
       "type": "Executive",
       "sector": "Digital Infrastructure",
       "salaryLpa": 65,
       "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-account-director-princeton10-1137913",
-      "postedDate": "2026-11-20T16:00:11+00:00",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sales-enablement-director-jobgether-1138118",
+      "postedDate": "2026-11-25T09:20:27+00:00",
       "keywords": [
-        "exec",
-        "design",
-        "marketing",
-        "web dev",
-        "travel",
-        "finance",
-        "senior",
-        "ops",
-        "legal",
-        "golang",
-        "medical",
-        "digital nomad"
+        "sales"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1138117",
+      "title": "Account Director (Network Testing & Planning)",
+      "company": "Jobgether",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-account-director-network-testing-planning-jobgether-1138117",
+      "postedDate": "2026-11-25T09:20:26+00:00",
+      "keywords": [
+        "sales"
       ],
       "relevanceScore": 65
     }
