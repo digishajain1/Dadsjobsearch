@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T21:54:51.783Z",
+  "generatedAt": "2026-11-26T08:44:29.622Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,22 +108,6 @@
       "relevanceScore": 90
     },
     {
-      "id": "remoteok-1137949",
-      "title": "VP, Customer Experience Operations",
-      "company": "Ping Identity",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-vp-customer-experience-operations-ping-identity-1137949",
-      "postedDate": "2026-11-21T05:20:06+00:00",
-      "keywords": [
-        "devops"
-      ],
-      "relevanceScore": 70
-    },
-    {
       "id": "remoteok-1138085",
       "title": "Director, Product Marketing (Contractor)",
       "company": "Glossier",
@@ -200,6 +184,33 @@
       "postedDate": "2026-11-21T04:00:06+00:00",
       "keywords": [
         "product"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1137913",
+      "title": "Account Director",
+      "company": "Princeton10",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-account-director-princeton10-1137913",
+      "postedDate": "2026-11-20T16:00:11+00:00",
+      "keywords": [
+        "exec",
+        "design",
+        "marketing",
+        "web dev",
+        "travel",
+        "finance",
+        "senior",
+        "ops",
+        "legal",
+        "golang",
+        "medical",
+        "digital nomad"
       ],
       "relevanceScore": 65
     }
