@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-26T21:48:28.379Z",
+  "generatedAt": "2026-11-27T08:55:18.734Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,6 +108,86 @@
       "relevanceScore": 90
     },
     {
+      "id": "remoteok-1138173",
+      "title": "Director of Software Engineering",
+      "company": "Warner Music Group",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-software-engineering-warner-music-group-1138173",
+      "postedDate": "2026-11-26T07:40:15+00:00",
+      "keywords": [
+        "programming"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1138171",
+      "title": "Head of Professional Services, NICE",
+      "company": "TTEC Digital",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-head-of-professional-services-nice-ttec-digital-1138171",
+      "postedDate": "2026-11-26T07:00:16+00:00",
+      "keywords": [
+        "programming"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1138168",
+      "title": "Sales Director - Quality",
+      "company": "Veeva Systems",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sales-director-quality-veeva-systems-1138168",
+      "postedDate": "2026-11-26T06:00:13+00:00",
+      "keywords": [
+        "sales"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1138167",
+      "title": "Partner Director, Federal",
+      "company": "Netomi",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-partner-director-federal-netomi-1138167",
+      "postedDate": "2026-11-26T05:40:15+00:00",
+      "keywords": [
+        "sales"
+      ],
+      "relevanceScore": 65
+    },
+    {
+      "id": "remoteok-1138155",
+      "title": "Director of Strategic Accounts, South/Central (TOLA)",
+      "company": "Jobgether",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-strategic-accounts-south-central-tola-jobgether-1138155",
+      "postedDate": "2026-11-26T01:40:12+00:00",
+      "keywords": [
+        "sales"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1138146",
       "title": "Creative Director",
       "company": "Luxury Presence",
@@ -120,86 +200,6 @@
       "postedDate": "2026-11-25T14:01:01+00:00",
       "keywords": [
         "marketing"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1138143",
-      "title": "Director of Sales, North America",
-      "company": "Insider One",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-of-sales-north-america-insider-one-1138143",
-      "postedDate": "2026-11-25T13:40:30+00:00",
-      "keywords": [
-        "sales"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1138124",
-      "title": "North America Alliance and Partnerships Director (Remote)",
-      "company": "Vendavo",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-north-america-alliance-and-partnerships-director-remote-vendavo-1138124",
-      "postedDate": "2026-11-25T10:20:29+00:00",
-      "keywords": [
-        "marketing"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1138121",
-      "title": "Associate Director of Field Marketing - Quality Cloud - Europe",
-      "company": "Veeva Systems",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-associate-director-of-field-marketing-quality-cloud-europe-veeva-systems-1138121",
-      "postedDate": "2026-11-25T10:00:26+00:00",
-      "keywords": [
-        "marketing"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1138118",
-      "title": "Sales Enablement Director",
-      "company": "Jobgether",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sales-enablement-director-jobgether-1138118",
-      "postedDate": "2026-11-25T09:20:27+00:00",
-      "keywords": [
-        "sales"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1138117",
-      "title": "Account Director (Network Testing & Planning)",
-      "company": "Jobgether",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-account-director-network-testing-planning-jobgether-1138117",
-      "postedDate": "2026-11-25T09:20:26+00:00",
-      "keywords": [
-        "sales"
       ],
       "relevanceScore": 65
     }
