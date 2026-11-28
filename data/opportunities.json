@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T21:31:23.011Z",
+  "generatedAt": "2026-11-28T08:15:39.054Z",
   "metadata": {
     "salaryFloorLpa": 60,
     "executiveCompaniesCovered": [
@@ -108,6 +108,38 @@
       "relevanceScore": 90
     },
     {
+      "id": "remoteok-1138205",
+      "title": "VP of Brand and Communications",
+      "company": "Oscilar",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-vp-of-brand-and-communications-oscilar-1138205",
+      "postedDate": "2026-11-27T00:40:38+00:00",
+      "keywords": [
+        "marketing"
+      ],
+      "relevanceScore": 70
+    },
+    {
+      "id": "remoteok-1138221",
+      "title": "Director, Sales - Retail Merchandising Analytics",
+      "company": "NielsenIQ",
+      "location": "Remote",
+      "type": "Executive",
+      "sector": "Digital Infrastructure",
+      "salaryLpa": 65,
+      "source": "RemoteOK",
+      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-director-sales-retail-merchandising-analytics-nielseniq-1138221",
+      "postedDate": "2026-11-27T06:00:44+00:00",
+      "keywords": [
+        "customer support"
+      ],
+      "relevanceScore": 65
+    },
+    {
       "id": "remoteok-1138192",
       "title": "Director, Demand Generation",
       "company": "ClickUp",
@@ -168,38 +200,6 @@
       "postedDate": "2026-11-26T07:00:16+00:00",
       "keywords": [
         "programming"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1138168",
-      "title": "Sales Director - Quality",
-      "company": "Veeva Systems",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-sales-director-quality-veeva-systems-1138168",
-      "postedDate": "2026-11-26T06:00:13+00:00",
-      "keywords": [
-        "sales"
-      ],
-      "relevanceScore": 65
-    },
-    {
-      "id": "remoteok-1138167",
-      "title": "Partner Director, Federal",
-      "company": "Netomi",
-      "location": "Remote",
-      "type": "Executive",
-      "sector": "Digital Infrastructure",
-      "salaryLpa": 65,
-      "source": "RemoteOK",
-      "url": "https://remoteok.comhttps://remoteOK.com/remote-jobs/remote-partner-director-federal-netomi-1138167",
-      "postedDate": "2026-11-26T05:40:15+00:00",
-      "keywords": [
-        "sales"
       ],
       "relevanceScore": 65
     }
